@@ -1140,4 +1140,79 @@ Let $(W,B_{W}),A $ and $V$ as in the lemma \ref{keylemma}.  Pick $ D_{0} \in \ma
 
 
 
+
+\begin{enumerate}[(A)]
+  \item\label{a} \textbf{If $ \lambda\leqslant\mu $ and $ K_X+B+\frac{1}{\mu}H $ is not nef:} Suppose $ f $ is the contraction with respect to a $ (K_X+B) $-negative extremal ray $ R= \overline{\operatorname{ NE }}(X/S) $, then $ (K_X+B+\frac{1}{\mu}H).R=0 $ by definition of $ \mu $. There is an extremal ray $ P \subset \overline{\operatorname{ NE }}(X) $ such that $ (K_X+B+\frac{1}{\mu}H).P<0 $ and $ F:=P+R $ is an extremal face  (Check \cite[5.4.2]{cortiFactoringBirationalMaps} for details). Take  $ 0<t\ll 1 $ such that $ (K_X+B+(\frac{1}{\mu}-t)H).P<0 $, then $  (K_X+B+(\frac{1}{\mu}-t)H).R<0 $ since $H$ is $f$-ample, and $ F $ is a $  (K_X+B+(\frac{1}{\mu}-t)H) $-negative extremal face. Since $ (X,B+(\frac{1}{\mu}-t)H) $ is klt, there is  a contraction $ g:X\to T $ with respect  to $ F $ factorizing through $ f:X\to S $. Since  $ (X,B+\frac{1}{\mu}H) $ is klt, and $ \rho(X/T)=2 $,  we can  run $ (K_X+B+\frac{1}{\mu}H) $-MMP on $ X  $ with scaling of some ample divisor $C$.  Since $ B+\frac{1}{\mu}H $ is relatively big,  the MMP terminates. There are following cases: 
+  \begin{enumerate}[1)]
+    \item\label{a1} 
+\begin{multicols}{2}       % 分两栏 若花括号中为3则是分三列
+After finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is a divisorial contraction $ p:Z\to X_1 $, and then followed by a Mori fibre space $(X_{1},B_{1}+\frac{1}{\mu}H_{1} )\to S_{1}$. Then  $S_{1} \cong T$ and this is a link of type III.     
+
+      \[ \xymatrix{
+      X\ar[d]_f\ar@{.>}[r]^{flips}&Z\ar[rd]^{p}&\\
+      S\ar[dr]&&X_1\ar[d]^{f_1}\\
+      &T&S_1\ar[l]_\sim}\]
+\end{multicols}
+After finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is a divisorial contraction $ p:Z\to X_1 $, and then followed by a Mori fibre space $(X_{1},B_{1}+\frac{1}{\mu}H_{1} )\to S_{1}$. 
+    Then  $S_{1} \cong T$ and this is a link of type III.     
+      \[ \xymatrix{
+      X\ar[d]_f\ar@{.>}[r]^{flips}&Z\ar[rd]^{p}&\\
+      S\ar[dr]&&X_1\ar[d]^{f_1}\\
+      &T&S_1\ar[l]_\sim}\]
+    \item\label{a2}
+      \begin{multicols}{2}
+      After finitely many flips $ X\dashrightarrow X_1 $, first non-flip contraction is a Mori fibre space $ f_1:X_1\to S_{1} $. This is a link of type IV.  
+   \begin{tikzcd} 
+     X\ar[d,swap,"f"]\ar[rr,dashrightarrow,"\phi_{1}"]&&X_1\ar[d,"f_1"]\\
+      S\ar[dr]&&S_1\ar[dl]\\
+      &T &
+    \end{tikzcd}
+      \end{multicols}
+
+
+    \item \label{a3}
+      \begin{multicols}{2}
+      If after finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is a divisorial contraction $ p:Z\to X_1$ with 
+    \[ K_Z+B_Z+\frac{1}{\mu}H_Z=p^*(K_{X_1}+B_1+\frac{1}{\mu}H_1)+eE \]
+    where $ e>0 $ and  $E=\operatorname{Exc}\,p$ and  $g_{1}: (X_1,B_1+\frac{1}{\mu}H_1) \to T$ is a log minimal model of $(X,B+\frac{1}{\mu}H)$ over $T$ . In fact the only ray of $ \overline{\operatorname{NE}}(X_1/T) $ is $ (K_{X_1}+B_1+\frac{1}{\mu}H_1) $-trivial and hence is $ (K_{X_1}+B_1) $-negative, therefore $ (X_1,B_1)/T $ is a log Mori fibre space. Take $ S_1=T $, then this is a link of type III:
+    \[ \xymatrix{
+      X\ar[d]_f\ar@{.>}[r]&Z\ar[rd]^{p}&\\
+      S\ar[dr]&&X_1\ar[d]^{f_1}\\
+      &T&S_1\ar@{=}[l]}\]
+\end{multicols}
+      If after finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is a divisorial contraction $ p:Z\to X_1$ with 
+    \[ K_Z+B_Z+\frac{1}{\mu}H_Z=p^*(K_{X_1}+B_1+\frac{1}{\mu}H_1)+eE \]
+    where $ e>0 $ and  $E=\operatorname{Exc}\,p$ and  $g_{1}: (X_1,B_1+\frac{1}{\mu}H_1) \to T$ is a log minimal model of $(X,B+\frac{1}{\mu}H)$ over $T$ . In fact the only ray of $ \overline{\operatorname{NE}}(X_1/T) $ is $ (K_{X_1}+B_1+\frac{1}{\mu}H_1) $-trivial and hence is $ (K_{X_1}+B_1) $-negative, therefore $ (X_1,B_1)/T $ is a log Mori fibre space. Take $ S_1=T $, then this is a link of type III:
+    \[ \xymatrix{
+      X\ar[d]_f\ar@{.>}[r]&Z\ar[rd]^{p}&\\
+      S\ar[dr]&&X_1\ar[d]^{f_1}\\
+      &T&S_1\ar@{=}[l]}\]
+  \item \label{a4}After finitely many flips $ X\dashrightarrow X_1 $, MMP ends with log minimal model $ (X_1,B_1+\frac{1}{\mu}H_1)/T $. Then there is a ray of $ \overline{\operatorname{NE}}(X_1/T) $ is $ (K_{X_1}+B_1+\frac{1}{\mu}H_1) $-trivial and $ (K_{X_1}+B_1) $-negative.  Take the contraction $ f_1:X_1\to S_1 $ with respect to $ (K_{X_1}+B_1) $-negative ray $ R=\mathbb{R}_{\geqslant 0}[C] $: 
+    \[ \xymatrix{
+      X\ar[d]_f\ar@{.>}[rr]&&X_1\ar[d]^{f_1}\\
+      S\ar[dr]&&S_1\ar[dl]\\
+      &T &}\]
+    This is a link of type IV. In fact, $X \dashrightarrow  S_{1}$ is the ample model of $K_{X}+B+\frac{1}{\mu}H$.
+  \end{enumerate}
+
+\item\label{b} If $ \lambda>\mu $, then $ (X,B+\frac{1}{\mu}H) $ is not $ \theta $-canonical. Take  an extraction $ p:(Z,B_Z,H_Z)\to (X,B,H) $ as in lemma \ref{thetaextraction}, that is  $ (Z,B_Z) $ is $ \theta $-terminal and $ p^*(K_X+B+\frac{1}{\lambda}H)=K_Z+B_Z+\frac{1}{\lambda}H_Z $ where $ B_Z=\sum\theta(E_\nu)E_\nu $ and $ E=\mathrm{Exc}\,p $ is a prime divisor on $ Z $.  Let $ H_Z=p^{-1}_*H $ a strict transform of a general member $ H' $ of $ \mathcal{H}' $. Then we run $ (K_Z+B_Z+\frac{1}{\lambda}H_Z) $-MMP on $ Z $ over $ S $ with scaling of some ample divisor $C$. Since $Z$ is covered by $ (K_Z+B_Z+\frac{1}{\lambda}H_Z) $-negative curves, $ (K_Z+B_Z+\frac{1}{\lambda}H_Z) $ is not relatively pseudo-effective, hence this always ends with a Mori fibre space by theorem \ref{notpseudoeffmfs}. There are two cases:
+  \begin{enumerate}[1)]
+    \item \label{b1}After finitely many flips $ Z\dashrightarrow Z' $, first non flip contraction is a divisorial contraction $ q:Z'\to X_1 $. Since $ \rho(X_1/S)=1 $, there is no further flips or divisorial contraction, thus must be followed by a fibering contraction $ f_1:X_1\to Y $ with $ Y\xrightarrow{\sim}S $. Since $ (K_{X_1}+B_1+\frac{1}{\lambda}H_1) $ is $ f_1 $-negative, and $ H_1 $ is $ f_1 $- ample, $ (K_{X_1}+B_1) $ is $ f_1 $-negative, and $ (X_1,B_1)/Y $ is a log Mori fibre space.  Let $ S_1=Y $ and this is a link of type II.
+    \[ \xymatrix{
+      &Z\ar[ld]_p\ar@{.>}[r]&Z'\ar[dr]^{q}&\\
+      X\ar[d]_{f}\ar@{.>}[rrr]^{\psi_1}&&&X_1\ar[d]^{f_1}\\
+      S\ar@{=}[rrr]&&&S_1} \]
+    \item\label{b2} If after finitely many flips $ Z\dashrightarrow X_1 $, first non-flip contraction is a fibering contraction $ f_1:X_1\to Y  $. Since $ (K_{X_1}+B_1+\frac{1}{\lambda}H_1) $ is $ f_1 $-negative and $ H_1 $ is $ f_1 $- ample, $ (K_{X_1}+B_1) $ is $ f_1 $-negative, and $ (X_1,B_1)/Y $ is a log Mori fibre space.  Take $ S_1=Y $ and this is a link of type I.
+    \[
+      \xymatrix{
+      &Z\ar[ld]_p\ar@{.>}[r]&X_1\ar[dd]^{f_1}\\
+        X\ar[d]_f&&\\
+      S &&S_1\ar[ll]}
+    \]
+  \end{enumerate} 
+\end{enumerate}
+
+\bibliographystyle{alpha}
+\bibliography{ref}
+
 \end{document}
