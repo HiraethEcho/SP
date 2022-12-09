@@ -267,7 +267,7 @@ Let $ (X,B) $ be a a klt pair and $\Sigma$ be any set of exceptional divisors su
 
 \begin{defn}
   \cite[Definition 3.3]{brunoLogSarkisovProgram1995}
-  Two or more pairs $ \{(X_i,B_i)\} $ are called \textbf{MMP-related} if they are results of $ (K+B) $-MMP from a nonsingular  projective variety $ W $ and  boundary $ B_W $ with only normal crossing.
+  Two or more pairs $ \{(X_i,B_i)\} $ are called \textbf{MMP-related} if they are results of $ (K+B) $-MMP from a log smooth pair $(W,B_{W})$.
 \end{defn}
 % TODO: Not MMP related
 % \begin{rmk}
@@ -609,19 +609,19 @@ Then we show there are isomorphic. Take a very ample divisor $ D $ on $ X $ and 
   \end{enumerate} \end{proof}
 
 \section{Double scaling}
-This section we follows \cite[13.The Sarkisov program]{haconMinimalModelProgram2012} and  \cite{liuSarkisovProgramGeneralized2019}
+This section we follows \cite[13.The Sarkisov program]{haconMinimalModelProgram2012} and  \cite{liuSarkisovProgramGeneralized2019}.
 \subsection{Prepare}
 Let $(W,B_W)$ be a $\mathbb{Q}$-factorial klt pair and $f:(X,B)\to S$ and $f':(X',B')\to S'$ be two different log Mori fibre spaces as outputs $(K_{W}+B_{W})$-MMP.  To modify the beginning setting, we need more conventions and lemmas:
 \begin{defn}
 Let $f:X\dashrightarrow Y$ be a birational map of normal quasi-projective varieties. If
 \begin{itemize}
   \item $f$ does not extract divisors;
-  \item $a(E;X,B)\leqslant a(E;Y,B')$ for all divisor  $E$  over $X$ 
+  \item $a(E;X,B)\leqslant a(E;Y,B')$ for all divisor  $E$  over $X$.
 \end{itemize}
 then we write $(X,B)\geqslant (Y,B')$.
 \end{defn}
 In particular, for terminal pairs, we have following lemma: 
-\begin{lem}
+\begin{lem}\label{terminalorder}
 Let $f:W\dashrightarrow X$ be a birational map where $(W,B_W)$ is terminal. If
 \begin{itemize}
   \item $f$ does not extract divisors;
@@ -637,27 +637,20 @@ then
 \end{itemize}
 \end{lem}
 Conversely, start from a klt pair and non-positive map, we have
-\begin{lem}
-Let $p:(W,B_W)\dashrightarrow (X,B)$ be a $K_W+B_W$-non-positive birational map such that $f_*(K_W+B_W)=K_X+B$ and $(W,B_W)$ is a $\mathbb{Q}$-factorial klt pair. Then there is a resolution of indeterminacy $\pi:W'\to W $ and $p':W'\to X$ such that
+\begin{lem}\label{terminalresolution}
+  Let $\sigma:(W,B_W)\dashrightarrow (X,B)$ be a $K_W+B_W$-non-positive birational map such that $\sigma_*(K_W+B_W)=K_X+B$ and $(W,B_W)$ is a $\mathbb{Q}$-factorial klt pair. Then there is a resolution of indeterminacy $\pi:\tilde{W}\to W $ and $\tilde{\sigma}:\tilde{W}\to X$ such that
 \begin{itemize}
-  \item $(W',B'_W)$ is $\mathbb{Q}$-factorial terminal and $\pi_*B'_W=B_W$,
-  \item $p'$ is $(K_{W'}+B'_W)$-non-positive and $(W',B'_W)\geqslant (X,B)$.
+  \item $(\tilde{W},B_{\tilde{W}})$ is $\mathbb{Q}$-factorial terminal and $\tilde{\sigma}_*B_{\tilde{W}}$,
+  \item $\tilde{\sigma}$ is $(K_{\tilde{W}}+B_{\tilde{W}})$-non-positive and $(\tilde{W},B_{\tilde{W}})\geqslant (X,B)$.
 \end{itemize}
 \end{lem}
-\begin{lem}
-Let $f:(W,B_W)\dashrightarrow (X,B)$ be a $(K_W+B_W)$-non-positive birational map such that $f_*(K_W+B_W)=K_X+B$ and $(W,B_W)$ is a $\mathbb{Q}$-factorial klt pair. Then there is a resolution of indeterminacy $\pi:W'\to W $ and $p':W'\to X$ such that
-\begin{itemize}
-  \item $(W',B_{W'})$ is $\mathbb{Q}$-factorial terminal and $\pi_*B_{W'}=B_W$,
-  \item $p'$ is $(K_{W'}+B_{W'})$-non-positive and $(W',B_{W'})\geqslant (X,B)$.
-\end{itemize}
-\end{lem}
-By  above lemma, we replace $(W,B_W)$ by $(W',B_{W'})$, such that $(W,B_{W})$ is terminal and $p:W\to X$ and $q:W\to X'$ are $(K_W+B_W)$-non-positive morphisms, and $(W,B_W)\geqslant (X,B),(X',B')$. 
+By Lemma \ref{terminalresolution}, we can replace $(W,B_W)$ by its log resolution such that $(W,B_{W})$ is terminal and $\sigma:W\to X$ and $\sigma':W\to X'$ are $(K_W+B_W)$-non-positive morphisms, and $(W,B_W)\geqslant (X,B),(X',B')$. 
 
-Take  very general ample $\mathbb{Q}$-divisors $ A $ and $ A' $ on $ S $ and $ S' $ such that $ G\sim_{\mathbb{Q}}-(K_X+B)+f^*A $ and $ H\sim_{\mathbb{Q}}-(K_{X'}+B')+f^{'*}A' $. Moreover, we may assume $ G $ and $ H $ satisfying $G_{W}:= p^*G=p^{-1}_*G $ and $ H_{W}:=q^*H=q^{-1}_*H $.
+Take  very general ample $\mathbb{Q}$-divisors $ A $ and $ A' $ on $ S $ and $ S' $ such that $ G\sim_{\mathbb{Q}}-(K_X+B)+f^*A $ and $ H\sim_{\mathbb{Q}}-(K_{X'}+B')+f^{'*}A' $. Moreover, we may assume $ G $ and $ H $ satisfying $G_{W}:= \sigma^*G=\sigma^{-1}_*G $ and $ H_{W}:=\sigma^{'*}H=\sigma^{'-1}_*H $. Therefore $\sigma_{*}(K_{W}+B_{W}+G_{W})=K_{X}+B+G$ is nef, and Lemma \label{terminalorder} holds.
 Furthermore, we may assume $(W,B_W+gG_W+hH_W)$ is log smooth and terminal for all $0\leqslant g,h\leqslant 2$ by taking furthermore blowing up if necessary.
 Then we have Sarkisov program with double scaling of $(G_{W},H_{W})$: 
 % TODO: Rewrite statement
-\begin{thm}[Double Scaling]\label{maintheorem2}
+\begin{thm}\label{main2}
 Notations as above, there is a finite sequence of Sarkisov links
 \[
   \xymatrix{
@@ -684,42 +677,42 @@ such that
 \subsection{Construct Sarkisov links}
 % TODO: induction: assume $X_{i}$, then construct $X_{i+1}$. 
 
-This subsection we construct the links inductively. Suppose 
+This subsection we construct the links inductively. Suppose we have $\sigma_{i}:W\dashrightarrow X_{i}$ as in Theorem  \ref{main2}, that is 
 % Suppose $C_{i}$ is the $f_{i}$-vertical curve on $X_{i}$, then denote $r_{i}:=\frac{H_{i}.C_{i}}{G_{i}.C_{i}}$ and $D_{i}=B_{i}+g_{i}G_{i}+h_{i}H_{i}$.  
 \begin{itemize}
-  \item $(W,B_{W}+2G_{W}+2H_{W})$ is a terminal log smooth pair and $f:X\to S$ is a Mori fibre space;
-  \item $\pi:W\dashrightarrow  X$ is $(K_{W}+gG+hH_{W})$-non-positive biratinal map, and $(K_{X}+gG+hH)=\pi_{*}(K_{W}+gG_{W}+hH_{W})$ is nef and is relatively trivial over $S$;
-  \item $(W,B_{W}+gG_{W}+hH_{W})\geqslant (X,B+gG+hH)$;
-  \item $0\leqslant g,h\leqslant 1$ are two rational numbers.
+  \item $f_{i}:(X_{i},B_{i})\to S_{i}$ is a log Mori fibre space and $\sigma_{i*} B_{W}=B_{i}$;
+  \item $\sigma_{i}:W\dashrightarrow  X_{i}$ is $(K_{W}+g_{i}G+h_{i}H_{W})$-non-positive biratinal map, and $(K_{X_{i}}+g_{i}G+h_{i}H)=\sigma_{i*}(K_{W}+g_{i}G_{W}+h_{i}H_{W})$ is nef and is relatively trivial over $S_{i}$;
+  \item $(W,B_{W}+g_{i}G_{W}+h_{i}H_{W})\geqslant (X_{i},B_{i}+g_{i}G_{i}+h_{i}H_{i})$;
+  \item $0\leqslant g_{i},h_{i}\leqslant 1$ are two rational numbers.
 \end{itemize}
-Then we need to show that there is a Sarkisov link $X\dashrightarrow Y$ satisfying the theorem \ref{maintheorem2}. Similar with Sarkisov degree, we need to define some invariants:
+Then we need to show that there is a Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ satisfying the theorem \ref{main2}. Similarly with Sarkisov degree, we have following notations:
 \begin{defn}
-  Let $C$ be a general $f$-vertical curve on $X$, then
+  Let $C_{i}$ be a general $f_{i}$-vertical curve on $X_{i}$, then
   \begin{itemize}
-    \item $r:=\frac{H.C}{G.C}$ ;
-    \item Let $\Gamma$ be the set of $t\in [0,\frac{g}{r}] $ such that 
+    \item $r_{i}:=\frac{H_{i}.C_{i}}{G_{i}.C_{i}}$ ;
+    \item Let $\Gamma$ be the set of $t\in [0,\frac{g_{i}}{r_{i}}] $ such that 
       \begin{enumerate}
-        \item $(W,B_{W}+gG_{W}+hH_{W}t(G_{W}-rH_{W}))\geqslant (X,B+gG+hH+t(G-rH))$
-        \item $K_{X}+B_{V}+gG+hH+t(G-rH)$ is nef;
+        \item\label{nefcondition} $\left(W,B_{W}+g_{i}G_{W}+h_{i}H_{W}=t(G_{W}-r_{i}H_{W})\right)\geqslant \left(X_{i},B_{i}+g_{i}G+h_{i}H+t\left(G_{i}-r_{i}H_{i}\right)\right)$
+        \item\label{singularcondition} $K_{X_{i}}+B_{i}+g_{i}G+h_{i}H+t(G_{i}-r_{i}H_{i})$ is nef;
     \end{enumerate}
-    And Let $s=\max \Gamma $;
-  \item Let $D_{W}(t)=B_{W}+gG_{W}=hH_{W}+t(G_{W}-rH_{W})$ and $D(t)=B+gG+hH+t(G-rH))$. Let $g_Y=g-rs$ and $h_{Y}=h+s$, and let $r_{Y}=\frac{H_{Y}.C_{Y}}{G_{Y}.C_{Y}}$
+    And Let $s_{i}=\max \Gamma $;
+\item Let $D_{W,i}(t)=B_{W}+g_{i}G_{W}+h_{i}H_{W}+t(G_{W}-r_{i}H_{W})$ and $D_{i}(t)=B_{i}+g_{i}G_{i}+h_{i}H_{i}+t\left(G_{i}-r_{i}H_{i}\right))$. Let $g_{i+1}=g_{i}-r_{i}s_{i}$ and $h_{i+1}=h_{i}+s_{i}$. 
   \end{itemize}
 \end{defn}
-Then we have 
+Then we have (check \cite[Lemma 4.4]{liuSarkisovProgramGeneralized2019} for details)
 \begin{enumerate}
-    \item $r>0$ is well defined;
+    \item $r_{i}>0$ is well defined;
     \item either $\Gamma=\{0\} $ or is a closed interval;
-    \item $g_{Y}=g \Leftrightarrow h_{Y}=h \Leftrightarrow s=0$;
-    \item $\Gamma \subset [0,1-h]$. In particular, $h_{Y}\leqslant 1$.
+    \item $g_{i+1}=g_{i} \Leftrightarrow h_{i+1}=h_{i} \Leftrightarrow s_{i}=0$;
+    \item $\Gamma \subset [0,1-h_{i}]$. In particular, $h_{i+1}\leqslant 1$.
 \end{enumerate}
-\textbf{Construct links}: The construction is quite the same as the original method. If $s=\frac{g}{r}$, then $g_{Y}=0$, and we stop. Otherwise, $s<\frac{g}{r}$, then there are following cases:
+\textbf{Construct links}: If $s_{i}=\frac{g_{i}}{r_{i}}$, then $g_{i+1}=0$. Let $N=i+1$ and $h_{N}=0$ and let $X_{N}=X_{i}$ and $S_{N}=S_{i}$, then $X_{N}\to S_{N}$ is isomorphic to $f':X'\to S'$ (shown in the next subsection) and  we stop. Otherwise, if  $s_{i}<\frac{g_{i}}{r_{i}}$, then we construct the Sarkisov link $X_{i}\dashrightarrow X_{i+1}$  as following:
 \begin{enumerate}[A]
-  \item\label{2a} Suppose $s$ is \textbf{NOT} the threshold of first condition of $\Gamma$, that is, there exists $0<\epsilon\ll 1$, such that for any $X$-exceptional divisor $E$ on $W$, we have
+  \item\label{2a} Suppose $s_{i}$ is \textbf{NOT} the threshold of  condition \ref{nefcondition} of $\Gamma$, that is, there exists $0<\epsilon\ll 1$, such that for any $\sigma_{i}$-exceptional divisor $E$ on $W$, we have
     \[
-      a(E;X,D(s+\epsilon))\geqslant a(E;W,D_{W}(s+\epsilon))
+      a(E;X_{i},D_{i}(s_{i}+\epsilon))\geqslant a(E;W,D_{W,i}(s_{i}+\epsilon))
     \]
-    and $K_{X}+D(s+\epsilon)$ is not nef. Then there ia a $2$-dimensional $(K_{X}+D(s+\epsilon)-\delta G)$-negative extremal face $F$, spaned by $R=\mathbb{R}_{\geqslant 0}[C]$ and another extremal ray $P$. Hence there is a contraction $X\to U$ factoring through $f:X\to S$. Then we run $(K_{X}+D(s+\epsilon))$-MMP on $X$ over $U$.
+    and $K_{X_{i}}+D_{i}(s_{i}+\epsilon)$ is not nef. Then there ia a $2$-dimensional $(K_{X_{i}}+D_{i}(s_{i}+\epsilon)-\delta G_{i})$-negative extremal face $F$ for some $0< \delta \ll \epsilon $, spaned by $R=\mathbb{R}_{\geqslant 0}[C]$ and another extremal ray $P$. Hence there is a contraction $X\to U$ factoring through $f:X\to S$. Then we run $(K_{X}+D(s+\epsilon))$-MMP on $X$ over $U$.
     \begin{enumerate}[1]
     \item\label{2a1}After finitely many flips $X\dashrightarrow Y$ there is a fibration $Y\to T$, and this is a link of type III. Furthermore, $r_{Y}<r$.
     \item\label{2a2} After finitely many flips $X\dashrightarrow Z$ there is a divisorial contraction $X\to Y$, then let $T=U$ and $Y\to T$ is a Mori fibre space and this is a link of type IV.
@@ -1058,4 +1051,6 @@ Let $(W,B_{W}),A $ and $V$ as in the lemma \ref{keylemma}.  Pick $ D_{0} \in \ma
 
 \section{Others}
 
+\bibliographystyle{plain}
+\bibliography{ref}
 \end{document}
