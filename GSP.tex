@@ -387,6 +387,7 @@ Using the notation in the definition of Sarkisov degree, then there is a contrac
       .\] 
 \end{itemize}
 \end{lem}
+% need this proof 
 \begin{proof}
   We follow the proof in \cite[Proposition 1.6]{brunoLogSarkisovProgram1995} but for klt pair case.  Let $(W,B_{W})\in \mathcal{C}_{\theta}$ and $\sigma:W\to X,\sigma':W \to X'$ be the common resolution as in Definition \ref{sarkisovdegree} ,and suppose  $E_{1},\ldots ,E_{e}$ are   $(K_{X}+B_{X}+\frac{1}{\mu}H)$-$\theta$-crepant divisors after renumbering. Then we have
 
@@ -408,6 +409,7 @@ If $ \lambda\leqslant\mu $ and $ K_X+B+\frac{1}{\mu}H $ is nef, the two Mori fib
      \psi_{1}:X\dashrightarrow X_{1}$ of type I or II.
 \end{enumerate} 
 \end{claim}
+% need this proof
 \begin{proof}
 \begin{enumerate}
   \item\label{a} By assumption,  $\lambda\leqslant \mu$ and   $ K_X+B+\frac{1}{\mu}H $ is not nef. Suppose $ f $ is the contraction with respect to a $ (K_X+B) $-negative extremal ray $ R= \overline{\operatorname{ NE }}(X/S) $, then $ (K_X+B+\frac{1}{\mu}H).R=0 $ by definition of $ \mu $. There is an extremal ray $ P \subset \overline{\operatorname{ NE }}(X) $ such that $ (K_X+B+\frac{1}{\mu}H).P<0 $ and $ F:=P+R $ is an extremal face  (Check \cite[5.4.2]{cortiFactoringBirationalMaps} for details). Take  $ 0<\delta\ll 1 $ such that $ (K_X+B+(\frac{1}{\mu}-\delta)H).P<0 $, then $  (K_X+B+(\frac{1}{\mu}-\delta)H).R<0 $ since $H$ is $f$-ample, and $ F $ is a $  (K_X+B+(\frac{1}{\mu}-\delta)H) $-negative extremal face. Since $ (X,B+(\frac{1}{\mu}-\delta)H) $ is klt, there is  a contraction $ g:X\to T $ with respect  to $ F $ factorizing through $ f:X\to S $. Since  $ (X,B+\frac{1}{\mu}H) $ is klt, and $ \rho(X/T)=2 $,  we can  run $ (K_X+B+\frac{1}{\mu}H) $-MMP on $ X  $ with scaling of some ample divisor.  Since $ B+\frac{1}{\mu}H $ is relatively big,  the MMP terminates. There are following cases: 
@@ -457,8 +459,14 @@ After finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is 
 \end{rmk}
 
 \subsection{Termination}
-% First we need to show the procedure constructed in the last subsection terminates in finitely many steps. We need the following discreteness of nef threshold  $\mu$:
-We need following theorems:
+For now, we can only show the termination of Sarkisov program for klt threefold. In higher dimension, we need 
+\begin{enumerate}
+  \item discreteness of nef threshold $\mu$;
+  \item termination of flips;
+  \item ascending chain condition of log canonical threshold;
+  \item finiteness of local log canonical threshold.
+\end{enumerate}
+Discreteness of nef threshold holds by  following theorems:
 \begin{thm}\label{BAB}
   \cite[Theorem 1.1]{birkarSingularitiesLinearSystems2020} Let $ d $ be a natural number and $ \delta $ be a positivity real number, then the projective varieties $ X $ such that  \begin{itemize}
     \item  $ (X,B) $ is a $ \delta $-lc pair of dimension $ d $ for some boundary $ B $, and
@@ -472,19 +480,20 @@ We need following theorems:
 \begin{cor}\label{Discreteness}
   The nef threshold $ \mu $ with respect to $ \theta $ is discrete.
 \end{cor}
+% need this proof
 \begin{proof}
   Notice that all pairs in $ \mathcal{C}_\theta $ are $ \delta $-lc, then the general fibre  of $(F_{i},B_{F_{i}})$ of  $(X_{i},B_{i})\to S_{i}$ is  also $\delta$-lc with $\dim F_{i}\leqslant \dim X_{i}$. Thus they form a bounded family by Theorem \ref{BAB}. Take the integral $ I $ in  Lemma \ref{effeciveindex}, then $ I(K_{F_{i}}+B_{F_{i}}) $ is Cartier. Take a rational curve $ C_{F_{i}} $ in $ \overline{\operatorname{NE}}(F_{i}) $, then
   \[ 0<-I(K_{F_{i}}+B_{F}).C_{F_{i}}\leqslant 2I\dim F_{i} \]
   Notice that $ \mu=\frac{IH_{F_{i}}.C_{F_{i}}}{-I(K_{F_{i}}+B_{F_{i}}).C_{F_{i}}} $, where $ H_{F_{i}}.C_{F_{i}} $ and $ -I(K_{F_{i}}+B_{F_{i}}).C_{F_{i}} $ are integers, thus 
   \[ \mu\in \frac{1}{(2I\dim F_{i})!}\mathbb{N}.  \] \end{proof}
 
-We prove the termination by contraction. Otherwise, if there is an infinite sequence, i.e. there are infinitely many $ X_i $ and birational maps obtained from the program:
+We prove the termination (in dimension  $3$) by contraction. Otherwise, if there is an infinite sequence, i.e. there are infinitely many $ X_i $ and birational maps obtained from the program:
 \[ X=X_0\dashrightarrow X_1\dashrightarrow \cdots\dashrightarrow X_i \dashrightarrow\cdots\dashrightarrow X'\]
 Then we have:
 \begin{itemize}
-  \item Since $ \mu'\leqslant\mu_{i+1}\leqslant \mu_i $, and as is shown in \ref{Discreteness} that $ \{\mu_i\} $ is discreteness, there is an integer $ N $ such that $ \mu_i=\mu_N $ for all $ i>N $. In fact, we may assume $ N=0 $ and $ \mu_i=\mu_0=\mu $ for all $ i $;
-  \item  Notice that for case \ref{a1} and \ref{a2}, we have $ \mu_{i+1}<\mu_i $, thus there is no such links in the infinite sequence. If there is a link as case \ref{a3} or \ref{a4}, then $ \mu_{i+1}=\mu_i=\mu  $ and $ \lambda_{i+1}\leqslant \mu $, thus next link must be case \ref{a3} or \ref{a4} again, and  all links following must be case \ref{a3} or \ref{a4}. For case \ref{a3} we have $ \rho(X_{i+1})=\rho(X_i)-1 $, therefore there are only finitely many such links, and all links after are  case \ref{a4};
-  \item  Each Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ is obtained by $ (K+B+\frac{1}{\mu}H) $-MMP with scaling of a $\mathbb{Q}$-divisor $C_{i}$.  But we can choose $C_{i+1}$ to be the strict transform of $C_{i}$ in $X_{i+1}$, then the whole sequence is  $ (K+B+\frac{1}{\mu}H) $-MMP with scaling of a $\mathbb{Q}$-divisor $C_{0}$, and this ends. Therefore there are no links of case \ref{a3} or \ref{a4}, and i.e. all links are of case \ref{b}.
+  \item Since $ \mu'\leqslant\mu_{i+1}\leqslant \mu_i $, and as is shown in Corollary \ref{Discreteness} that $ \{\mu_i\} $ is discreteness, there is an integer $ N $ such that $ \mu_i=\mu_N $ for all $ i>N $. In fact, we may assume $ N=0 $ and $ \mu_i=\mu_0=\mu $ for all $ i $;
+  \item  Notice that for case \ref{a1} and \ref{a2}, we have $ \mu_{i+1}<\mu_i $, thus there is no such links in the infinite sequence. If there is a link as case \ref{a3} or \ref{a4}, then $ \mu_{i+1}=\mu_i=\mu  $ and $ \lambda_{i+1}\leqslant \mu $, thus next link must be case \ref{a3} or \ref{a4} again, and  all links following must be case \ref{a3} or \ref{a4}. For case \ref{a3} we have $ \rho(X_{i+1})=\rho(X_i)-1 $, therefore there are only finitely many such links, and all links after are  case \ref{a4}. Therefore it is a infinite sequence of flips of $(K_{X}+\frac{1}{\mu}H)$.
+  \item  In dimension $3$, flips terminate.  Therefore there are no links of case \ref{a4}, and i.e. all links are of case \ref{b}.
   \item For case \ref{b}, recall that $ \mu_{i+1}=\mu_i $ implies that
 \[
   \begin{aligned}
@@ -496,8 +505,7 @@ and notice that $ \dim S_i< \dim X $, hence we may assume $ \dim S_i=\dim S_0 $ 
 \end{itemize}
 We are left to show that there is no infinite sequence with stationary $ \mu_i $ and $ \dim S_i $. Since for case \ref{b}, $ \lambda_{i+1}\leqslant \lambda_i $ and $ \lambda_{i+1}=\lambda_i $ implies $ e_{i+1}<e_i $, furthermore $ \frac{1}{\lambda_i}\leqslant \frac{1}{\mu_0} $ , we have
 \[ c:=\lim_{i}\frac{1}{\lambda_i}>\frac{1}{\lambda_i}=c_i \]
-We prove it in servel steps:
-
+We give the sketch steps: 
 \begin{enumerate}[\textbf{Step} 1:]
   \item Claim that $ (X_i,B_i+cH_i) $ and $ (Z_i,B_i+cH_i) $ are log canonical for all $ i\gg 0 $. Otherwise, let
   \[ \alpha_i=\mathrm{lct}(X_i,B_i;H_i) \]
@@ -515,16 +523,8 @@ We prove it in servel steps:
 .}\]
   This step we will show that such 2-ray game of $ (K+B+c_iH) $-MMP on $ Z_i $ is also a 2-ray game of $ (K+B+cH) $-MMP.
 
-  Let $ P^k=\overline{\operatorname{NE}}(Z^k/X^k) $ and $ Q^k=\overline{\operatorname{NE}}(Z^k/X^{k+1}) $, then $ P^k $ is $ (K_{Z^k}+B_{Z^k}+c_0H_{Z^k}) $-positive and $ (K_{Z^k}+B_{Z^k}+c_0H_{Z^k}) $-negative. Need to show this also holds for each $ (K_{Z^k}+B_{Z^k}+cH_{Z^k}) $. Prove this by induction on $ k $.
-  % TODO: the foot $Z_{i}$ and others 
-  
-  Since $ c>c_i $, we have 
-  \[ K_Z+B_Z+cH_Z=p^*(K_X+B+cH)-aE\,(a>0) \]
-  By negativity lemma, there is a curve $ C_Z $ on $ Z $ mapping to a point on $ X $, and $ E.C_Z<0 $, thus we have $ (K_Z+B_Z+cH_Z).P^0>0 $, where $ P^0=\mathbb{R}_{\geqslant0}[C_Z]=\overline{\operatorname{NE}}(Z/X) $. Suppose
-  $(K_{Z^k}+B_{Z^k}+cH_{Z^k}).P^k>0$, then $ (K_{Z^k}+B_{Z^k}+cH_{Z^k}) $ is not nef over $ S $. In particular,  $ P^k $ is positive, and the other extremal ray $ Q^k $ is negative. This implies step 2. 
-  Furthermore, by decreasing of canonical divisor, we have
-  \[ a(\nu;X_i,B_i+cH_i)\leqslant a(\nu;X,B+cH) \]
-  and strictly inequality holds if and only if $ X_l\dashrightarrow X_{l+1} $ is not an isomorphism at center of $ \nu $ on $ X_l $ for some $ l<i $
+  Let $ P^k=\overline{\operatorname{NE}}(Z^k/X^k) $ and $ Q^k=\overline{\operatorname{NE}}(Z^k/X^{k+1}) $, then $ P^k $ is $ (K_{Z^k}+B_{Z^k}+c_0H_{Z^k}) $-positive and $ (K_{Z^k}+B_{Z^k}+c_0H_{Z^k}) $-negative. One can show this also holds for each $ (K_{Z^k}+B_{Z^k}+cH_{Z^k}) $  by induction on $ k $.
+
   \item Claim that $ (X_i,B_i+cH_i) $ is klt for all $ i\gg 0 $. Otherwise, if there are infinitely many $ i $ such that $ (X_i,B_i+cH_i) $ is not klt, since they are all log canonical, this is equivalent to say there infinitely many $ i $ and $ \nu_i $ such that
   \[ -1=a(\nu_i;X_i,B_i+cH_i)\geqslant a(\nu_i;X_0,B_0+cH_0)\geqslant -1  \]
   Therefore $ a(\nu;X_i,B_i+cH_i)=-1 $ and $ X_0\dashrightarrow X_i $ isomorphism at the center $ z(\nu_i,X) $. Thus the local $ \theta $-canonical threholds are same
@@ -535,7 +535,7 @@ We prove it in servel steps:
   \[ ct_{\theta}(\nu_i;X_i,B_i;H_i)<c \]
   Therefore
   \[ c_i\leqslant ct_{\theta}(\nu_i;X,B;H)<c \]
-  But the set $\{ ct_{\theta}(x;X,B;H);x\in X\} $ is finite, a contradiction! We may assume $ (X_i,B_i+cH_i) $ are all klt.
+  But the set $\{ ct_{\theta}(x;X,B;H);x\in X\} $ is finite (does not hold for higher dimension), a contradiction! We may assume $ (X_i,B_i+cH_i) $ are all klt.
   \item Note that $ E_i=\mathrm{Exc}(p_i) $ are all distinct. Otherwise, assume $ E_i=E_j $ for some $ i<j $, then $ Z_i $ and $ Z_j $ are isomorphic in a neighborhood of $ E_i $ and $ E_j $, thus 
   \[ a(E_i;X_i,B_i+cH_i)=a(E_j;X_j,B_j+cH_j) \]
   However, since $ E_i=E_j $ is not a divisor on $ X_j $, there is $ k<j $ such that $ E_j $ is contracted by $ Z'_k\to X_{k+1} $, therefore $ X_k\dashrightarrow X_{k+1} $ is not isomorphic at $ E_j $, hence 
@@ -546,7 +546,7 @@ We prove it in servel steps:
   \[ a(E_i;X,B+cH)\leqslant  a(E_i;X_i,B_i+cH_i)<-\theta (E)\leqslant 0 ,\] 
   a contradiction! 
 \end{enumerate}
-At last we have the Noether-Fano-Iskovskikh criterion to show when they are isomorphic:
+At last we have the Noether-Fano-Iskovskikh criterion (hold for all dimensions) to show when they are isomorphic:
 
 \begin{thm}\label{nfi}
   (Noether-Fano-Iskovskikh Criterion): Notations as in the definition of Sarkisov degree, then 
@@ -559,6 +559,8 @@ At last we have the Noether-Fano-Iskovskikh criterion to show when they are isom
   \end{enumerate}
 \end{thm}
 
+
+% need this proof 
 \begin{proof}
 % Suppose  $ B=\sum_ib_iB_i+\sum_jd_jD_j $ and $ B'=\sum_jd_j'D_j+\sum_kb_k'B_k' $, where $ B_i $ are divisors on $ X $ but not on $ X' $, $ B_k' $ are divisors on $ X' $ but not on $ X $, and $ D_j $ are divisors on both $ X $ and $ X' $.
   We follow the proof in \cite{haconMinimalModelProgram2012},\cite{liuSarkisovProgramGeneralized2021} and \cite{cortiFactoringBirationalMaps}:
@@ -750,6 +752,7 @@ then
   \end{enumerate}
 \end{lem}
 
+%maybe need this proof
 \begin{proof}
 \begin{enumerate}
   \item This essentially follows from the finiteness of weak log canonical model (Theorem \ref{finitewlcm}). We construct the subspace $V$ of $\operatorname{WDiv}_{\mathbb{R}}(W)$ as following: 
@@ -864,18 +867,6 @@ $\qquad\qquad\qquad\qquad$or$\qquad\qquad\qquad\qquad$
   \draw(0,0)--(3,3);
   \draw(3,1.5)node{$ \mathcal{O}= \mathcal{C}_{A,g}$};
 \end{tikzpicture}
-\begin{proof}
- By assumption $f$  is birational and $X$  is $\mathbb{Q}$-factorial. Let $h: W \dashrightarrow S$ be the ample model corresponding to  $K_{W}+D$. Since $D$  is not a point of the boundary of $\mathcal{L}_{A}(V)$,  if $D$ belongs to the boundary of $\mathcal{E}_{A}(V)$ then $K_{W}+D$ is not big and so $h$  is not birational. As $\mathcal{O}$   is a subset of both $\mathcal{C}_{A,f}$ and $\mathcal{C}_{A,g}$ there are morphisms $p: X\to S $ and  $q:Y\to S$ 
-of relative Picard number at most one. There are therefore only two cases
-\begin{enumerate}
-  \item $\rho (X)=\rho(Y)+1$, or 
-  \item $\rho(X)=\rho(Y)$
-\end{enumerate}
-Suppose we are in the first case, then $q$ is the identity and $p=\pi:X\to Y$  is a contraction morphism such that $
-g=p \circ f$. Suppose that $\pi$ is birational, then $ h $ is birational and $\mathcal{O}$ is not contained in the boundary of  $\mathcal{E}_{A}(V)$. If $\pi$ is divisorial then $Y$ is $\mathbb{Q}$-factorial and so $\mathcal{O} \neq \mathcal{C}_{A,g}$. If $\pi $ is a small contraction then $Y$ is not $\mathbb{Q}$-factorial and so $\mathcal{C}_{A,g}=\mathcal{O}$ is one dimensional. If $\pi $ is a log Mori fibre space then $\mathcal{O} $ is contained in the boundary of $\mathcal{E}_{A}(V)$ and $\mathcal{O} = \mathcal{C}_{A,g}$.
-
-Now suppose we are in the second case. Since $\rho(X/S)=\rho(Y/S)=1$, we know that $p,q$ are not divisorial contractions as $\mathcal{O}$ is one dimensional. $p,q $ are not Mori fibre spaces as $\mathcal{O} $  cannot be contained in the boundary of $\mathcal{E}_{A}(V)$. Hence  $p,q$ are small and $\pi:X\dashrightarrow Y$ is a flop.
-\end{proof}
 
 \begin{lem}
   \cite[Lemma 3.6]{haconSarkisovProgram2012} Let $f:W\dashrightarrow X $ be a birational contraction between $\mathbb{Q}$-factorial varieties. Suppose $(W,D)$ and $(W,D+A)$ are both klt. If $f$ is ample model of $(W,D+A)$ and $A$ is ample, then $f$ is a result of  $(K_{W}+D)$-MMP.
@@ -899,6 +890,7 @@ Set $ f=f_1:W\dashrightarrow X, g=f_k:W\dashrightarrow Y $ and $ \phi:X\to S=S_0
 \begin{thm}\label{constructlink}
   \cite[Theorem 3.7]{haconSarkisovProgram2011} Suppose $ B_W $ is a divisor such that $ K_W+B_W $ is klt and $ D-B_W $ is ample. Then $ \phi $ and $ \psi $ are log Mori fibre spaces as outputs of $ (K_W+B_W) $-MMP and connected by a Sarkisov link if $ D $ is contained in more than two polytopes.
 \end{thm}
+% need this proof
 \begin{proof}
   WMA $ k\geqslant 3 $ and we have 
   $$ \xymatrix{
@@ -925,6 +917,8 @@ We need a special resolution $W$ and a special  affine subspace $V \subset \oper
     \item $ \mathcal{C}_{A,\phi\circ f} $ and $ \mathcal{C}_{A,\psi\circ g} $ are one dimensional.
   \end{enumerate}
 \end{lem}
+
+% need this proof
 \begin{proof}
   By assumption there is a $\mathbb{Q}$-factorial klt pair $(W,B_{W})$ such that $f:W\dashrightarrow X$ and $g:W \dashrightarrow Y$are  outputs of $(K_{W}+B_{W})$-MMP. Let $p':W'\to W$ be any log resolution such that resolves the indeterminacy of $f$ and $g$, then we may write
   \[
@@ -972,8 +966,10 @@ Thus $\mathcal{A}_{A,\phi\circ f}$ is not contained in the boundary of $\mathcal
 Let $V_{1}$ be the translate by $B_{0}$ of the two dimensional vector space spaned by $F+H-A$ and $G+H-A$. Let $V$ be a small general perturbation of $V_{1}$ as in Lemma \ref{subspace}, which is defined over rationals. This is the affine subspace we need.
 \end{proof}
 Then we can prove the main theorem
-\begin{proof}[Proof of \ref{main}]
-Let $(W,B_{W}),A $ and $V$ as in the Lemma \ref{keylemma}.  Pick $ D_{0} \in \mathcal{A}_{A,\phi\circ f} $  and $ D_1\in \mathcal{A}_{A,\psi\circ g} $ belonging to the interior of $ \mathcal{L}_A(V) $. As $ V $ is two dimensional, removing $ D_0 $ and $ D_1 $ divides the boundary of $ \mathcal{E}_A(V) $ into two parts. The part which consists entirely of divisors which are not big is contained in the interior of $ \mathcal{L}_A(V) $. Consider tracing this boundary from $ D_0 $ to $ D_1 $. Then there are finitely many $ 2\leqslant i\leqslant N $ points $ D_i $ which are contained in more than two polytopes $ \mathcal{C}_{A,f_i}(V) $. By lemma \ref{constructlink},  each point $ D_i $ gives a Sarkisov link. And the birational map $X \dashrightarrow Y$ is the composition of such Sarkisov links.
+
+% need this proof
+\begin{proof}[Proof of the main theorem]
+Let $(W,B_{W}),A $ and $V$ as in the lemma \ref{keylemma}.  Pick $ D_{0} \in \mathcal{A}_{A,\phi\circ f} $  and $ D_1\in \mathcal{C}_{A,g} $ belonging to the interior of $ \mathcal{L}_A(V) $. As $ V $ is two dimensional, removing $ D_0 $ and $ D_1 $ divides the boundary of $ \mathcal{E}_A(V) $ into two parts. The part which consists entirely of divisors which are not big is contained in the interior of $ \mathcal{L}_A(V) $. Consider tracing this boundary from $ D_0 $ to $ D_1 $. Then there are finitely many $ 2\leqslant i\leqslant N $ points $ D_i $ which are contained in more than two polytopes $ \mathcal{C}_{A,f_i}(V) $. By lemma \ref{constructlink},  each point $ D_i $ gives a Sarkisov link. And the birational map $X \dashrightarrow Y$ is composition of such links.
 \end{proof}
 
 \section{Examples}
