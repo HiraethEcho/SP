@@ -57,12 +57,12 @@ The \textbf{Minimal model program (MMP)}  aims to classify varieties up to birat
 However, for each case the output may not be unique.
 
 For the first case, it is shown that two different minimal model can be linked by flops:
-\begin{thm}[\cite{kawamataFlopsConnectMinimal2008}]
-  Let $(W,B_W)$ be a $\mathbb{Q}$-factorial terminal pair, and $(X,B),(Y,D)$ are two minimal models of $(W,B_W)$. Then the birational map $X\dashrightarrow Y$ may be factored as sequence of $(K_X+B)$ flops. 
+\begin{thm}
+  \cite[Theorem 1]{kawamataFlopsConnectMinimal2008} Let $(W,B_W)$ be a $\mathbb{Q}$-factorial terminal pair, and $(X,B),(Y,D)$ are two minimal models of $(W,B_W)$. Then the birational map $X\dashrightarrow Y$ may be factored as sequence of $(K_X+B)$ flops. 
 \end{thm}
 For the second case, it is shown that:
 
-\begin{thm}
+\begin{thm}\label{main}
   Let $ f:(X,B)\to S$ and $,f':(X',B')\to S' $ be two MMP related $ \mathbb{Q} $-factorial klt log Mori fibre spaces with induced induced  birational map $\Phi$:
   \[ \xymatrix{
     (X,B)\ar[d]_f\ar@{.>}[r]^\Phi&(X',B')\ar[d]^{f'}\\
@@ -96,7 +96,6 @@ For the second case, it is shown that:
     X\ar[d]_f\ar@{.>}[rr]&&X_1\ar[d]^{f_1}\\
     S\ar[dr]_{s}&&S_1\ar[dl]^{t}\\
     &T &}$
-% TODO:   文字环绕
   Here, all $ f:(X,B)\to S $ and $ f_1:(X_1,B_1)\to S_1 $ are log Mori fibre space, and all $ p,q $ are divisorial contractions, and all dash arrows are composition of flips, flops and inverse flips. 
 \end{defn}
 % \begin{rmk}
@@ -123,28 +122,28 @@ In \cite{haconMinimalModelProgram2012}, double scaling;
 In this article, all varieties are over complex number $\mathbb{C}$.
 \subsection{Models}
 \begin{defn}
-  A rational map $f:X\to S$ is called a \textbf{rational contraction} if there is a resolution $p:W\dashrightarrow X$  and $q:W\dashrightarrow Y$  of $f$  such that $p$  and $q$  are contraction morphisms and $p$  is birational. $f$ is called a \textbf{birational contraction} if $q$  is in addition birational and every $p$ -exceptional divisor is $q$ -exceptional. If in addition $f^{-1}$ is also a \textbf{birational contraction}, then $f$ is called a \textbf{small birational map}.
+  \cite[2.Notation and Conventions]{haconSarkisovProgram2011} A rational map $f:X\to S$ is called a \textbf{rational contraction} if there is a resolution $p:W\dashrightarrow X$  and $q:W\dashrightarrow Y$  of $f$  such that $p$  and $q$  are contraction morphisms and $p$  is birational. $f$ is called a \textbf{birational contraction} if $q$  is in addition birational and every $p$ -exceptional divisor is $q$ -exceptional. If in addition $f^{-1}$ is also a \textbf{birational contraction}, then $f$ is called a \textbf{small birational map}.
 \end{defn}
 
 \begin{defn}\label{negativemap}
-Let $f:X\dashrightarrow Y$ be a birational map of normal quasi-projective varieties, and $p:W\to X$ and $q:W\to Y$ be a resolution of indeterminacy of $f$l. Let $D$ be a $\mathbb{R}$-Cartier divisor on $X$ such  $D_{Y}=f_*D$ is  also $\mathbb{R}$-Cartier. Then $f$ is called \textbf{$D$-non-positive ($D$-negative)} if
+  \cite[Definition 3.6.1]{birkarExistenceMinimalModels2009}Let $f:X\dashrightarrow Y$ be a birational map of normal quasi-projective varieties, and $p:W\to X$ and $q:W\to Y$ be a resolution of indeterminacy of $f$l. Let $D$ be a $\mathbb{R}$-Cartier divisor on $X$ such  $D_{Y}=f_*D$ is  also $\mathbb{R}$-Cartier. Then $f$ is called \textbf{$D$-non-positive ($D$-negative)} if
 \begin{itemize}
   \item $f$ does not extract any divisor;
   \item $E=p^{*}D-q^*D_Y$ is effecive and exceptional over $Y$ (and $\operatorname{Supp}p_*E$ contains all $f$-exceptional divisors).
 \end{itemize}
 \end{defn}
 \begin{defn}\label{trivialmap}
-  Let $f:X\dashrightarrow Y$ be a rational map of normal quasi-projective varieties over $S$, and $D$ be a $\mathbb{R}$-Cartier $\mathbb{R}$-divisor divisor on $X$ with $f_*D=D_Y$. Then $f$ is called \textbf{$D$-trivial} if $D$ is pull back of a $\mathbb{R}$-Cartier divisor on $S$.
+  \cite[13.2.Notation and conventions]{haconMinimalModelProgram2012} Let $f:X\dashrightarrow Y$ be a rational map of normal quasi-projective varieties over $S$, and $D$ be a $\mathbb{R}$-Cartier $\mathbb{R}$-divisor divisor on $X$ with $f_*D=D_Y$. Then $f$ is called \textbf{$D$-trivial} if $D$ is pull back of a $\mathbb{R}$-Cartier divisor on $S$.
 \end{defn}
 
 Recall the definitions of models in \cite{birkarExistenceMinimalModels2009}
 \begin{defn}
-  Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties and let $D$ be an $\mathbb{R}$-Cartier divisor on $X$. Let $ f:X\dashrightarrow Y $ be a birational map over $ U $, then $ Z $ is an \textbf{semiample model } for $ D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is semiample over $ U $.
+  \cite[Definition 3.6.5]{birkarExistenceMinimalModels2009} Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties and let $D$ be an $\mathbb{R}$-Cartier divisor on $X$. Let $ f:X\dashrightarrow Y $ be a birational map over $ U $, then $ Z $ is an \textbf{semiample model } for $ D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is semiample over $ U $.
 
   Let $ g:X\dashrightarrow Z $ be a rational map over $ U $, then $ Z $ is an \textbf{ample model } for $ D $ over $ U $ if there is a an ample divisor over $U$  on $Z$  such that if $p:W \to X $ and $q:W \to Z $ resolves $g$, then $q$ is a contraction morphism and we may write $p^*D \sim_{\mathbb{R},U} q^*H+E$, where $E\geqslant 0$ and for any $B \in |p^*D/U|_{\mathbb{R}}$, then $B\geqslant E$.
 \end{defn}
 \begin{defn}\label{models}
-  Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties, if $ K_X+D $ is log canonical and $ f:X\dashrightarrow Y $ is a birational map extracts no divisors, then define:
+  \cite[Definition 3.6.7]{birkarExistenceMinimalModels2009} Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties, if $ K_X+D $ is log canonical and $ f:X\dashrightarrow Y $ is a birational map extracts no divisors, then define:
   \begin{enumerate}
     \item $ Y $ is \textbf{weak log canonical model} for $ K_X+D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is nef over $ U $;
     \item $ Y $ is \textbf{ log canonical model} for $ K_X+D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is ample over $ U $;
@@ -172,7 +171,7 @@ Futhermore, for big boundary, we have
   \end{itemize}
 \end{lem}
 \begin{defn}\label{polytopeofdivisor}
-  Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and  let $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(X) $ defined over rational numbers. Define
+  \cite[Definition 1.1.4]{birkarExistenceMinimalModels2009} Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and  let $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(X) $ defined over rational numbers. Define
   \[
     \begin{aligned}
       \mathcal{L}(V)&=\{D\in V: K_X+D \text{ is log canonical }\} \\
@@ -196,12 +195,12 @@ Futhermore, for big boundary, we have
 \end{defn}
 
 By \cite[Lemma 3.7.2]{birkarExistenceMinimalModels2009}, if $V$  is a rational subspace, then $\mathcal{L}_{A}(V)$ is a rational polytope.
-\begin{lem}[finiteness of weak log canonical models]\label{finitewlcm}
-  Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties, and $A$ be an general divisor relatively ample over $U$, and $V \subset \operatorname{Div}_{\mathbb{R}}(X)$ be a finite dimensions rational subspace. Suppose that there is a klt pair $(X,\Delta_{0})$. Then there are finitely many birational maps $f_{i}:X \dashrightarrow X_{i}$ such that if $f:X \dashrightarrow  Y$ is a weak log canonical model of $K_{X}+D$ over $U$ for some $D \in \mathcal{L}_{A}(V)$, then there is an isomorphism  $h_{i}:X_{i} \to Y$  and $f=h_{i}\circ f_{i}$.  
+\begin{lem}\label{finitewlcm}
+  \cite[Theorem E]{birkarExistenceMinimalModels2009} Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties, and $A$ be an general divisor relatively ample over $U$, and $V \subset \operatorname{Div}_{\mathbb{R}}(X)$ be a finite dimensions rational subspace. Suppose that there is a klt pair $(X,\Delta_{0})$. Then there are finitely many birational maps $f_{i}:X \dashrightarrow X_{i}$ such that if $f:X \dashrightarrow  Y$ is a weak log canonical model of $K_{X}+D$ over $U$ for some $D \in \mathcal{L}_{A}(V)$, then there is an isomorphism  $h_{i}:X_{i} \to Y$  and $f=h_{i}\circ f_{i}$.  
 
 \end{lem}
 
-\begin{thm}[finiteness of models]\label{finitemodel}
+\begin{thm}\label{finitemodel}
 \cite[Corollary 1.1.5]{birkarExistenceMinimalModels2009}Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties, and $A$ be an general divisor relatively ample over $U$, and $V \subset \operatorname{Div}_{\mathbb{R}}(X)$ be a finite dimensions rational subspace. Suppose that there is a divisor $\Delta_{0} \in V$ such that $(X,\Delta_{0})$ is klt. Let $A$ be a general ample $\mathbb{Q}$-divisor over $U$ which has no components common with any element of $V$.  
   \begin{enumerate}
     \item   There are finitely many birational maps $f_{i}:X \dashrightarrow   X_{i}$ over $U$ such that 
@@ -220,32 +219,32 @@ By \cite[Lemma 3.7.2]{birkarExistenceMinimalModels2009}, if $V$  is a rational s
   In particular $\mathcal{E}_{A,\pi}$ is a rational polytope and  $\overline{\mathcal{A}_{j}}$ is a finite union of raional polytopes. 
 \end{thm}
 
-\begin{thm}[finiteness of models]\label{finiteamplemodel}
-  Let $W$ be a smooth projective   varieties, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
-  \begin{enumerate}
-    \item $ \{\mathcal{A}_i=\mathcal{A}_{A,f_i}\} $ is a partition of $ \mathcal{E}_{A}(V) $. $ \mathcal{A}_i $ is a finite union of interiors of rational polytopes. If $ f_i $ is birational then $ \mathcal{C}_i=\mathcal{C}_{A,f_i} $ is a rational polytope;
-      \item  
-  \end{enumerate}
-\end{thm}
+% \begin{thm}[finiteness of models]\label{finiteamplemodel}
+%   Let $W$ be a smooth projective   varieties, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
+%   \begin{enumerate}
+%     \item $ \{\mathcal{A}_i=\mathcal{A}_{A,f_i}\} $ is a partition of $ \mathcal{E}_{A}(V) $. $ \mathcal{A}_i $ is a finite union of interiors of rational polytopes. If $ f_i $ is birational then $ \mathcal{C}_i=\mathcal{C}_{A,f_i} $ is a rational polytope;
+%       \item  
+%   \end{enumerate}
+% \end{thm}
 
-\begin{thm}[morphisms between models]
-  Let $W$ be a smooth projective   varieties, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
-  \begin{enumerate}
-    \item If $ i,j $ are two indices such that $ \mathcal{A}_j\cap \mathcal{C}_i\neq \emptyset $ then there is a contraction $ f_{ij}:X_i\to X_j $ and $ f_j=f_{ij}\circ f_i $;
-  \end{enumerate}
-  Suppose in addition $ V $ spans $ \mathrm{NS}(W) $, then
-  \begin{enumerate}
-    \item Pick $ i $ such that a connected components $ \mathcal{C} $ of $ \mathcal{C}_i $ intersects the interior of $ \mathcal{L}_A(V) $, TFAE:
-    \begin{enumerate}
-      \item $ \mathcal{C} $ spans $ V $;
-      \item If $ D\in \mathcal{A}_i\cap \mathcal{C} $ then $ f_i $ is a log terminal model of $ K_W+D $;
-      \item $ f_i $ is birational and $ X_i $ is $ \mathbb{Q} $-factorial.
-    \end{enumerate}
-  \end{enumerate}
-  \begin{enumerate} 
-    \item If $ i,j $ are two indices such that $ \mathcal{C}_i $ spans $ V $ and $ D $ is a general point of $ \mathcal{A}_j\cap \mathcal{C}_i $ which is also a point of interior of $ \mathcal{L}_A(V) $, then $ \mathcal{C}_i $ and $ \overline{\mathrm{NE}}(X_i/X_j)^*\times \mathbb{R}^k $ for some $ k\leqslant 0 $. Furthermore $ \rho(X_i/X_j) $ equals the differece in the dimensions of $ \mathcal{C}_i $ and $ \mathcal{C}_j\cap \mathcal{C}_i $.
-  \end{enumerate}
-\end{thm}
+% \begin{thm}[morphisms between models]
+%   Let $W$ be a smooth projective   varieties, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
+%   \begin{enumerate}
+%     \item If $ i,j $ are two indices such that $ \mathcal{A}_j\cap \mathcal{C}_i\neq \emptyset $ then there is a contraction $ f_{ij}:X_i\to X_j $ and $ f_j=f_{ij}\circ f_i $;
+%   \end{enumerate}
+%   Suppose in addition $ V $ spans $ \mathrm{NS}(W) $, then
+%   \begin{enumerate}
+%     \item Pick $ i $ such that a connected components $ \mathcal{C} $ of $ \mathcal{C}_i $ intersects the interior of $ \mathcal{L}_A(V) $, TFAE:
+%     \begin{enumerate}
+%       \item $ \mathcal{C} $ spans $ V $;
+%       \item If $ D\in \mathcal{A}_i\cap \mathcal{C} $ then $ f_i $ is a log terminal model of $ K_W+D $;
+%       \item $ f_i $ is birational and $ X_i $ is $ \mathbb{Q} $-factorial.
+%     \end{enumerate}
+%   \end{enumerate}
+%   \begin{enumerate} 
+%     \item If $ i,j $ are two indices such that $ \mathcal{C}_i $ spans $ V $ and $ D $ is a general point of $ \mathcal{A}_j\cap \mathcal{C}_i $ which is also a point of interior of $ \mathcal{L}_A(V) $, then $ \mathcal{C}_i $ and $ \overline{\mathrm{NE}}(X_i/X_j)^*\times \mathbb{R}^k $ for some $ k\leqslant 0 $. Furthermore $ \rho(X_i/X_j) $ equals the differece in the dimensions of $ \mathcal{C}_i $ and $ \mathcal{C}_j\cap \mathcal{C}_i $.
+%   \end{enumerate}
+% \end{thm}
 \subsection{MMP}
 \begin{thm}
 \cite[Corollary 1.4.2]{birkarExistenceMinimalModels2009}Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and let $(X,B)$ be a $\mathbb{Q}$-factorial klt pair where $K_{X}+B$ is $\mathbb{R}$-Cartier and $B$ is $\pi$-big. Let $C\geqslant0$ be an $\mathbb{R}$-divisor. If $K_{X}+B+C$ is klt and  $\pi$-nef, then we may run $(K_{X}+B)$-MMP over $U$  with scaling of $C$ and  terminates.
@@ -255,7 +254,7 @@ By \cite[Lemma 3.7.2]{birkarExistenceMinimalModels2009}, if $V$  is a rational s
 \end{thm}
 
 \begin{cor}\label{extraction}
-Let $ (X,B) $ be a a klt pair and $\mathfrak{C}$ be any set of exceptional divisors such that  contains only exceptional divisors $ E $ of discrepancy $ a(E;X,B)\leqslant 0 $. Then there is a birational morphism $ f:Z\to X $ and a $ \mathbb{Q} $-divisor $ B_Z $ such that:
+  \cite[Corollary 13.7]{haconMinimalModelProgram2012} and \cite[Corollary 1.4.3]{birkarExistenceMinimalModels2009}: Let $ (X,B) $ be a a klt pair and $\mathfrak{C}$ be any set of exceptional divisors such that  contains only exceptional divisors $ E $ of discrepancy $ a(E;X,B)\leqslant 0 $. Then there is a birational morphism $ f:Z\to X $ and a $ \mathbb{Q} $-divisor $ B_Z $ such that:
   \begin{enumerate}
     \item $ (Z,B_Z) $ is klt;
     \item $ E $ is a $f$-exceptional divisor if and only if $ E\in \mathfrak{C} $;
@@ -312,6 +311,7 @@ Let $ K=K(X) $ be the function field, and let $ \Sigma=\{\nu\} $ be the set of d
   \end{enumerate} 
 \end{defn}
 For example, if we take $\theta \equiv 0$ constant, the $\mathcal{C}_{\theta}$ is the collection of all terminal varieties $Y$ without boundary birational to $X$. Furthermore, we can define the corresponding discrepancy:
+% TODO:cite or ref?
 \begin{defn}[$\theta$-discrepancy]
   Let $(X,B)$ be a pair in the category $\mathcal{C}_{\theta}$ for some function $\theta$ and let  $f:Y\to X$ be a log resolution of $(X,B)$. Suppose
   \[
@@ -419,7 +419,7 @@ Using the notation in the definition of Sarkisov degree, then there is a contrac
 \end{itemize}
 \end{lem}
 \begin{proof}
-  Let $(W,B_{W})\in \mathcal{C}_{\theta}$ and $\sigma:W\to X,\sigma':W \to X'$ be the common resolution as in Definition \ref{sarkisovdegree} ,and suppose  $E_{1},\ldots ,E_{e}$ are   $(K_{X}+B_{X}+\frac{1}{\mu}H)$-$\theta$-crepant divisors after renumbering. Then we have
+  We follow the proof in \cite[Proposition 1.6]{brunoLogSarkisovProgram1995} but for klt pair case.  Let $(W,B_{W})\in \mathcal{C}_{\theta}$ and $\sigma:W\to X,\sigma':W \to X'$ be the common resolution as in Definition \ref{sarkisovdegree} ,and suppose  $E_{1},\ldots ,E_{e}$ are   $(K_{X}+B_{X}+\frac{1}{\mu}H)$-$\theta$-crepant divisors after renumbering. Then we have
 
 \[ K_W+B_W+\frac{1}{\lambda} H_W=\sigma^*(K_X+B+\frac{1}{\lambda} H)+\sum_{l=1}^{e} 0\cdot E_{l}+\sum_{l>e}(a_l-\frac{1}{\lambda} f_l)E_l .\]
 We run $(K_{W}+B_{W}+\frac{1}{\lambda}H_{W})$-MMP on $W$ over $X$ with scaling of some ample divisor, then the MMP ends with a minimal model $p:(Y,B_{Y}+\frac{1}{\lambda}H_{Y})\to X$  of $(W,B_{W}+\frac{1}{\lambda}H_{W})$ over $X$ and the exceptional locus is exactly $\cup_{i=1}^{e}E_{i}$ and $p$ is crepant: 
@@ -596,6 +596,7 @@ At last we have the Noether-Fano-Iskovskikh criterion to show when they are isom
 
 \begin{proof}
 % Suppose  $ B=\sum_ib_iB_i+\sum_jd_jD_j $ and $ B'=\sum_jd_j'D_j+\sum_kb_k'B_k' $, where $ B_i $ are divisors on $ X $ but not on $ X' $, $ B_k' $ are divisors on $ X' $ but not on $ X $, and $ D_j $ are divisors on both $ X $ and $ X' $.
+  % TODO: We follow the proof in 
   \begin{enumerate}
     \item Only need to show $ (K_X+B+\frac{1}{\mu'}H) $ is $ f $-nef.   Let $\sigma:W\to X$ and $\sigma':W\to X'$ be the common resolution. Consider the ramification formulas:
       \[
@@ -642,7 +643,7 @@ then we write $(X,B)\geqslant (Y,B_{Y})$.
 \end{defn}
 In particular, for terminal pairs, we have following lemma: 
 \begin{lem}\label{terminalorder}
-Let $f:W\dashrightarrow X$ be a birational map where $(W,B_W)$ is terminal. If
+\cite[Lemma 13.8]{haconMinimalModelProgram2012} Let $f:W\dashrightarrow X$ be a birational map where $(W,B_W)$ is terminal. If
 \begin{itemize}
   \item $f$ does not extract divisors;
   \item $K_X+B$ is nef, where $B=f_*B_W$;
@@ -658,7 +659,7 @@ then
 \end{lem}
 Conversely, start from a klt pair and non-positive map, we have
 \begin{lem}\label{terminalresolution}
-  Let $\sigma:(W,B_W)\dashrightarrow (X,B)$ be a $K_W+B_W$-non-positive birational map such that $\sigma_*(K_W+B_W)=K_X+B$ and $(W,B_W)$ is a $\mathbb{Q}$-factorial klt pair. Then there is a resolution of indeterminacy $\pi:\tilde{W}\to W $ and $\tilde{\sigma}:\tilde{W}\to X$ such that
+  \cite[Lemma 3.5]{liuSarkisovProgramGeneralized2019} Let $\sigma:(W,B_W)\dashrightarrow (X,B)$ be a $K_W+B_W$-non-positive birational map such that $\sigma_*(K_W+B_W)=K_X+B$ and $(W,B_W)$ is a $\mathbb{Q}$-factorial klt pair. Then there is a resolution of indeterminacy $\pi:\tilde{W}\to W $ and $\tilde{\sigma}:\tilde{W}\to X$ such that
 \begin{itemize}
   \item $(\tilde{W},B_{\tilde{W}})$ is $\mathbb{Q}$-factorial terminal and $\tilde{\sigma}_*B_{\tilde{W}}$,
   \item $\tilde{\sigma}$ is $(K_{\tilde{W}}+B_{\tilde{W}})$-non-positive and $(\tilde{W},B_{\tilde{W}})\geqslant (X,B)$.
@@ -760,13 +761,13 @@ Then we have (check \cite[Lemma 4.4]{liuSarkisovProgramGeneralized2019} for deta
     \item Since the birational map $X_{i}\dashrightarrow X_{i+1}$ is over $T_{i}$ (over $S_{i}$) and $(K_{X_{i}}+D_{i}(s_{i}))$ is numerically trival over $T_{i}$ (over $S_{i}$) in case \ref{2a} (case \ref{2b}), it follows that $a(E;X_{i},D_{i}(s_{i}))\leqslant a(E;X_{i+1},D_{i+1})$.
   \item  In case \ref{2a}, for any divisor $E \subset W$, we have $a(E;X_{i},D_{i}(s_{i}+\epsilon))\leqslant a(E;X_{i+1},D_{i+1}(\epsilon))$ for all $0<\epsilon\ll 1$. Moreover, since $X_{i} \not\cong X_{i+1}$, there is a divisor $F$ over $W$ such that  $a(F,X_{i},D_{i}(s_{i}+\epsilon))< a(F,X_{i+1},D_{i+1}(\epsilon))$.
 
-  \item   In case \ref{2b}, for any divisor $E \subset W$, we have $a(E;X_{i},D_{i}(s_{i}+\epsilon)-\delta G_{i})\leqslant a(E;X_{i+1},D_{i+1}(\epsilon)-\delta G_{i+1})$ for all $0<\epsilon\ll 1$. Moreover, since $X_{i} \not\cong X_{i+1}$, there is a divisor $F$ over $W$ such that  $a(F,X_{i},D_{i}(s_{i}+\epsilon)-\delta G_{i})< a(F,X_{i+1},D_{i+1}(\epsilon)-\delta G_{i+1})$.
+  \item\label{2bdiscrepancy}   In case \ref{2b}, for any divisor $E \subset W$, we have $a(E;X_{i},D_{i}(s_{i}+\epsilon)-\delta G_{i})\leqslant a(E;X_{i+1},D_{i+1}(\epsilon)-\delta G_{i+1})$ for all $0<\epsilon\ll 1$. Moreover, since $X_{i} \not\cong X_{i+1}$, there is a divisor $F$ over $W$ such that  $a(F,X_{i},D_{i}(s_{i}+\epsilon)-\delta G_{i})< a(F,X_{i+1},D_{i+1}(\epsilon)-\delta G_{i+1})$.
   \item  $h_{i}\leqslant 1$, and $h_{i}=1$ if and only if $g_{i}=0$;
   \end{enumerate}
 \end{claim}
 \subsection{Termination}
 \begin{lem}\label{termination2}
-Suppose we construct a sequence of Sarkisov links: 
+\cite[Lemma 13.18 and Lemma 13.19]{haconSarkisovProgram2011} (or \cite[Lemma 4.9]{liuSarkisovProgramGeneralized2019}) Suppose we construct a sequence of Sarkisov links: 
 \[
   \xymatrix{
     X=X_0\ar@{.>}[r]\ar[d]&X_{1}\ar@{.>}[r]\ar[d]& X_{2}\ar[d]\ar[r] &\cdots\ar@{.>}[r]&X_{i}\ar[d] \ar[r] &\cdots\\
@@ -797,8 +798,7 @@ then
 Then all $X_{i}$ are weak log canonical models of $(W,\Delta_{i})$. By finiteness of weak log canonical models, there are finitely many $X_{i}$ up to isomorpism.
 \item Assmue this sequence of links is infinite, then there are $i>j$ such that $X_{i}\cong X_{j}$. Then we have $g_{i+1}=g_{j+1}$ and $h_{i+1}=h_{j+1}$. Since sequences of $h_{k}$ and $g_{k}$ are monotone, we have $h_{i}=h_{k}$ and  $g_{i}=g_{k}$ for all $k>i$. Suppose $X_{i}\dashrightarrow X_{i+1}$ is a link in case \ref{2a}, then the next link is also in case \ref{2a}  so are all the links follows. But $X_{i}\cong X_{j}$ and therefore $\rho(X_{i})=\rho(X_{j})$, the link are all of type IV. But this contracts the claim case \ref{2a3}, therefore there are no link of type III or IV after $X_{i}$. In other word, the links after $X_{i}$ are all type I, II in case B.
 
-  Since $\rho(X_{i})= \rho(X_{k})$ and Sarkisov link of type I increase the piscard number, $X_{i}$  and $X_{j}$ is linked by  the Sarkisov links of type II. But this contracts the lemma \ref{behavior2}.
-% TODO: claim in case?
+  Since $\rho(X_{i})= \rho(X_{j})$ and Sarkisov link of type I increase the picard number, $X_{i}$  and $X_{j}$ is linked by  the Sarkisov links of type II. But this contracts the \ref{2bdiscrepancy} Claim \ref{behavior2}.
 \end{enumerate}  
 \end{proof}
 At last we need to show that $X_{N}$ is isomorphic to $X'$. In fact, this follows directly by the Noether-Fano-Iskovskikh Criterion \ref{nfi}.
@@ -806,8 +806,8 @@ At last we need to show that $X_{N}$ is isomorphic to $X'$. In fact, this follow
 In this section we follows \cite{haconSarkisovProgram2011}.
 \subsection{Morphisms between models}
   Let $W$ be a smooth projective   variety, and let $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. In this subsection we describe the models $X_{i}$ of $(W,A+B)$ for some $B \in V$ and rational maps between $X_{i}$.
-\begin{thm}[Morphisms between ample models]\label{mapbetweenAM}
-  Let $W$ be a smooth projective   variety, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
+\begin{thm}\label{mapbetweenAM}
+  \cite[Theorem 3.3]{haconSarkisovProgram2011} Let $W$ be a smooth projective   variety, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
   \begin{enumerate}
     \item $ \{\mathcal{A}_i=\mathcal{A}_{A,f_i}\} $ is a partition of $ \mathcal{E}_{A}(V) $. $ \mathcal{A}_i $ is a finite union of interiors of rational polytopes. If $ f_i $ is birational then $ \mathcal{C}_i=\mathcal{C}_{A,f_i} $ is a rational polytope;
     \item If $ i,j $ are two indices such that $ \mathcal{A}_j\cap \mathcal{C}_i\neq \emptyset $ then there is a contraction $ f_{ij}:X_i\to X_j $ and $ f_j=f_{ij}\circ f_i $;
@@ -881,14 +881,14 @@ is ample over $X_{j}$. Hence $f_{ij}:X\to X_{j}$ is a Fano fibration and so by c
 This is (4).
   \end{enumerate}
 \end{proof}
-\begin{lem}[densen subspace]\label{subspace}
-  If $V$ spans  $\operatorname{NS}(W)$, then there is a Zariski dense open subset $U$ of the Grassmannian $G(r,V)$ of real affine subspace of dimension $r$ such that any  $[V']\in U$ defined on ratinal numbers statify (1-4) of \ref{finiteamplemodel} 
+\begin{lem}\label{subspace}
+  \cite[Corollary 3.4]{haconSarkisovProgram2011}If $V$ spans  $\operatorname{NS}(W)$, then there is a Zariski dense open subset $U$ of the Grassmannian $G(r,V)$ of real affine subspace of dimension $r$ such that any  $[V']\in U$ defined on ratinal numbers statify (1-4) of \ref{mapbetweenAM} 
 \end{lem}
 \begin{proof}
  Let $U \subset G(r,V) $ be the set of real affine subspace  $V'$ of $V$ of dimension $r$, which contion any sub no face of any $\mathcal{C}_{i}$ or $\mathcal{L}(V)$. In particular, the interior of  $\mathcal{L}_{A}(V')$ is contained in the interior of $\mathcal{L}_{A}(V)$. Clearly that any $V'\in U$ satisfies (1-4) of \ref{finiteamplemodel}. \end{proof}
 From now on in this subsection, we always assume that $V$ has dimension $2$ and statisfies \ref{mapbetweenAM}.  
-\begin{lem}[maps at the edge of polytopes]
-Let $ f:W\dashrightarrow X $ and $ g:W\dashrightarrow  Y $ be two rational contracions such that $ \mathcal{C}_{A,f} $ is dimension $ 2 $ and $ \mathcal{O}=\mathcal{C}_{A,f}\cap \mathcal{C}_{A,g} $ is dimension $ 1 $. Assume $ \rho(X)\geqslant \rho(Y) $ and $ \mathcal{O} $ is not contained in the boundary of $ \mathcal{L}_{A}(V) $. Let $ D $ be an interior point of $ \mathcal{O} $ and $ B=f_*D $. Then there is a rational contraction $ \pi:X\dashrightarrow Y $ and $ g=\pi\circ f $ such that either
+\begin{lem}
+\cite[Lemma 3.5]{haconSarkisovProgram2011} Let $ f:W\dashrightarrow X $ and $ g:W\dashrightarrow  Y $ be two rational contracions such that $ \mathcal{C}_{A,f} $ is dimension $ 2 $ and $ \mathcal{O}=\mathcal{C}_{A,f}\cap \mathcal{C}_{A,g} $ is dimension $ 1 $. Assume $ \rho(X)\geqslant \rho(Y) $ and $ \mathcal{O} $ is not contained in the boundary of $ \mathcal{L}_{A}(V) $. Let $ D $ be an interior point of $ \mathcal{O} $ and $ B=f_*D $. Then there is a rational contraction $ \pi:X\dashrightarrow Y $ and $ g=\pi\circ f $ such that either
 \begin{enumerate}
   \item $ \rho(X)=\rho(Y)+1 $ and $ \pi  $ is $ (K_X+B) $-trival, and either
   \begin{enumerate}
@@ -945,8 +945,8 @@ Let $ D=A+B $ be a point of boundary of $ \mathcal{E}_A(V) $ in the interior of 
 \end{tikzpicture}
 
 Set $ f=f_1:W\dashrightarrow X, g=f_k:W\dashrightarrow Y $ and $ \phi:X\to S=S_0,\psi:Y\to T=S_k $ and $ X'=X_2,Y'=X_{k-1} $ and let $ W\dashrightarrow R $ be the ample model of $ D $. Then
-\begin{thm}[Construct one Sarkisov link]\label{constructlink}
-  Suppose $ B_W $ is a divisor such that $ K_Z+B_W $ is klt and $ D-B_W $ is ample. Then $ \phi $ and $ \psi $ are Mori fibre spaces as outputs of $ (K_Z+B_W) $-MMP and connected by a Sarkisov link if $ D $ is contained in more than two polytopes.
+\begin{thm}\label{constructlink}
+  \cite[Theorem 3.7]{haconSarkisovProgram2011} Suppose $ B_W $ is a divisor such that $ K_Z+B_W $ is klt and $ D-B_W $ is ample. Then $ \phi $ and $ \psi $ are Mori fibre spaces as outputs of $ (K_Z+B_W) $-MMP and connected by a Sarkisov link if $ D $ is contained in more than two polytopes.
 \end{thm}
 \begin{proof}
   WMA $ k\geqslant 3 $ and we have 
@@ -964,16 +964,16 @@ The same holds for $ q $ and $ t $. And the map $X'\to Y'$ is clear the composit
 \end{proof}
 \subsection{Construction of Sarkisov links}
 \begin{lem}
-  Let $f:W\dashrightarrow X $ be a birational contraction between $\mathbb{Q}$-factorial varieties. Suppose $(W,D)$ and $(W,D+A)$ are both klt. If $f$ is ample model of $(W,D+A)$ and $A$ is ample, then $f$ is result of running $(K_{W}+D)$-MMP.
+  \cite[Lemma 3.6]{haconSarkisovProgram2011} Let $f:W\dashrightarrow X $ be a birational contraction between $\mathbb{Q}$-factorial varieties. Suppose $(W,D)$ and $(W,D+A)$ are both klt. If $f$ is ample model of $(W,D+A)$ and $A$ is ample, then $f$ is result of running $(K_{W}+D)$-MMP.
 \end{lem}
 This lemma gunrantee that every variety in the Sarkisov links constructed later is a MMP result of $(W,B_{W})$.
 We need a special resolution $W$ and an   affine subspace $V \subset \operatorname{WDiv}(W)$ such that we can find two Mori fibre spaces $X/S$ and $Y/T$ and vertexs connecting them. The following  lemma shows the desired affine subspace exits. 
 \begin{lem}\label{keylemma}
-  Let $ \phi:X\to S $ and $ \psi :Y\to T  $ be two MMP related Mori fibre space corresponding to two klt projective varieties $ (X,B_X) $ and $ (Y,B_Y) $. Then we may find a smooth projective variety $ W $, two biratinal morphism $ f:W\to X $ and $ g:W\to Y $, a klt pair $ (W,B_{W}) $, an ample $ \mathbb{Q} $-divisor $ A $ on $ W $ and a two dimensional rational affine subspace $ V $ of $ \mathrm{WDiv}_\mathbb{R}(W) $ such that 
+  \cite[Lemma 4.1]{haconSarkisovProgram2011} Let $ \phi:X\to S $ and $ \psi :Y\to T  $ be two MMP related Mori fibre space corresponding to two klt projective varieties $ (X,B_X) $ and $ (Y,B_Y) $. Then we may find a smooth projective variety $ W $, two biratinal morphism $ f:W\to X $ and $ g:W\to Y $, a klt pair $ (W,B_{W}) $, an ample $ \mathbb{Q} $-divisor $ A $ on $ W $ and a two dimensional rational affine subspace $ V $ of $ \mathrm{WDiv}_\mathbb{R}(W) $ such that 
   \begin{enumerate}
     \item If $ D\in \mathcal{L}_A(V) $ then $ D-B_W $ is ample;
     \item $ \mathcal{A}_{A,\phi\circ f} $ and $ \mathcal{A}_{A,\psi\circ g} $ are not contained in the boundary of $ \mathcal{L}_A(V) $;
-    \item $ V $ satisfy \ref{finiteamplemodel};
+    \item $ V $ satisfy \ref{mapbetweenAM};
     \item $ \mathcal{C}_{A,f} $ and $ \mathcal{C}_{A,g} $ are two dimensional;
     \item $ \mathcal{C}_{A,\phi\circ f} $ and $ \mathcal{C}_{A,\psi\circ g} $ are one dimensional.
   \end{enumerate}
@@ -1019,7 +1019,7 @@ is ample, as $B-B_{0}$ is nef by definition of $V_{0}$. Note the
 \[
   B_{0}+F+H \in \mathcal{A}_{A,\phi\circ f}(V_{0}), B_{0}+G+H \in \mathcal{A}_{\psi \circ g}(V_{0})
 \]
-and $f$, respectively $g$, is a weak log canonical model of $K_{W}+B_{0}+F+H$, respectively $K_{W}+B_{0}+G+H$. Thus theorem \ref{finiteamplemodel} implies that $V_{0}$ satisfies (1-4) of \ref{finiteamplemodel}.
+and $f$, respectively $g$, is a weak log canonical model of $K_{W}+B_{0}+F+H$, respectively $K_{W}+B_{0}+G+H$. Thus theorem \ref{mapbetweenAM} implies that $V_{0}$ satisfies (1-4) of \ref{mapbetweenAM}.
 
 Since $H_{1},\ldots ,H_{k}$ generated the Neron-Severi group of $W$ we may find constants $h_{1},\ldots ,h_{k}$ such that $G \equiv \sum^{k}_{i=1} h_{i}H_{i}$. Then there is $0< \delta\ll 1$ such that  $B_{0}+F+\delta G+H- \delta(\sum_{i=1}^{k} h_{i}H_{i}) \in \mathcal{L}_{A}(V_{0})$ and
 \[
@@ -1029,8 +1029,9 @@ Thus $\mathcal{A}_{A,\phi\circ f}$ is not contained in the boundary of $\mathcal
 
 Let $V_{1}$ be the tranlate by $B_{0}$ of two dimensional bector space spaned by $F+H-A$ and $F+G-A$. Let $V$ be a small general pertubation of $V_{1}$, which is defined over rationals. This is the affine subspace we need.
 \end{proof}
+% TODO: proof of what?
 Then we can prove the main theorem
-\begin{proof}[Proof of the main theorem]
+\begin{proof}[Proof of \ref{main}]
 Let $(W,B_{W}),A $ and $V$ as in the lemma \ref{keylemma}.  Pick $ D_{0} \in \mathcal{A}_{A,\phi\circ f} $  and $ D_1\in \mathcal{C}_{A,g} $ belonging to the interior of $ \mathcal{L}_A(V) $. As $ V $ is two dimensional, removing $ D_0 $ and $ D_1 $ divides the boundary of $ \mathcal{E}_A(V) $ into two parts. The part which consists entirely of divisors which are not big is contained in the interior of $ \mathcal{L}_A(V) $. Consider tracing this boundary from $ D_0 $ to $ D_1 $. Then there are finitely many $ 2\leqslant i\leqslant N $ points $ D_i $ which are contained in more than two polytopes $ \mathcal{C}_{A,f_i}(V) $. By lemma \ref{constructlink},  each point $ D_i $ gives a Sarkisov link. And the birational map $X \dashrightarrow Y$ is composition of such links.
 \end{proof}
 
