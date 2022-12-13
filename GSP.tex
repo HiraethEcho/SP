@@ -17,7 +17,7 @@
 
 \usepackage{geometry}
 % \geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm}
-% \geometry{a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm}
+\geometry{a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm}
 
 \newtheorem{defn}{Definition}[subsection]
 \newtheorem{prop}[defn]{Proposition}
@@ -196,12 +196,12 @@ Futhermore, for big boundary, we have
 
 By \cite[Lemma 3.7.2]{birkarExistenceMinimalModels2009}, if $V$  is a rational subspace, then $\mathcal{L}_{A}(V)$ is a rational polytope.
 \begin{lem}\label{finitewlcm}
-  \cite[Theorem E]{birkarExistenceMinimalModels2009} Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties, and $A$ be an general divisor relatively ample over $U$, and $V \subset \operatorname{Div}_{\mathbb{R}}(X)$ be a finite dimensions rational subspace. Suppose that there is a klt pair $(X,\Delta_{0})$. Then there are finitely many birational maps $f_{i}:X \dashrightarrow X_{i}$ such that if $f:X \dashrightarrow  Y$ is a weak log canonical model of $K_{X}+D$ over $U$ for some $D \in \mathcal{L}_{A}(V)$, then there is an isomorphism  $h_{i}:X_{i} \to Y$  and $f=h_{i}\circ f_{i}$.  
+  \cite[Theorem E]{birkarExistenceMinimalModels2009} Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties, and $A$ be an general divisor relatively ample over $U$, and $V \subset \operatorname{Div}_{\mathbb{R}}(X)$ be a finite dimensional rational subspace. Suppose that there is a klt pair $(X,\Delta_{0})$. Then there are finitely many birational maps $f_{i}:X \dashrightarrow X_{i}$ such that if $f:X \dashrightarrow  Y$ is a weak log canonical model of $K_{X}+D$ over $U$ for some $D \in \mathcal{L}_{A}(V)$, then there is an isomorphism  $h_{i}:X_{i} \to Y$  and $f=h_{i}\circ f_{i}$.  
 
 \end{lem}
 
 \begin{thm}\label{finitemodel}
-\cite[Corollary 1.1.5]{birkarExistenceMinimalModels2009}Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties, and $A$ be an general divisor relatively ample over $U$, and $V \subset \operatorname{Div}_{\mathbb{R}}(X)$ be a finite dimensions rational subspace. Suppose that there is a divisor $\Delta_{0} \in V$ such that $(X,\Delta_{0})$ is klt. Let $A$ be a general ample $\mathbb{Q}$-divisor over $U$ which has no components common with any element of $V$.  
+\cite[Corollary 1.1.5]{birkarExistenceMinimalModels2009}Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties, and $A$ be an general divisor relatively ample over $U$, and $V \subset \operatorname{Div}_{\mathbb{R}}(X)$ be a finite dimensional rational subspace. Suppose that there is a divisor $\Delta_{0} \in V$ such that $(X,\Delta_{0})$ is klt. Let $A$ be a general ample $\mathbb{Q}$-divisor over $U$ which has no components common with any element of $V$.  
   \begin{enumerate}
     \item   There are finitely many birational maps $f_{i}:X \dashrightarrow   X_{i}$ over $U$ such that 
       \[
@@ -219,33 +219,25 @@ By \cite[Lemma 3.7.2]{birkarExistenceMinimalModels2009}, if $V$  is a rational s
   In particular $\mathcal{E}_{A,\pi}$ is a rational polytope and  $\overline{\mathcal{A}_{j}}$ is a finite union of raional polytopes. 
 \end{thm}
 
-% \begin{thm}[finiteness of models]\label{finiteamplemodel}
-%   Let $W$ be a smooth projective   varieties, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
-%   \begin{enumerate}
-%     \item $ \{\mathcal{A}_i=\mathcal{A}_{A,f_i}\} $ is a partition of $ \mathcal{E}_{A}(V) $. $ \mathcal{A}_i $ is a finite union of interiors of rational polytopes. If $ f_i $ is birational then $ \mathcal{C}_i=\mathcal{C}_{A,f_i} $ is a rational polytope;
-%       \item  
-%   \end{enumerate}
-% \end{thm}
-
-% \begin{thm}[morphisms between models]
-%   Let $W$ be a smooth projective   varieties, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
-%   \begin{enumerate}
-%     \item If $ i,j $ are two indices such that $ \mathcal{A}_j\cap \mathcal{C}_i\neq \emptyset $ then there is a contraction $ f_{ij}:X_i\to X_j $ and $ f_j=f_{ij}\circ f_i $;
-%   \end{enumerate}
-%   Suppose in addition $ V $ spans $ \mathrm{NS}(W) $, then
-%   \begin{enumerate}
-%     \item Pick $ i $ such that a connected components $ \mathcal{C} $ of $ \mathcal{C}_i $ intersects the interior of $ \mathcal{L}_A(V) $, TFAE:
-%     \begin{enumerate}
-%       \item $ \mathcal{C} $ spans $ V $;
-%       \item If $ D\in \mathcal{A}_i\cap \mathcal{C} $ then $ f_i $ is a log terminal model of $ K_W+D $;
-%       \item $ f_i $ is birational and $ X_i $ is $ \mathbb{Q} $-factorial.
-%     \end{enumerate}
-%   \end{enumerate}
-%   \begin{enumerate} 
-%     \item If $ i,j $ are two indices such that $ \mathcal{C}_i $ spans $ V $ and $ D $ is a general point of $ \mathcal{A}_j\cap \mathcal{C}_i $ which is also a point of interior of $ \mathcal{L}_A(V) $, then $ \mathcal{C}_i $ and $ \overline{\mathrm{NE}}(X_i/X_j)^*\times \mathbb{R}^k $ for some $ k\leqslant 0 $. Furthermore $ \rho(X_i/X_j) $ equals the differece in the dimensions of $ \mathcal{C}_i $ and $ \mathcal{C}_j\cap \mathcal{C}_i $.
-%   \end{enumerate}
-% \end{thm}
 \subsection{MMP}
+\begin{defn}
+  Let $(X,B)$ be a pair  and let  $f:Y\to X$ be a log resolution of $(X,B)$. Suppose
+  \[
+  K_{Y}+C=f^*(K_{X}+B)
+  ,\]
+then the discrepancy  of exceptional divisor $E_{i}$ over $X$ is
+\[
+  a(E_{i};X,B)=-\operatorname{mult}_{E_{i}}C
+.\]
+ Moreover, let
+\[
+  \operatorname{discrep}(X, B) := \operatorname{inf}\{a(E; X, B) : E \text{ is an expectional divisor over } X \}
+\]
+and
+\[
+  \operatorname{totdiscrep}(X, B) :=\operatorname{inf}\{a(E; X, B) : E \text{ is a divisor over } X\}.
+\]
+\end{defn}
 \begin{thm}
 \cite[Corollary 1.4.2]{birkarExistenceMinimalModels2009}Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and let $(X,B)$ be a $\mathbb{Q}$-factorial klt pair where $K_{X}+B$ is $\mathbb{R}$-Cartier and $B$ is $\pi$-big. Let $C\geqslant0$ be an $\mathbb{R}$-divisor. If $K_{X}+B+C$ is klt and  $\pi$-nef, then we may run $(K_{X}+B)$-MMP over $U$  with scaling of $C$ and  terminates.
 \end{thm}
@@ -271,24 +263,6 @@ By \cite[Lemma 3.7.2]{birkarExistenceMinimalModels2009}, if $V$  is a rational s
 % \begin{rmk}
   
 % \end{rmk}
-\begin{defn}
-  Let $(X,B)$ be a pair  and let  $f:Y\to X$ be a log resolution of $(X,B)$. Suppose
-  \[
-  K_{Y}+C=f^*(K_{X}+B)
-  ,\]
-then the discrepancy  of exceptional divisor $E_{i}$ over $X$ is
-\[
-  a(E_{i};X,B)=-\operatorname{mult}_{E_{i}}C
-.\]
- Moreover, let
-\[
-  \operatorname{discrep}(X, B) := \operatorname{inf}\{a(E; X, B) : E \text{ is an expectional divisor over } X \}
-\]
-and
-\[
-  \operatorname{totdiscrep}(X, B) :=\operatorname{inf}\{a(E; X, B) : E \text{ is a divisor over } X\}.
-\]
-\end{defn}
  \begin{lem}\label{MMPrelatedConditation}
   \cite[Proposition 3.4]{brunoLogSarkisovProgram1995}
   Let $ \{(X_l,B_l)\} $ be a finite set of $ \mathbb{Q} $-factorial klt pairs such that birational to other, then TFAE:
@@ -311,7 +285,6 @@ Let $ K=K(X) $ be the function field, and let $ \Sigma=\{\nu\} $ be the set of d
   \end{enumerate} 
 \end{defn}
 For example, if we take $\theta \equiv 0$ constant, the $\mathcal{C}_{\theta}$ is the collection of all terminal varieties $Y$ without boundary birational to $X$. Furthermore, we can define the corresponding discrepancy:
-% TODO:cite or ref?
 \begin{defn}[$\theta$-discrepancy]
   Let $(X,B)$ be a pair in the category $\mathcal{C}_{\theta}$ for some function $\theta$ and let  $f:Y\to X$ be a log resolution of $(X,B)$. Suppose
   \[
@@ -508,7 +481,6 @@ We need following theorems:
 \end{cor}
 \begin{proof}
   Notice that all pairs in $ \mathcal{C}_\theta $ are $ \delta $-lc, then the general fibre  of $(F_{i},B_{F_{i}})$ of  $(X_{i},B_{i})\to S_{i}$ is  also $\delta$-lc with $\dim F_{i}\leqslant \dim X_{i}$. Thus they form a bounded family by Theorem \ref{BAB}. Take the integral $ I $ in  Lemma \ref{effeciveindex}, then $ I(K_{F_{i}}+B_{F_{i}}) $ is Cartier. Take a rational curve $ C_{F_{i}} $ in $ \overline{\operatorname{NE}}(F_{i}) $, then
-  % TODO: cite kawamata
   \[ 0<-I(K_{F_{i}}+B_{F}).C_{F_{i}}\leqslant 2I\dim F_{i} \]
   Notice that $ \mu=\frac{IH_{F_{i}}.C_{F_{i}}}{-I(K_{F_{i}}+B_{F_{i}}).C_{F_{i}}} $, where $ H_{F_{i}}.C_{F_{i}} $ and $ -I(K_{F_{i}}+B_{F_{i}}).C_{F_{i}} $ are integers, thus 
   \[ \mu\in \frac{1}{(2I\dim F_{i})!}\mathbb{N}.  \] \end{proof}
@@ -597,6 +569,7 @@ At last we have the Noether-Fano-Iskovskikh criterion to show when they are isom
 \begin{proof}
 % Suppose  $ B=\sum_ib_iB_i+\sum_jd_jD_j $ and $ B'=\sum_jd_j'D_j+\sum_kb_k'B_k' $, where $ B_i $ are divisors on $ X $ but not on $ X' $, $ B_k' $ are divisors on $ X' $ but not on $ X $, and $ D_j $ are divisors on both $ X $ and $ X' $.
   % TODO: We follow the proof in 
+  We follow the proof in \cite{haconMinimalModelProgram2012},\cite{liuSarkisovProgramGeneralized2019} and \cite{cortiFactoringBirationalMaps}:
   \begin{enumerate}
     \item Only need to show $ (K_X+B+\frac{1}{\mu'}H) $ is $ f $-nef.   Let $\sigma:W\to X$ and $\sigma':W\to X'$ be the common resolution. Consider the ramification formulas:
       \[
@@ -632,14 +605,14 @@ Then we show there are isomorphic. Take a very ample divisor $ D $ on $ X $ and 
 \section{Double scaling}
 This section we follows \cite[13.The Sarkisov program]{haconMinimalModelProgram2012} and  \cite{liuSarkisovProgramGeneralized2019}.
 \subsection{Prepare}
-Let $(W,B_W)$ be a $\mathbb{Q}$-factorial klt pair and $f:(X,B)\to S$ and $f':(X',B')\to S'$ be two different log Mori fibre spaces as outputs $(K_{W}+B_{W})$-MMP.  To modify the beginning setting, we need more conventions and lemmas:
+Let $(W,B_W)$ be a $\mathbb{Q}$-factorial klt pair and $f:(X,B)\to S$ and $f':(X',B')\to S'$ be two different log Mori fibre spaces as outputs of $(K_{W}+B_{W})$-MMP.  To modify the beginning setting, we need more conventions and lemmas:
 \begin{defn}
 Let $f:X\dashrightarrow Y$ be a birational map of normal quasi-projective varieties. If
 \begin{itemize}
   \item $f$ does not extract divisors;
-  \item $a(E;X,B_{X})\leqslant a(E;Y,B_{Y})$ for all divisor  $E$  over $X$.
+  \item $a(E;X,B_{X})\leqslant a(E;Y,B_{Y})$ for all divisors  $E$  over $X$.
 \end{itemize}
-then we write $(X,B)\geqslant (Y,B_{Y})$.
+then we denote $(X,B)\geqslant (Y,B_{Y})$.
 \end{defn}
 In particular, for terminal pairs, we have following lemma: 
 \begin{lem}\label{terminalorder}
@@ -647,7 +620,7 @@ In particular, for terminal pairs, we have following lemma:
 \begin{itemize}
   \item $f$ does not extract divisors;
   \item $K_X+B$ is nef, where $B=f_*B_W$;
-  \item $a(E;X,B)\geqslant a(E;W,B_W)$ for all divisor $E \subset W$,
+  \item $a(E;X,B)\geqslant a(E;W,B_W)$ for all divisors $E \subset W$,
 \end{itemize}
 then
 \begin{itemize}
@@ -661,16 +634,16 @@ Conversely, start from a klt pair and non-positive map, we have
 \begin{lem}\label{terminalresolution}
   \cite[Lemma 3.5]{liuSarkisovProgramGeneralized2019} Let $\sigma:(W,B_W)\dashrightarrow (X,B)$ be a $K_W+B_W$-non-positive birational map such that $\sigma_*(K_W+B_W)=K_X+B$ and $(W,B_W)$ is a $\mathbb{Q}$-factorial klt pair. Then there is a resolution of indeterminacy $\pi:\tilde{W}\to W $ and $\tilde{\sigma}:\tilde{W}\to X$ such that
 \begin{itemize}
-  \item $(\tilde{W},B_{\tilde{W}})$ is $\mathbb{Q}$-factorial terminal and $\tilde{\sigma}_*B_{\tilde{W}}$,
+  \item $(\tilde{W},B_{\tilde{W}})$ is $\mathbb{Q}$-factorial terminal and $\tilde{\sigma}_*B_{\tilde{W}}=B$,
   \item $\tilde{\sigma}$ is $(K_{\tilde{W}}+B_{\tilde{W}})$-non-positive and $(\tilde{W},B_{\tilde{W}})\geqslant (X,B)$.
 \end{itemize}
 \end{lem}
 By Lemma \ref{terminalresolution}, we  replace $(W,B_W)$ by its log resolution such that $(W,B_{W})$ is terminal and $\sigma:W\to X$ and $\sigma':W\to X'$ are $(K_W+B_W)$-non-positive morphisms, and $(W,B_W)\geqslant (X,B),(X',B')$. 
 
-Take  very general ample $\mathbb{Q}$-divisors $ A $ and $ A' $ on $ S $ and $ S' $ such that $ G\sim_{\mathbb{Q}}-(K_X+B)+f^*A $ and $ H\sim_{\mathbb{Q}}-(K_{X'}+B')+f^{'*}A' $. Moreover, we may assume $ G $ and $ H $ satisfying $G_{W}:= \sigma^*G=\sigma^{-1}_*G $ and $ H_{W}:=\sigma^{'*}H=\sigma^{'-1}_*H $. Therefore $\sigma_{*}(K_{W}+B_{W}+G_{W})=K_{X}+B+G$ is nef, and Lemma \ref{terminalorder} holds.
+Take  very general ample $\mathbb{Q}$-divisors $ A $ and $ A' $ on $ S $ and $ S' $ such that $ G\sim_{\mathbb{Q}}-(K_X+B)+f^*A $ and $ H\sim_{\mathbb{Q}}-(K_{X'}+B')+f^{'*}A' $ are two ample $\mathbb{Q}$-divisors. Moreover, we may assume $ G $ and $ H $ satisfying $G_{W}:= \sigma^*G=\sigma^{-1}_*G $ and $ H_{W}:=\sigma^{'*}H=\sigma^{'-1}_*H $. Therefore $\sigma_{*}(K_{W}+B_{W}+G_{W})=K_{X}+B+G$ is nef, and Lemma \ref{terminalorder} holds.
 Furthermore, we may assume $(W,B_W+gG_W+hH_W)$ is log smooth and terminal for all $0\leqslant g,h\leqslant 2$ by taking furthermore blowing up if necessary.
-Then we have Sarkisov program with double scaling of $(G_{W},H_{W})$: 
-\begin{thm}\label{main2}
+Then we have:
+\begin{thm}[Sarkisov program with double scaling]\label{main2}
 Notations as above, there is a finite sequence of Sarkisov links
 \[
   \xymatrix{
@@ -687,21 +660,20 @@ and rational numbers
 \]
 such that 
 \begin{enumerate}
-  \item $p_i:W\dashrightarrow  X_{i}$ is $(K_{W}+g_{i}G_{W}+h_{i}H_{W})$-non-positive, and $(K_{X_{i}}+g_{i}G_{i}+h_{i}H_{i})=p_{i*}(K_{W}+g_{i}G_{W}+h_{i}H_{W})$ is nef and is relatively trivial over $S_{i}$;
+  \item $p_i:W\dashrightarrow  X_{i}$ is $(K_{W}+B_{W}+g_{i}G_{W}+h_{i}H_{W})$-non-positive, and $(K_{X_{i}}+B_{i}+g_{i}G_{i}+h_{i}H_{i})=p_{i*}(K_{W}+B_{W}+g_{i}G_{W}+h_{i}H_{W})$ is nef and is relatively trivial over $S_{i}$;
   \item $(W,B_{W}+g_{i}G_{W}+h_{i}H_{W})\geqslant (X_{i},B_{i}+g_{i}G_{i}+h_{i}H_{i})$;
-  \item each Sarkisov link is given by a sequence of $(K_{X_{i}}+g_{i}G_{i}+h_{i}H_{i})$-trivial maps.
+  \item each Sarkisov link is given by a sequence of $(K_{X_{i}}+B_{i}+g_{i}G_{i}+h_{i}H_{i})$-trivial maps.
     \item  The last link $X_{N} \to S_{N}$ is isomorphic to $X'\to S'$
 \end{enumerate}
-This is called Sarkisov program with double scaling of $(G_{W},H_{W})$.
 \end{thm}
 
 \subsection{Construct Sarkisov links}
 This subsection we construct the links inductively. Suppose we have $\sigma_{i}:W\dashrightarrow X_{i}$ as in Theorem  \ref{main2}, that is 
 \begin{itemize}
   \item $f_{i}:(X_{i},B_{i})\to S_{i}$ is a log Mori fibre space and $\sigma_{i*} B_{W}=B_{i}$;
-  \item $\sigma_{i}:W\dashrightarrow  X_{i}$ is $(K_{W}+g_{i}G+h_{i}H_{W})$-non-positive biratinal map, and $(K_{X_{i}}+g_{i}G+h_{i}H)=\sigma_{i*}(K_{W}+g_{i}G_{W}+h_{i}H_{W})$ is nef and is relatively trivial over $S_{i}$;
+  \item $\sigma_{i}:W\dashrightarrow  X_{i}$ is $(K_{W}+g_{i}G_{i}+h_{i}H_{W})$-non-positive biratinal map, and $(K_{X_{i}}+B_{i}+g_{i}G+h_{i}H)=\sigma_{i*}(K_{W}+g_{i}G_{W}+h_{i}H_{W})$ is nef and is relatively trivial over $S_{i}$;
   \item $(W,B_{W}+g_{i}G_{W}+h_{i}H_{W})\geqslant (X_{i},B_{i}+g_{i}G_{i}+h_{i}H_{i})$;
-  \item $0\leqslant g_{i},h_{i}\leqslant 1$ are two rational numbers.
+  \item $0\leqslant g_{i},h_{i}\leqslant 1$ are  rational numbers.
 \end{itemize}
 Then we need to show that there is a Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ satisfying the theorem \ref{main2}. Similarly with Sarkisov degree, we have following notations:
 \begin{defn}
@@ -710,38 +682,38 @@ Then we need to show that there is a Sarkisov link $X_{i}\dashrightarrow X_{i+1}
     \item $r_{i}:=\frac{H_{i}.C_{i}}{G_{i}.C_{i}}$ ;
     \item Let $\Gamma$ be the set of $t\in [0,\frac{g_{i}}{r_{i}}] $ such that 
       \begin{enumerate}
-        \item\label{nefcondition} $\left(W,B_{W}+g_{i}G_{W}+h_{i}H_{W}=t(G_{W}-r_{i}H_{W})\right)\geqslant \left(X_{i},B_{i}+g_{i}G+h_{i}H+t\left(G_{i}-r_{i}H_{i}\right)\right)$
-        \item\label{singularcondition} $K_{X_{i}}+B_{i}+g_{i}G+h_{i}H+t(G_{i}-r_{i}H_{i})$ is nef;
+        \item\label{nefcondition} $\left(W,B_{W}+g_{i}G_{W}+h_{i}H_{W}+t(H_{W}-r_{i}G_{W})\right)\geqslant \left(X_{i},B_{i}+g_{i}G_{i}+h_{i}H_{i}+t\left(H_{i}-r_{i}G_{i}\right)\right)$
+        \item\label{singularcondition} $K_{X_{i}}+B_{i}+g_{i}G+h_{i}H+t(H_{i}-r_{i}G_{i})$ is nef;
     \end{enumerate}
     And Let $s_{i}=\max \Gamma $;
-\item Let $D_{W,i}(t)=B_{W}+g_{i}G_{W}+h_{i}H_{W}+t(G_{W}-r_{i}H_{W})$ and $D_{i}(t)=B_{i}+g_{i}G_{i}+h_{i}H_{i}+t\left(G_{i}-r_{i}H_{i}\right))$. Let $g_{i+1}=g_{i}-r_{i}s_{i}$ and $h_{i+1}=h_{i}+s_{i}$. Note that $D_{W,i+1}=D_{W,i}(s_{i})$. 
+\item Let $D_{W,i}=B_{W}+g_{i}G_{W}+h_{i}H_{W}$ and $D_{i}=B_{i}+g_{i}G_{i}+h_{i}H_{i}+$. Let $D_{W,i}(t)=B_{W}+g_{i}G_{W}+h_{i}H_{W}+t(G_{W}-r_{i}H_{W})$ and $D_{i}(t)=B_{i}+g_{i}G_{i}+h_{i}H_{i}+t\left(G_{i}-r_{i}H_{i}\right))$. Let $g_{i+1}=g_{i}-r_{i}s_{i}$ and $h_{i+1}=h_{i}+s_{i}$. Note that $D_{W,i+1}=D_{W,i}(s_{i})$. 
   \end{itemize}
 \end{defn}
 Then we have (check \cite[Lemma 4.4]{liuSarkisovProgramGeneralized2019} for details)
 \begin{enumerate}
-    \item $r_{i}>0$ is well defined;
+    \item $r_{i}>0$;
     \item either $\Gamma=\{0\} $ or is a closed interval;
     \item $g_{i+1}=g_{i} \Leftrightarrow h_{i+1}=h_{i} \Leftrightarrow s_{i}=0$;
 \end{enumerate}
-\textbf{Construct links}: If $s_{i}=\frac{g_{i}}{r_{i}}$, then $g_{i+1}=0$. Let $N=i+1$  and let $f_{N}:X_{N}=X_{i} \to S_{N}=S_{i}$, then $X_{N}\to S_{N}$ is isomorphic to $f':X'\to S'$ (shown in the next subsection) and  we stop. Otherwise, if  $s_{i}<\frac{g_{i}}{r_{i}}$, then we construct the Sarkisov link $X_{i}\dashrightarrow X_{i+1}$  as following:
+\textbf{Construct links}: If $s_{i}=\frac{g_{i}}{r_{i}}$, then $g_{i+1}=0$. Let $N=i+1$  and let $f_{N}:X_{N}=X_{i} \to S_{N}=S_{i}$, then $X_{N}\to S_{N}$ is isomorphic to $f':X'\to S'$ (see Proposition \ref{nfi2}) and  we stop. Otherwise, if  $s_{i}<\frac{g_{i}}{r_{i}}$, then we construct the Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ in following cases:
 \begin{enumerate}
-  \item\label{2a} Suppose $s_{i}$ is not the threshold of  condition \ref{nefcondition} of $\Gamma$, that is, there exists $0<\epsilon\ll 1$, such that for any divisor $E$ on $W$, we have
+  \item\label{2a} Suppose $s_{i}$ is not the threshold of  condition \ref{nefcondition} of $\Gamma$. That is, there exists $0<\epsilon\ll 1$, such that for any divisor $E$ on $W$, we have
     \[
       a(E;X_{i},D_{i}(s_{i}+\epsilon))\geqslant a(E;W,D_{W,i}(s_{i}+\epsilon))
     \]
-    and $K_{X_{i}}+D_{i}(s_{i}+\epsilon)$ is not nef. Then there ia a $2$-dimensional $(K_{X_{i}}+D_{i}(s_{i}+\epsilon)-\delta G_{i})$-negative extremal face $F$ for some $0< \delta \ll \epsilon $, spaned by $R=\mathbb{R}_{\geqslant 0}[C_{i}]$ and another extremal ray $P$. Hence there is a contraction $X_{i}\to T_{i}$ factoring through $f_{i}$. Then we run $(K_{X_{i}}+D_{i}(s_{i}+\epsilon))$-MMP on $X_{i}$ over $T_{i}$. After finitely many flips, we either have a $(K_{X_{i}}+D_{i}(s_{i}+\epsilon))$ minimal model, divisorial contraction, or Mori fibre space over $T_{i}$: 
+    and $K_{X_{i}}+D_{i}(s_{i}+\epsilon)$ is not nef. Then there is a $2$-dimensional $(K_{X_{i}}+D_{i}(s_{i}+\epsilon)-\delta G_{i})$-negative extremal face $F$ for some $0< \delta \ll \epsilon $, spaned by $R=\mathbb{R}_{\geqslant 0}[C_{i}]$ and another extremal ray $P$. Hence there is a contraction $X_{i}\to T_{i}$ corresponding to $F$ factoring through $f_{i}$. Then we run $(K_{X_{i}}+D_{i}(s_{i}+\epsilon))$-MMP on $X_{i}$ with scaling over $T_{i}$. After finitely many flips, we either have a $(K_{X_{i}}+D_{i}(s_{i}+\epsilon))$ minimal model, a divisorial contraction, or a Mori fibre space over $T_{i}$: 
     \begin{enumerate}
-    \item\label{2a1}After finitely many flips $X_{i}\dashrightarrow X_{i+1}$ there is a fibration $X_{i+1}\to S_{i+1}$, and this is a link of type III.
-    \item\label{2a2} After finitely many flips $X_{i}\dashrightarrow Z_{i}$ there is a divisorial contraction $Z_{i}\to X_{i+1}$, then let $S_{i+1}=T_{i}$ and $X_{i+1}\to S_{i+1}$ is a Mori fibre space and this is a link of type IV.
-    \item \label{2a3}After finitely many flips $X_{i}\dashrightarrow X_{i+1}$,  the contraction $X_{i+1}\to T_{i}$ is a log minimal model of $\left(X_{i},D_{i}\left(s_{i}+\epsilon\right)\right)$ over $T_{i}$. Let  $C'$ be the strict transform of  $C_{i}$ on $X_{i+1}$, then $(K_{X_{i+1}}+D_{i+1}(\epsilon)).C'=0$ and $(K_{X_{i+1}}+B_{i+1}).C'<0$, therefore there is a contraction  $X_{i+1} \to S_{i+1}$ which is a log Mori fibre space. And this is a link of type IV. In this case we have $\rho(X)=\rho(Y)$. 
+    \item\label{2a1}After finitely many flips $X_{i}\dashrightarrow X_{i+1}$ there is a log Mori fibre space $X_{i+1}\to S_{i+1}$, and this is a link of type III.
+    \item\label{2a2} After finitely many flips $X_{i}\dashrightarrow Z_{i}$ there is a divisorial contraction $Z_{i}\to X_{i+1}$, then let $S_{i+1}=T_{i}$ and $X_{i+1}\to S_{i+1}$ is a log Mori fibre space and this is a link of type IV.
+    \item \label{2a3}After finitely many flips $X_{i}\dashrightarrow X_{i+1}$,  the contraction $X_{i+1}\to T_{i}$ is a log minimal model of $\left(X_{i},D_{i}\left(s_{i}+\epsilon\right)\right)$ over $T_{i}$. Let  $C'$ be the strict transform of  $C_{i}$ on $X_{i+1}$, then $(K_{X_{i+1}}+D_{i+1}(\epsilon)).C'=0$ and $(K_{X_{i+1}}+B_{i+1}).C'<0$, therefore there is a contraction  $X_{i+1} \to S_{i+1}$ which is a log Mori fibre space. And this is a link of type IV. 
   \end{enumerate}
-  \item\label{2b} Suppose $s$ is the threshold of second conditation, that is, there exists  $0<\epsilon \ll 1$ and a $\sigma_{i}$-exceptional divisor $E_{i}$ on $W$ such that 
+\item\label{2b} Suppose $s_{i}$ is the threshold of conditation \ref{singularcondition} of $\Gamma$, that is, there exists  $0<\epsilon \ll 1$ and a $\sigma_{i}$-exceptional divisor $E_{i}$ on $W$ such that 
     \[
       a(E_{i};X_{i},D_{i}(s_{i}+\epsilon))< a(E_{i};W,D_{W,i}(s_{i}+\epsilon))
     .\]
    In this case, we have 
     \[
-  a(E_{i};X_{i},D_{i}(s_{i}))= a(E_{i};W_{i},D_{W,i}(s_{i}))=-\operatorname{mult}_{E_{i}}(D_{W,i}(s_{i}))\leqslant 0
+  a(E_{i};X_{i},D_{i}(s_{i}))= a(E_{i};W,D_{W,i}(s_{i}))=-\operatorname{mult}_{E_{i}}(D_{W,i}(s_{i}))\leqslant 0
     .\]
     Let $p_{i}:Z_{i}\to X_{i}$ be the diviosrial extraction of divisor $E_{i}$ as in Corollary \ref{extraction}, and suppose $K_{Z_{i}}+D_{Z_{i}}(s_{i})=K_{Z_{i}}+B_{Z_{i}}+g_{i+1}G_{Z_{i}}+h_{i+1}H_{Z_{i}}=p_{i}^*\left(K_{X_{i}}+D_{i}\left(s_{i}+\epsilon\right)\right)$.
    Take a sufficiently small $\delta_{i}$ such that $0<\delta \ll \epsilon \ll 1$ and
@@ -750,18 +722,20 @@ Then we have (check \cite[Lemma 4.4]{liuSarkisovProgramGeneralized2019} for deta
    \]
   is klt. Then we run $(K_{Z_{i}}+\Delta_{i})$-MMP on $Z_{i}$ over $S_{i}$. Since $Z_{i}$ is covered by $(K_{Z_{i}}+\Delta_{i})$-negative curves, it follows that $(K_{Z_{i}}+\Delta_{i})$ is not peseudo-effective over $S_{i}$, and  this MMP ends with a Mori fibre space. Moreover, this is a MMP for $p_{i}^*(K_{X_{i}}+D_{i}(s_{i}+\epsilon)-\delta'G_{i})$ for all $0<\delta'\leqslant\delta$. After finitely many flips, we either have a $(K_{Z_{i}}+\Delta_{i})$ Mori fibre space or a $(K_{Z_{i}}+\Delta_{i})$ divisorial contraction.
   \begin{enumerate}
-    \item\label{2b1} After finitely many flips $Z_{i}\dashrightarrow X_{i+1}$ there is a Mori fibre space $X_{i+1}\to S_{i+1}$, and this is a link of type I. In this case we have $\rho(Y)=\rho(X)+1$.
-    \item\label{2b2} After finitely many flips $Z_{i}\dashrightarrow Z_{i+1}'$ there is a divisorial contraction $q_{i}:Z_{i}'\to X_{i+1}$, and then a Mori fibre space $X_{i+1}\to S_{i}=:S_{i+1}$. This is a link of type II. In this case we have $\rho(X)=\rho(Y)$.   
-  \end{enumerate}
+    \item\label{2b1} After finitely many flips $Z_{i}\dashrightarrow X_{i+1}$ there is a Mori fibre space $X_{i+1}\to S_{i+1}$, and this is a link of type I. In this case we have $\rho(X_{i+1})=\rho(X_{i})+1$.
+    \item\label{2b2} After finitely many flips $Z_{i}\dashrightarrow Z_{i+1}'$ there is a divisorial contraction $q_{i}:Z_{i+1}'\to X_{i+1}$, and then a Mori fibre space $X_{i+1}\to S_{i}=:S_{i+1}$. This is a link of type II.   \end{enumerate}
 \end{enumerate}
 
 \begin{claim}\label{behavior2}
   \begin{enumerate}
     \item $r_{i}\leqslant r_{i+1}$. Morever, in case \ref{2a1}, we have $r_{i}<r_{i+1}$. 
-    \item Since the birational map $X_{i}\dashrightarrow X_{i+1}$ is over $T_{i}$ (over $S_{i}$) and $(K_{X_{i}}+D_{i}(s_{i}))$ is numerically trival over $T_{i}$ (over $S_{i}$) in case \ref{2a} (case \ref{2b}), it follows that $a(E;X_{i},D_{i}(s_{i}))\leqslant a(E;X_{i+1},D_{i+1})$.
+    \item\label{2adicrepancy} Since the birational map $X_{i}\dashrightarrow X_{i+1}$ is over $T_{i}$ (over $S_{i}$) and $(K_{X_{i}}+D_{i}(s_{i}))$ is numerically trival over $T_{i}$ (over $S_{i}$) in case \ref{2a} (case \ref{2b}), it follows that $a(E;X_{i},D_{i}(s_{i}))= a(E;X_{i+1},D_{i+1})$ for any divisors $E$ over $W$ and so the inequality
+    \[
+      a(E;X_{i+1},D_{i+1})\geqslant a(E;W,D_{W,i+1})
+    \]
   \item  In case \ref{2a}, for any divisor $E \subset W$, we have $a(E;X_{i},D_{i}(s_{i}+\epsilon))\leqslant a(E;X_{i+1},D_{i+1}(\epsilon))$ for all $0<\epsilon\ll 1$. Moreover, since $X_{i} \not\cong X_{i+1}$, there is a divisor $F$ over $W$ such that  $a(F,X_{i},D_{i}(s_{i}+\epsilon))< a(F,X_{i+1},D_{i+1}(\epsilon))$.
 
-  \item\label{2bdiscrepancy}   In case \ref{2b}, for any divisor $E \subset W$, we have $a(E;X_{i},D_{i}(s_{i}+\epsilon)-\delta G_{i})\leqslant a(E;X_{i+1},D_{i+1}(\epsilon)-\delta G_{i+1})$ for all $0<\epsilon\ll 1$. Moreover, since $X_{i} \not\cong X_{i+1}$, there is a divisor $F$ over $W$ such that  $a(F,X_{i},D_{i}(s_{i}+\epsilon)-\delta G_{i})< a(F,X_{i+1},D_{i+1}(\epsilon)-\delta G_{i+1})$.
+  \item\label{2bdiscrepancy}   In case \ref{2b}, for any divisor $E \subset W$, we have $a(E;X_{i},D_{i}(s_{i}+\epsilon)-\delta G_{i})\leqslant a(E;X_{i+1},D_{i+1}(\epsilon)-\delta G_{i+1})$ for all $0<\epsilon\ll 1$. Moreover, since $X_{i} \not\cong X_{i+1}$, there is a divisor $F$ over $W$ such that  $a(F;X_{i},D_{i}(s_{i}+\epsilon)-\delta G_{i})< a(F;X_{i+1},D_{i+1}(\epsilon)-\delta G_{i+1})$.
   \item  $h_{i}\leqslant 1$, and $h_{i}=1$ if and only if $g_{i}=0$;
   \end{enumerate}
 \end{claim}
@@ -776,32 +750,50 @@ Then we have (check \cite[Lemma 4.4]{liuSarkisovProgramGeneralized2019} for deta
 ,\]
 then
   \begin{enumerate}
-    \item There are only finitely many possibilities of $X_{i}$ up to isomorphism;
-
-    \item This Sarkisov program with double scalling of $(G_{W},H_{W})$ terminates. That is, there exits an integer $N>0$ such that $g_{N}=0$.  
+    \item There are only finitely many possibilities of $f_{i}:X_{i}\to S_{i}$ up to isomorphism;
+    \item The Sarkisov program with double scalling of $(G_{W},H_{W})$ terminates. That is, there exits an integer $N>0$ such that $g_{N}=0$.  
   \end{enumerate}
 \end{lem}
 
 \begin{proof}
 \begin{enumerate}
-  \item This follows from finiteness of weak log canonical models. We construct the space $V$ as following: 
+  \item This follows from the finiteness of weak log canonical model (Theorem \ref{finitewlcm}). We construct the space $V$ of $\operatorname{WDiv}_{\mathbb{R}}(W)$ as following: 
 \begin{enumerate}
-  \item If $h_{k}>0$ for some $k$: Since $H_{W}$ is nef and big,  take  $H_{W}\sim_{\mathbb{Q}}A_{W}+C_{W}$  ample $\mathbb{Q}$-divisor $A_{W}$ and effecive $\mathbb{Q}$-divisor such that $H_{W}\sim_{\mathbb{Q}}A_{W}+C_{W}$. Let $V$ be the affine space spaned by components of  $B_{W},G_{W},H_{W},C_{W}$, then 
+  \item If $h_{k}>0$ for some $k$: Since $H_{W}$ is nef and big,  take an  ample $\mathbb{Q}$-divisor $A_{W}$ and effecive $\mathbb{Q}$-divisor $C_{W}$  such that $H_{W}\sim_{\mathbb{Q}}A_{W}+C_{W}$. Let $V$ be the affine space spaned by components of  $B_{W},G_{W},H_{W},C_{W}$, then 
     \[
       B_{W}+g_{i}G_{W}+h_{i}H_{W}\sim_{\mathbb{Q}} h_{k}A_{W}+B_{W}+g_{i}G_{W}+(h_{i}-h_{k})H_{W}+h_{k}C_{W}=:\Delta_{i} \in \mathcal{L}_{h_{k}A_{W}}(V)
     \]
-  \item If $h_{k}=0$ for all $k$, then $h_{i}\equiv 0$ and $g_{i}\equiv 1$.  Since $H_{W}$ is nef and big,  take  $H_{W}\sim_{\mathbb{Q}}A_{W}+C_{W}$  ample $\mathbb{Q}$-divisor $A_{W}$ and effecive $\mathbb{Q}$-divisor such that $H_{W}\sim_{\mathbb{Q}}A_{W}+C_{W}$. Let $V$ be the affine space spaned by components of  $B_{W},C_{W}$, then 
+  \item If $h_{k}=0$ for all $k$, then $h_{i}\equiv 0$ and $g_{i}\equiv 1$.  Since $G_{W}$ is nef and big,  take  an  ample $\mathbb{Q}$-divisor $A_{W}$ and effecive $\mathbb{Q}$-divisor $C_{W}$  such that $G_{W}\sim_{\mathbb{Q}}A_{W}+C_{W}$. Let $V$ be the affine space spaned by components of  $B_{W},C_{W}$, then 
     \[
       B_{W}+G_{W}\sim_{\mathbb{Q}} A_{W}+B_{W}+C_{W}=:\Delta_{i} \in \mathcal{L}_{A_{W}}(V)
     \]
 \end{enumerate}
-Then all $X_{i}$ are weak log canonical models of $(W,\Delta_{i})$. By finiteness of weak log canonical models, there are finitely many $X_{i}$ up to isomorpism.
-\item Assmue this sequence of links is infinite, then there are $i>j$ such that $X_{i}\cong X_{j}$. Then we have $g_{i+1}=g_{j+1}$ and $h_{i+1}=h_{j+1}$. Since sequences of $h_{k}$ and $g_{k}$ are monotone, we have $h_{i}=h_{k}$ and  $g_{i}=g_{k}$ for all $k>i$. Suppose $X_{i}\dashrightarrow X_{i+1}$ is a link in case \ref{2a}, then the next link is also in case \ref{2a}  so are all the links follows. But $X_{i}\cong X_{j}$ and therefore $\rho(X_{i})=\rho(X_{j})$, the link are all of type IV. But this contracts the claim case \ref{2a3}, therefore there are no link of type III or IV after $X_{i}$. In other word, the links after $X_{i}$ are all type I, II in case B.
+Then all $X_{i}$ are weak log canonical models of $(W,\Delta_{i})$. By finiteness of weak log canonical models, there are finitely many $\sigma_{i}:W\dashrightarrow X_{i}$ up to isomorpism. However even $X_{i} \cong X_{j}$, they may have different log Mori fibre spaces, i.e. $f_{i}$ and $f_{j}$ are not same. But such log Mori fibre spaces of same $X_{i}$ are finite.
+Indeed, we may assume that there is an $k$ such that $X_{i} \cong X_{k}$ for all $k>i$, and  $f_{i}$ is the contraction corresponding to an extremal ray $R_{i} \subset \overline{\operatorname{NE}}(X_{i}) $. Then we have $(K_{X_{k}}+B_{k}).R_{i}<0  $ and $(K_{X_{k}}+B_{k}+g_{i}G_{i}+h_{i}H_{i}).R_{i}=0$. Furthermore, $H_{k}$ and $G_{k}$ are relatively ample over $S_{i}$ for all $i>k$.
+\begin{enumerate}
+\item If $h_{k}>0$: Since $H_{k}$ is big, we have $h_{k}H_{k}=A_{k}+E_{k}$ for some ample $\mathbb{Q}$-divisor $H_{k}$ and effective $\mathbb{Q}$-divisor  $E_{k}$. Let $B_{k}'=B_{k}+(1-\epsilon)h_{k}H_{k}+\epsilon E_{k}$ for sufficiently small $\epsilon$ such that $(X,B')$ is klt, then $(K_{X_{k}}+B_{k}').R_{i}<0$ and $(K_{X_{k}}+B_{k}'+\epsilon A_{k}).R_{i}<0$ for all $i>k$. By cone theorem, we have 
+  \[
+    \overline{\operatorname{NE}}(X_{k})=\overline{\operatorname{NE}}(X_{k})_{K_{X_{k}}+B_{k}'+\epsilon A_{k}\geqslant 0} +\sum_{\alpha \in\Lambda\text{ finite set}}R_{\alpha}
+  \]
+  All extremal ray $R_{i}$ corresponding to $f_{i}$ for $i>k$ are in the finite set $\{R_{\alpha}\}_{\alpha \in \Lambda} $, thus there are finitely many log Mori fibre spaces $f_{i}:X_{i}\to S_{i}$ of $X_{k}$.
+\item If $h_{k}=0$ for all $k$, and hence $g_{k}=1$ for all $k$. Since $G_{k}$ is big, we have $G_{k}=A_{k}+E_{k}$ for some ample $\mathbb{Q}$-divisor $H_{k}$ and effective $\mathbb{Q}$-divisor  $E_{k}$. Let $B_{k}'=B_{k}+(1-\epsilon)G_{k}+\frac{\epsilon}{2} E_{k}$ for sufficiently small $\epsilon$ such that $(X,B')$ is klt, then $(K_{X_{k}}+B_{k}').R_{i}<0$ and $(K_{X_{k}}+B_{k}'+\frac{\epsilon}{2} A_{k}).R_{i}<0$ for all $i>k$. By cone theorem, we have 
+\[
+    \overline{\operatorname{NE}}(X_{k})=\overline{\operatorname{NE}}(X_{k})_{K_{X_{k}}+B_{k}'+\frac{\epsilon}{2}A_{k}\geqslant 0} +\sum_{\alpha \in\Lambda\text{ finite set}}R_{\alpha}
+  \]
+  Again,there are finitely many log Mori fibre spaces $f_{i}:X_{i}\to S_{i}$ of $X_{k}$.
 
-  Since $\rho(X_{i})= \rho(X_{j})$ and Sarkisov link of type I increase the picard number, $X_{i}$  and $X_{j}$ is linked by  the Sarkisov links of type II. But this contracts the \ref{2bdiscrepancy} Claim \ref{behavior2}.
+\end{enumerate}
+\item Assmue this sequence of links is infinite, then there are $i<j$ such that $f_{i}:X_{i}\to S_{i}  $ and $f_{j}:X_{j}\to S_{j}$ are isomorphic. Then we have $g_{i+1}=g_{j+1}$ and $h_{i+1}=h_{j+1}$. Since sequences of $h_{k}$ and $g_{k}$ are monotone, we have $h_{i+1}=h_{k}$ and  $g_{i+1}=g_{k}$ for all $k>i$. Suppose $X_{i}\dashrightarrow X_{i+1}$ is a link in case \ref{2a}, then the next link is also in case \ref{2a}, and all the links after are in case \ref{2a}. Note that $X_{i}\cong X_{j}$ and therefore $\rho(X_{i})=\rho(X_{j})$, the links are all of type IV. But this contracts  \ref{2adicrepancy} of Claim\ref{behavior2}. Therefore there are no link of type III or IV after $X_{i}$. In other word, the links after $X_{i}$ are all type I or II in case \ref{2b}.
+
+  Since $\rho(X_{i})= \rho(X_{j})$ , $X_{i}$  and $X_{j}$ is linked by  the Sarkisov links of type II. But this contracts  \ref{2bdiscrepancy} of  Claim \ref{behavior2}.
 \end{enumerate}  
 \end{proof}
-At last we need to show that $X_{N}$ is isomorphic to $X'$. In fact, this follows directly by the Noether-Fano-Iskovskikh Criterion \ref{nfi}.
+\begin{lem}\label{nfi2}
+$X_{N}\to S_{N}$ is isomorphic to $X'\to S'$. 
+\end{lem}
+\begin{proof}
+  By $2$ of Theorem \ref{nfi}, we have $h_{N}=1$ and they are isomorphic.
+\end{proof}
 \section{Using the Polytope}
 In this section we follows \cite{haconSarkisovProgram2011}.
 \subsection{Morphisms between models}
@@ -885,7 +877,7 @@ This is (4).
   \cite[Corollary 3.4]{haconSarkisovProgram2011}If $V$ spans  $\operatorname{NS}(W)$, then there is a Zariski dense open subset $U$ of the Grassmannian $G(r,V)$ of real affine subspace of dimension $r$ such that any  $[V']\in U$ defined on ratinal numbers statify (1-4) of \ref{mapbetweenAM} 
 \end{lem}
 \begin{proof}
- Let $U \subset G(r,V) $ be the set of real affine subspace  $V'$ of $V$ of dimension $r$, which contion any sub no face of any $\mathcal{C}_{i}$ or $\mathcal{L}(V)$. In particular, the interior of  $\mathcal{L}_{A}(V')$ is contained in the interior of $\mathcal{L}_{A}(V)$. Clearly that any $V'\in U$ satisfies (1-4) of \ref{finiteamplemodel}. \end{proof}
+ Let $U \subset G(r,V) $ be the set of real affine subspace  $V'$ of $V$ of dimension $r$, which contion any sub no face of any $\mathcal{C}_{i}$ or $\mathcal{L}(V)$. In particular, the interior of  $\mathcal{L}_{A}(V')$ is contained in the interior of $\mathcal{L}_{A}(V)$. Clearly that any $V'\in U$ satisfies (1-4) of \ref{mapbetweenAM}. \end{proof}
 From now on in this subsection, we always assume that $V$ has dimension $2$ and statisfies \ref{mapbetweenAM}.  
 \begin{lem}
 \cite[Lemma 3.5]{haconSarkisovProgram2011} Let $ f:W\dashrightarrow X $ and $ g:W\dashrightarrow  Y $ be two rational contracions such that $ \mathcal{C}_{A,f} $ is dimension $ 2 $ and $ \mathcal{O}=\mathcal{C}_{A,f}\cap \mathcal{C}_{A,g} $ is dimension $ 1 $. Assume $ \rho(X)\geqslant \rho(Y) $ and $ \mathcal{O} $ is not contained in the boundary of $ \mathcal{L}_{A}(V) $. Let $ D $ be an interior point of $ \mathcal{O} $ and $ B=f_*D $. Then there is a rational contraction $ \pi:X\dashrightarrow Y $ and $ g=\pi\circ f $ such that either
