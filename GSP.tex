@@ -17,7 +17,7 @@
 
 \usepackage{geometry}
 % \geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm}
-\geometry{a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm}
+% \geometry{a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm}
 
 \newtheorem{defn}{Definition}[subsection]
 \newtheorem{prop}[defn]{Proposition}
@@ -660,9 +660,9 @@ and rational numbers
 \]
 such that 
 \begin{enumerate}
-  \item $p_i:W\dashrightarrow  X_{i}$ is $(K_{W}+B_{W}+g_{i}G_{W}+h_{i}H_{W})$-non-positive, and $(K_{X_{i}}+B_{i}+g_{i}G_{i}+h_{i}H_{i})=p_{i*}(K_{W}+B_{W}+g_{i}G_{W}+h_{i}H_{W})$ is nef and is relatively trivial over $S_{i}$;
+  \item For each $i$, $\sigma_i:W\dashrightarrow  X_{i}$ is $(K_{W}+B_{W}+g_{i}G_{W}+h_{i}H_{W})$-non-positive, and $(K_{X_{i}}+B_{i}+g_{i}G_{i}+h_{i}H_{i})=\sigma_{i*}(K_{W}+B_{W}+g_{i}G_{W}+h_{i}H_{W})$ is nef and is relatively trivial over $S_{i}$;
   \item $(W,B_{W}+g_{i}G_{W}+h_{i}H_{W})\geqslant (X_{i},B_{i}+g_{i}G_{i}+h_{i}H_{i})$;
-  \item each Sarkisov link is given by a sequence of $(K_{X_{i}}+B_{i}+g_{i}G_{i}+h_{i}H_{i})$-trivial maps.
+  \item each Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ is given by a sequence of $(K_{X_{i}}+B_{i}+g_{i}G_{i}+h_{i}H_{i})$-trivial maps.
     \item  The last link $X_{N} \to S_{N}$ is isomorphic to $X'\to S'$
 \end{enumerate}
 \end{thm}
@@ -671,11 +671,11 @@ such that
 This subsection we construct the links inductively. Suppose we have $\sigma_{i}:W\dashrightarrow X_{i}$ as in Theorem  \ref{main2}, that is 
 \begin{itemize}
   \item $f_{i}:(X_{i},B_{i})\to S_{i}$ is a log Mori fibre space and $\sigma_{i*} B_{W}=B_{i}$;
-  \item $\sigma_{i}:W\dashrightarrow  X_{i}$ is $(K_{W}+g_{i}G_{i}+h_{i}H_{W})$-non-positive biratinal map, and $(K_{X_{i}}+B_{i}+g_{i}G+h_{i}H)=\sigma_{i*}(K_{W}+g_{i}G_{W}+h_{i}H_{W})$ is nef and is relatively trivial over $S_{i}$;
+  \item $\sigma_{i}:W\dashrightarrow  X_{i}$ is $(K_{W}+g_{i}G_{i}+h_{i}H_{W})$-non-positive birational map, and $(K_{X_{i}}+B_{i}+g_{i}G+h_{i}H)=\sigma_{i*}(K_{W}+B_{W}+g_{i}G_{W}+h_{i}H_{W})$ is nef and is relatively trivial over $S_{i}$;
   \item $(W,B_{W}+g_{i}G_{W}+h_{i}H_{W})\geqslant (X_{i},B_{i}+g_{i}G_{i}+h_{i}H_{i})$;
   \item $0\leqslant g_{i},h_{i}\leqslant 1$ are  rational numbers.
 \end{itemize}
-Then we need to show that there is a Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ satisfying the theorem \ref{main2}. Similarly with Sarkisov degree, we have following notations:
+Then we need to show that there is a Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ satisfying  Theorem \ref{main2}. Similarly with Sarkisov degree, we have following notations:
 \begin{defn}
   Let $C_{i}$ be a general $f_{i}$-vertical curve on $X_{i}$, then
   \begin{itemize}
