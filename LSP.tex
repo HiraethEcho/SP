@@ -898,9 +898,12 @@ There is another definition of log canonical models:
     \item If $ i,j $ are two indices such that $ \mathcal{C}_i $ spans $ V $ and $ D $ is a general point of $ \mathcal{A}_j\cap \mathcal{C}_i $ which is also a point of interior of $ \mathcal{L}_A(V) $, then $ \mathcal{C}_i $ and $ \overline{\mathrm{NE}}(X_i/X_j)^*\times \mathbb{R}^k $ for some $ k\leqslant 0 $. Furthermore $ \rho(X_i/X_j) $ equals the differece in the dimensions of $ \mathcal{C}_i $ and $ \mathcal{C}_j\cap \mathcal{C}_i $.
   \end{enumerate}
 \end{thm}
+
+
+
 \begin{proof}
-  \begin{enumerate}[1)]
-    \item is proved in \textbf{BCHM}
+  \begin{enumerate}
+    \item is proved in \cite{birkarExistenceMinimalModels2009}.
     \item Pick a divisor $D \in \mathcal{A}_{j} \cap \mathcal{C}_{i}$ and $D' \in \mathcal{A}_{i}$ such that
       \[
         D_{t}=D+t(D'-D) \in \mathcal{A}_{i} 
@@ -927,7 +930,7 @@ There is another definition of log canonical models:
         \end{aligned}
       \]
       for all $t \in [0,1]$. As $K_{X}+B_{0}$ is semiample, it follows that $H_{0}$ is semiample and the associated contraction $f_{i,j}:X_{i}\to X_{j}$ is the required morphism.  
-    \item Suppose that $\mathcal{C}$ spans $V$. Pick $D$ in the interior of $\mathcal{C} \cap \mathcal{A}_{i}$. Let $f:W \dashrightarrow  X$ be a log termianl model of $(K_{W}+D)$, then $f=f_{j}$ for some index $1\leqslant j\leqslant k$ and that $D \in \mathcal{C}j$. But then $A_{i} \cap \mathcal{A}_{j}\neq \emptyset$ so that $i=j$. If $f_{i}$ is a log terminal model of $K_{W}+D$ then $f_{i}$ is birational and $X$ is $\mathbb{Q}$-factorial. Finally suppose that $f_{i}$ is birational and $X_{i}$ is $\mathbb{Q}$-factorial. Fix $D \in \mathcal{A}_{i}$. Pick any divisor $G \in V$ such that $-B$ is ample and $K_{X_{i}}+
+    \item Suppose that $\mathcal{C}$ spans $V$. Pick $D$ in the interior of $\mathcal{C} \cap \mathcal{A}_{i}$. Let $f:W \dashrightarrow  X$ be a log termianl model of $(K_{W}+D)$, then $f=f_{j}$ for some index $1\leqslant j\leqslant k$ and that $D \in \mathcal{C}_{j}$. But then $A_{i} \cap \mathcal{A}_{j}\neq \emptyset$ so that $i=j$. If $f_{i}$ is a log terminal model of $K_{W}+D$ then $f_{i}$ is birational and $X$ is $\mathbb{Q}$-factorial. Finally suppose that $f_{i}$ is birational and $X_{i}$ is $\mathbb{Q}$-factorial. Fix $D \in \mathcal{A}_{i}$. Pick any divisor $G \in V$ such that $-G$ is ample and $K_{X_{i}}+
 f_{i*}(D+G)$ is ample and $D+G \in \mathcal{L}_{A}(V)$. Then $f_{i}$ is $(K_{W}+D+G)$-negative and so $D+G \in \mathcal{A}_{i}$. But $\mathcal{C}_{i}$ spans $V$, this implies (3).
   \item Let $f=f_{i}$ and $X=X_{i}$. As $\mathcal{C}_{i}$ spans $V$, (3) implies that $f$ is birational and $X$ is $\mathbb{Q}$-factorial so that $f$ is a $\mathbb{Q}$-factorial weak log canonical model of $K_{W}+D$. Suppose that $E_{1},E_{2},\ldots ,E_{k}$ are the divisors contracted by $f$.  Pick $F_{i} \in V$ numerically equivalent to $E_{i}$. If we let $E_{0}= \sum^{k}_{i=1} E_{i}$ and $F_{0}= \sum^{k}_{i=1}F_{i} $, then $E_{0}$ and $F_{0}$ are numerically equivalent. As $D$ belongs to ineterior of $\mathcal{L}_{A}(V)$ we may find $\delta>0$ such that $K_{W}+D+\delta F_{0}$ and $K_{W}+D+\delta B_{0}$ are both klt. Then $f$ is $(K_{W}+D+  \delta E_{0})$-negative and so $f$ is a log terminal model of $(K_{W}+D+  \delta E_{0})$ and $f_{j} $ is the ample model of $K_{W}+D+\delta B_{0}$. In paricular  $D+\delta F_{0} \in \mathcal{A}_{j} \cap \mathcal{C}_{i}$. As we are supposing that $D$ is general in $\mathcal{A}_{j} \cap  \mathcal{C}_{i}$, in fact $f$ must be a log terminal model of $K_{W}+D$, and $f$ is $(K_{W}+D)$-negative.    
 
@@ -939,14 +942,14 @@ f_{i*}(D+G)$ is ample and $D+G \in \mathcal{L}_{A}(V)$. Then $f_{i}$ is $(K_{W}+
 
   But since $f_{j}$ is the ample model of $K_{W}+D$, in fact we can choose $\epsilon$ sufficiently small such that $K_{X}+H$ is nef if and only if $K_{X}+H$ is nef over $X_j$. There is a surjective  affine linear map from $V_{X}$ to the space of Weil divisor on $X$ modulo numerical equivalence over $X_{j}$ and this induces an isomorphism
   \[
-    \mathcal{N} \cong \overline{\operatorname{NE}}^* \times \mathbb{R}^l,
+    \mathcal{N} \cong \overline{\operatorname{NE}}(X/X_{j})^* \times \mathbb{R}^l,
   \]
  in a neighbourhood of $f_*D$.
 
  Note that $K_{X}+f_* D$ is numerical trival over $X_{j}$. As $f_*D$ is big and $K_{X}+f_*D$ is klt we may find an ample $\mathbb{Q}$-divisor $A'$ and a divisor $B'\geqslant 0$ such that 
  \[
-   K_{X}+A'+B' \sim_{\mathbb{R}} (K_{X}+f_*D 
- ,\]
+   K_{X}+A'+B' \sim_{\mathbb{R}} K_{X}+f_*D 
+ \]
 is klt. But then 
 \[
   -(K_{X}+B')\sim_{\mathbb{R}}-(K_{X}+H)+A'
