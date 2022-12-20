@@ -102,14 +102,20 @@ For the second case, it is shown that:
 % \end{rmk}
 The Sarkisov program has its origin in the birational classification of ruled surfaces \cite{sarkisovCONICBUNDLESTRUCTURES1983}. 
 Reid explained the original idea of Sarkisov \cite{sarkisovBirationalmapsofstandardQfanoFibering}. 
-The complete proof of Sarkisov program for terminal threefolds is given in by Corti \cite{cortiFactoringBirationalMaps}. 
-Andrea Bruno and Kenji Matsuki generalized it to klt pairs of dimension $3$. In fact, they showed that the Sarkisov program works for klt pairs of all dimensions, but in higher dimension it may not terminate.  
+The complete proof of Sarkisov program for terminal threefolds is given  by Corti \cite{cortiFactoringBirationalMaps}. 
+Andrea Bruno and Kenji Matsuki \cite{brunoLogSarkisovProgram1995} generalized it to klt pairs of dimension $3$. In fact, they showed that the Sarkisov program works for klt pairs of all dimensions, but in higher dimension it may not terminate.  
 Due to the finiteness of weak log canonical model \cite{birkarExistenceMinimalModels2009}, Hacon gives another Sarkisov program called double scaling \cite{haconMinimalModelProgram2012} which terminates in all dimensions. 
-Liu Jihao generalized it to generalized pairs \cite{liuSarkisovProgramGeneralized2019}. 
-
+Liu Jihao generalized Hacon's method to generalized pairs \cite{liuSarkisovProgramGeneralized2019}. 
 As another application of \cite{birkarExistenceMinimalModels2009}, Hacon and M\textsuperscript{c}kern gave another proof \cite{haconSarkisovProgram2011} and is quite different.
 \subsection{Using MMP}
-Assume $f:(X,B)\to S'$ and $f':(X',B')\to S'$ are two Mori fibre spaces as outputs of $(K_{W}+B_{W})$-MMP on $W$. The Sarkisov program constructs each Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ inductively. For each $X_{i}$ we shall find some $W_{i}$ such that $X_{i}$ and $X_{i+1}$ are two Mori fibre spaces as outputs of certain MMP on $W_{i}$. Moreover, $W_{i}\dashrightarrow X_{i+1}$ is a $2$-tay game. More precisely, there are two cases:
+Assume $f:(X,B)\to S'$ and $f':(X',B')\to S'$ are two Mori fibre spaces as outputs of $(K_{W}+B_{W})$-MMP on $W$. The Sarkisov program constructs each Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ inductively. Each Sarkisov link is given by running a special MMP called 2-ray game.
+
+\textbf{Sarkisov's Idea:} Take an ample $\mathbb{Q}$-divisor $A'$ on $S'$ such that $H'\sim -(K_{X'}+B') +f'^*A'$  is ample, then $(X',B'+H')$ is a weak log canonical model. Therefore we expect that $X'$ is output of certain MMP from $X$. Let $H$ be the strict transform of $H'$ on $X$, then we run $(K_{X}+B+cH)$-MMP for max  $c$ such that
+\begin{enumerate}
+  \item $K_{X}+B+cH$ is non-positive over $S$, and 
+  \item $K_{X}+B+cH$ is log canonical ($\theta$-canonical).
+\end{enumerate}
+% For each $X_{i}$ we shall find some $W_{i}$ such that $X_{i}$ and $X_{i+1}$ are two Mori fibre spaces as outputs of certain MMP on $W_{i}$. Moreover, $W_{i}\dashrightarrow X_{i+1}$ is a $2$-tay game. More precisely, there are two cases
 \begin{enumerate}
   \item Find a contraction $g:X_{i} \to T_{i}$ such that $\rho(X_{i}/T_{i})=2$ and factor though $f_{i}:X_{i} \to S_{i}$, then we run MMP on  $X_{i} $ over $T_{i}$, and obtains a Sarkisov link of type III or IV. Here $W_{i}=X_{i}$;
     \item  Find a divisorial contraction $p:Z_{i}\to X_{i}$, and therefore $\rho(Z_{i}/S_{i})=2$. Then we run MMP on $Z_{i}$ over $S_{i}$, and obtains a Sarkisov link of type I or II. Here $W_{i}=Z_{i}$. 
@@ -800,7 +806,7 @@ $X_{N}\to S_{N}$ is isomorphic to $X'\to S'$.
 \end{proof}
 \section{Using the Polytope}\label{thirdmethod}
 In this section we follows \cite{haconSarkisovProgram2011}.
-\subsection{Morphisms between models}
+\subsection{Construction of Sarkisov links}
   Let $W$ be a smooth projective   variety, and let $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. In this subsection we describe the models $X_{i}$ of $(W,A+B)$ for some $B \in V$ and rational maps between $X_{i}$.
 \begin{thm}\label{mapbetweenAM}
   \cite[Theorem 3.3]{haconSarkisovProgram2011} Let $W$ be a smooth projective   variety, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
@@ -874,7 +880,7 @@ Now suppose we are in the second case. Since $\rho(X/S)=\rho(Y/S)=1$, we know th
 \end{lem}
 This lemma gunrantee that every variety in the Sarkisov links constructed later is a MMP result of $(W,B_{W})$.
 
-Let $ D=A+B $ be a point of boundary of $ \mathcal{E}_A(V) $ in the interior of $ \mathcal{L}_A(V) $. Let $ \mathcal{T}_1, \ldots, \mathcal{T}_k $ be the polytopes $ \mathcal{C}_i $ of dimension $ 2 $ containing $ D $. Let $ \mathcal{O}_0 $ and $ \mathcal{O}_k $ be the intersection of $ \mathcal{T}_0 $ and $ \mathcal{T}_k $ with boundary of $ \mathcal{E}_A(V) $, and let $ \mathcal{O}_i=\mathcal{T}_i\cap\mathcal{T}_{i+1} $. Let $ f_i:W\to X_i $ be the rational contraction associated to $ \mathcal{T}_i $ and $ g_i:W\to S_i $ be the rational contraction associated to $ \mathcal{O}_i $.
+Let $ D=A+B $ be a point of boundary of $ \mathcal{E}_A(V) $ in the interior of $ \mathcal{L}_A(V) $. Let $ \mathcal{T}_1, \ldots, \mathcal{T}_k $ be the polytopes $ \mathcal{C}_i $ of dimension $ 2 $ containing $ D $. Let $ \mathcal{O}_0 $ and $ \mathcal{O}_k $ be the intersection of $ \mathcal{T}_0 $ and $ \mathcal{T}_k $ with boundary of $ \mathcal{E}_A(V) $, and let $ \mathcal{O}_i=\mathcal{T}_i\cap\mathcal{T}_{i+1} $. Let $ f_i:W\dashrightarrow  X_i $ be the birational contraction associated to $ \mathcal{T}_i $ and $ g_i:W\dashrightarrow  S_i $ be the rational contraction associated to $ \mathcal{O}_i $.
 \begin{tikzpicture}
   \draw (0,0)node[below]{$ D $}--(-6,4)node[above]{$ \mathcal{O}_0 $};
   \draw (-2.5,2)node[right]{$ \mathcal{T}_1 $};
@@ -904,8 +910,8 @@ Note that $ \rho(X_i/R)\leqslant 2 $ and $ \rho(X/S)=\rho(Y/T)=1 $. Thus
 \end{enumerate}
 The same holds for $ q $ and $ t $. And the map $X'\to Y'$ is clear the composition of flops. This gives 4 types of links.
 \end{proof}
-\subsection{Construction of Sarkisov links}
-We need a special resolution $W$ and an   affine subspace $V \subset \operatorname{WDiv}(W)$ such that we can find two Mori fibre spaces $X/S$ and $Y/T$ and vertexs connecting them. The following  lemma shows the desired affine subspace exits. 
+\subsection{Decomposition of $\Phi$}
+We need a special resolution $W$ and a special  affine subspace $V \subset \operatorname{WDiv}(W)$.
 \begin{lem}\label{keylemma}
   \cite[Lemma 4.1]{haconSarkisovProgram2011} Let $ \phi:X\to S $ and $ \psi :Y\to T  $ be two MMP related Mori fibre space corresponding to two klt projective varieties $ (X,B_X) $ and $ (Y,B_Y) $. Then we may find a smooth projective variety $ W $, two biratinal morphism $ f:W\to X $ and $ g:W\to Y $, a klt pair $ (W,B_{W}) $, an ample $ \mathbb{Q} $-divisor $ A $ on $ W $ and a two dimensional rational affine subspace $ V $ of $ \mathrm{WDiv}_\mathbb{R}(W) $ such that 
   \begin{enumerate}
@@ -962,7 +968,6 @@ Thus $\mathcal{A}_{A,\phi\circ f}$ is not contained in the boundary of $\mathcal
 
 Let $V_{1}$ be the translate by $B_{0}$ of two dimensional vector space spaned by $F+H-A$ and $F+G-A$. Let $V$ be a small general perturbation of $V_{1}$, which is defined over rationals. This is the affine subspace we need.
 \end{proof}
-% TODO: proof of what?
 Then we can prove the main theorem
 \begin{proof}[Proof of \ref{main}]
 Let $(W,B_{W}),A $ and $V$ as in the lemma \ref{keylemma}.  Pick $ D_{0} \in \mathcal{A}_{A,\phi\circ f} $  and $ D_1\in \mathcal{C}_{A,g} $ belonging to the interior of $ \mathcal{L}_A(V) $. As $ V $ is two dimensional, removing $ D_0 $ and $ D_1 $ divides the boundary of $ \mathcal{E}_A(V) $ into two parts. The part which consists entirely of divisors which are not big is contained in the interior of $ \mathcal{L}_A(V) $. Consider tracing this boundary from $ D_0 $ to $ D_1 $. Then there are finitely many $ 2\leqslant i\leqslant N $ points $ D_i $ which are contained in more than two polytopes $ \mathcal{C}_{A,f_i}(V) $. By lemma \ref{constructlink},  each point $ D_i $ gives a Sarkisov link. And the birational map $X \dashrightarrow Y$ is composition of such links.
