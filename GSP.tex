@@ -575,12 +575,9 @@ At last we have the Noether-Fano-Iskovskikh criterion (hold for all dimensions) 
       Here $ \{G_i\}, \{E_j\} $ are $ \sigma $-exceptional divisors, and $ \{E_j\}\{G'_k\} $ are $ \sigma' $-exceptional divisors. Since $H_W=\sigma'^*H' $, $ g_k'>0 $ (or there are no such $ G'_k $). Then take a general curve $ C\subset X $ contracted by $ f $, such that its strict transform $ \tilde{C} $ on $ W $ is disjoint from $ G_i, E_j $, and is not contained in $ G'_k $. Then we have:
       \[
         \begin{aligned}
-          C.\left(K_X+B+\frac{1}{\mu'}H\right)=&\tilde{C}.\sigma^*\left(K_X+B+\frac{1}{\mu'}H\right)
-          \\=&\tilde{C}.\left(\sigma^*\left(K_W+B_{W}+\frac{1}{\mu'}H\right)+\sum g_iG_i+\sum e_jE_j\right)\\
-          =&\tilde{C}.\left(K_W+B_W+\frac{1}{\mu'}H_W\right)\\
+          C.\left(K_X+B+\frac{1}{\mu'}H\right)==&\tilde{C}.\left(\sigma^*\left(K_W+B_{W}+\frac{1}{\mu'}H\right)+\sum g_iG_i+\sum e_jE_j\right)\\
           =&\tilde{C}.\left(\sigma'^*\left(K_{X'}+B'+\frac{1}{\mu'}H'\right)+\sum e'_jE_j+ \sum g_k'G_k'\right)\\
-          =&\tilde{C}.\sigma'^*f'^*A'+C.\left(\sum g_k'G_k'\right)\\
-          \geqslant&0
+          =&\tilde{C}.\sigma'^*f'^*A'+C.\left(\sum g_k'G_k'\right) \geqslant0
         \end{aligned}
       .\]
      This implies $ (K_X+B+\frac{1}{\mu'}H) $ is $ f $-nef and $ \mu\geqslant \mu' $;
@@ -627,7 +624,7 @@ then
 \end{lem}
 Conversely, start from a klt pair and non-positive map, we have
 \begin{lem}\label{terminalresolution}
-  \cite[Lemma 3.5]{liuSarkisovProgramGeneralized2019} Let $\sigma:(W,B_W)\dashrightarrow (X,B)$ be a $K_W+B_W$-non-positive birational map such that $\sigma_*(K_W+B_W)=K_X+B$ and $(W,B_W)$ is a $\mathbb{Q}$-factorial klt pair. Then there is a resolution of indeterminacy $\pi:\tilde{W}\to W $ and $\tilde{\sigma}:\tilde{W}\to X$ such that
+  \cite[Lemma 3.5]{liuSarkisovProgramGeneralized2021} Let $\sigma:(W,B_W)\dashrightarrow (X,B)$ be a $K_W+B_W$-non-positive birational map such that $\sigma_*(K_W+B_W)=K_X+B$ and $(W,B_W)$ is a $\mathbb{Q}$-factorial klt pair. Then there is a resolution of indeterminacy $\pi:\tilde{W}\to W $ and $\tilde{\sigma}:\tilde{W}\to X$ such that
 \begin{itemize}
   \item $(\tilde{W},B_{\tilde{W}})$ is $\mathbb{Q}$-factorial terminal and $\tilde{\sigma}_*B_{\tilde{W}}=B$,
   \item $\tilde{\sigma}$ is $(K_{\tilde{W}}+B_{\tilde{W}})$-non-positive and $(\tilde{W},B_{\tilde{W}})\geqslant (X,B)$.
@@ -723,7 +720,7 @@ Then we have (check \cite[Lemma 4.4]{liuSarkisovProgramGeneralized2021} for deta
   \end{enumerate}
 \end{enumerate}
 \begin{claim}\label{behavior2}
-By \cite[Lemma 13.14-17]{haconMinimalModelProgram2012} and \cite[Lemma 4.2]{liuSarkisovProgramGeneralized2019}  , we have:
+By \cite[Lemma 13.14-17]{haconMinimalModelProgram2012} and \cite[Lemma 4.2]{liuSarkisovProgramGeneralized2021}  , we have:
   \begin{enumerate}
     \item $r_{i}\leqslant r_{i+1}$. Moreover, in case \ref{2a1}, we have $r_{i}<r_{i+1}$. 
     \item Since the birational map $X_{i}\dashrightarrow X_{i+1}$ is over $T_{i}$ (over $S_{i}$) and $(K_{X_{i}}+D_{i}(s_{i}))$ is numerically trivial over $T_{i}$ (over $S_{i}$) in case \ref{2a} (case \ref{2b}), it follows that $a(E;X_{i},D_{i}(s_{i}))= a(E;X_{i+1},D_{i+1})$ for any divisors $E$ over $W$ and so the inequality
@@ -816,7 +813,7 @@ In this subsection we construct one Sarkisov link. First we show the partition o
 \end{thm}
   % Let $W$ be a smooth projective   variety, and let $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$.
 \begin{thm}\label{mapbetweenAM}
-  \cite[Theorem 3.3]{haconSarkisovProgram2011} Let $W$ be a smooth projective   variety, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
+  \cite[Theorem 3.3]{haconSarkisovProgram2012} Let $W$ be a smooth projective   variety, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
   \begin{enumerate}
     \item $ \{\mathcal{A}_i=\mathcal{A}_{A,f_i}\} $ is a partition of $ \mathcal{E}_{A}(V) $. $ \mathcal{A}_i $ is a finite union of interiors of rational polytopes. If $ f_i $ is birational then $ \mathcal{C}_i=\mathcal{C}_{A,f_i} $ is a rational polytope;
     \item If $ i,j $ are two indices such that $ \mathcal{A}_j\cap \mathcal{C}_i\neq \emptyset $ then there is a contraction $ f_{ij}:X_i\to X_j $ such that $ f_j=f_{ij}\circ f_i $;
@@ -838,7 +835,7 @@ In this subsection we construct one Sarkisov link. First we show the partition o
 \end{proof}
 By above Lemma, from now on in this subsection, we always assume that $V$ has dimension $2$ and satisfies Theorem \ref{mapbetweenAM}. The following lemma shows that the morphism in $2$ of Theorem \ref{mapbetweenAM} can be divisorial contraction, small contraction or Mori fibre space. And in some cases they forms a flop.
 \begin{lem}\label{mapbetweenAM2}
-\cite[Lemma 3.5]{haconSarkisovProgram2011} Let $ f:W\dashrightarrow X $ and $ g:W\dashrightarrow  Y $ be two rational contracions such that $ \mathcal{C}_{A,f} $ is of dimension $ 2 $ and $ \mathcal{O}=\mathcal{C}_{A,f}\cap \mathcal{C}_{A,g} $ is of dimension $ 1 $. Assume $ \rho(X)\geqslant \rho(Y) $ and $ \mathcal{O} $ is not contained in the boundary of $ \mathcal{L}_{A}(V) $. Let $ D $ be an interior point of $ \mathcal{O} $ and $ B=f_*D $. Then there is a rational contraction $ \pi:X\dashrightarrow Y $ and $ g=\pi\circ f $ such that either
+\cite[Lemma 3.5]{haconSarkisovProgram2012} Let $ f:W\dashrightarrow X $ and $ g:W\dashrightarrow  Y $ be two rational contracions such that $ \mathcal{C}_{A,f} $ is of dimension $ 2 $ and $ \mathcal{O}=\mathcal{C}_{A,f}\cap \mathcal{C}_{A,g} $ is of dimension $ 1 $. Assume $ \rho(X)\geqslant \rho(Y) $ and $ \mathcal{O} $ is not contained in the boundary of $ \mathcal{L}_{A}(V) $. Let $ D $ be an interior point of $ \mathcal{O} $ and $ B=f_*D $. Then there is a rational contraction $ \pi:X\dashrightarrow Y $ and $ g=\pi\circ f $ such that either
 \begin{enumerate}
   \item $ \rho(X)=\rho(Y)+1 $ and $ \pi  $ is $ (K_X+B) $-trivial, and either
   \begin{enumerate}
@@ -888,7 +885,7 @@ Finally we show there is a Sarkisov link corresponding to certain $D \in \mathca
 
 Set $ f=f_1:W\dashrightarrow X, g=f_k:W\dashrightarrow Y $ and $ \phi:X\to S=S_0,\psi:Y\to T=S_k $ and $ X'=X_2,Y'=X_{k-1} $ and let $ W\dashrightarrow R $ be the ample model of $ D $. Then
 \begin{thm}\label{constructlink}
-  \cite[Theorem 3.7]{haconSarkisovProgram2011} Suppose $ B_W $ is a divisor such that $ K_W+B_W $ is klt and $ D-B_W $ is ample. Then $ \phi $ and $ \psi $ are log Mori fibre spaces as outputs of $ (K_W+B_W) $-MMP and connected by a Sarkisov link if $ D $ is contained in more than two polytopes.
+  \cite[Theorem 3.7]{haconSarkisovProgram2012} Suppose $ B_W $ is a divisor such that $ K_W+B_W $ is klt and $ D-B_W $ is ample. Then $ \phi $ and $ \psi $ are log Mori fibre spaces as outputs of $ (K_W+B_W) $-MMP and connected by a Sarkisov link if $ D $ is contained in more than two polytopes.
 \end{thm}
 % need this proof
 \begin{proof}
