@@ -105,8 +105,8 @@ Reid explained the original idea of Sarkisov \cite{sarkisovBirationalmapsofstand
 The complete proof of Sarkisov program for terminal threefolds is given  by Corti \cite{cortiFactoringBirationalMaps}. 
 Andrea Bruno and Kenji Matsuki \cite{brunoLogSarkisovProgram1995} generalized it to klt pairs of dimension $3$. In fact, they showed that the Sarkisov program works for klt pairs of all dimensions, but in higher dimension it may not terminate.  
 Due to the finiteness of weak log canonical model \cite{birkarExistenceMinimalModels2009}, Hacon gives another Sarkisov program called double scaling \cite{haconMinimalModelProgram2012} which terminates in all dimensions. 
-Liu Jihao generalized Hacon's method to generalized pairs \cite{liuSarkisovProgramGeneralized2019}. 
-As another application of \cite{birkarExistenceMinimalModels2009}, Hacon and M\textsuperscript{c}kern gave another proof \cite{haconSarkisovProgram2011} and is quite different.
+Liu Jihao generalized Hacon's method to generalized pairs \cite{liuSarkisovProgramGeneralized2021}. 
+As another application of \cite{birkarExistenceMinimalModels2009}, Hacon and M\textsuperscript{c}kern gave another proof \cite{haconSarkisovProgram2012} and is quite different.
 \subsection{Using MMP}
 Assume $f:(X,B)\to S'$ and $f':(X',B')\to S'$ are two Mori fibre spaces as outputs of $(K_{W}+B_{W})$-MMP on $W$. The Sarkisov program constructs each Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ inductively. Each Sarkisov link is given by running a special MMP called 2-ray game.
 
@@ -138,7 +138,7 @@ Take a special $2$-dimensional rational affine subspace  $V$ (by Lemma \ref{keyl
 In this article, all varieties are over complex number $\mathbb{C}$.
 \subsection{Models}
 \begin{defn}
-  \cite[2.Notation and Conventions]{haconSarkisovProgram2011} A rational map $f:X\dashrightarrow Y$ is called a \textbf{rational contraction} if there is a resolution $p:W\to X$  and $q:W\to Y$  of $f$  such that $p$  and $q$  are contraction morphisms and $p$  is birational. $f$ is called a \textbf{birational contraction} if $q$  is in addition birational and every $p$-exceptional divisor is $q$-exceptional. If in addition $f^{-1}$ is also a \textbf{birational contraction}, then $f$ is called a \textbf{small birational map}.
+  \cite[2.Notation and Conventions]{haconSarkisovProgram2012} A rational map $f:X\dashrightarrow Y$ is called a \textbf{rational contraction} if there is a resolution $p:W\to X$  and $q:W\to Y$  of $f$  such that $p$  and $q$  are contraction morphisms and $p$  is birational. $f$ is called a \textbf{birational contraction} if $q$  is in addition birational and every $p$-exceptional divisor is $q$-exceptional. If in addition $f^{-1}$ is also a \textbf{birational contraction}, then $f$ is called a \textbf{small birational map}.
 \end{defn}
 
 \begin{defn}\label{negativemap}
@@ -502,7 +502,7 @@ We prove it in servel steps:
   \item Claim that $ (X_i,B_i+cH_i) $ and $ (Z_i,B_i+cH_i) $ are log canonical for all $ i\gg 0 $. Otherwise, let
   \[ \alpha_i=\mathrm{lct}(X_i,B_i;H_i) \]
   then there are infinitely many $ i $ such that $ c>\alpha_i $. By definition of $ \lambda_i $, we have $ \alpha_i>c_i $. Notice that $ c_i $ accumulates from below to $ c $ and never equals, there are infinitely many $ \alpha_i $, which contradicts to acc conditation of lct:
-
+  % TODO: wrong ref 
 \begin{thm}
   \cite[Theorem 1.1]{birkarAscendingChainCondition2007}  Fix a positive integral $ n $, $ I\subset [0,1] $ and a subset $ J $ of positive real numbers. If $ I,J $ satisfy the DCC, then $ \mathrm{LCT}_n(I,J) $ satisfies ACC.
 \end{thm}
@@ -561,7 +561,7 @@ At last we have the Noether-Fano-Iskovskikh criterion to show when they are isom
 
 \begin{proof}
 % Suppose  $ B=\sum_ib_iB_i+\sum_jd_jD_j $ and $ B'=\sum_jd_j'D_j+\sum_kb_k'B_k' $, where $ B_i $ are divisors on $ X $ but not on $ X' $, $ B_k' $ are divisors on $ X' $ but not on $ X $, and $ D_j $ are divisors on both $ X $ and $ X' $.
-  We follow the proof in \cite{haconMinimalModelProgram2012},\cite{liuSarkisovProgramGeneralized2019} and \cite{cortiFactoringBirationalMaps}:
+  We follow the proof in \cite{haconMinimalModelProgram2012},\cite{liuSarkisovProgramGeneralized2021} and \cite{cortiFactoringBirationalMaps}:
   \begin{enumerate}
     \item Only need to show $ (K_X+B+\frac{1}{\mu'}H) $ is $ f $-nef.   Let $\sigma:W\to X$ and $\sigma':W\to X'$ be the common resolution. Consider the ramification formulas:
       \[
@@ -596,7 +596,7 @@ Then we show there are isomorphic. Take a very ample divisor $ D $ on $ X $ and 
 \end{proof}
 
 \section{Double scaling}
-This section we follows \cite[13.The Sarkisov program]{haconMinimalModelProgram2012} and  \cite{liuSarkisovProgramGeneralized2019}.
+This section we follows \cite[13.The Sarkisov program]{haconMinimalModelProgram2012} and  \cite{liuSarkisovProgramGeneralized2021}.
 \subsection{Prepare}
 Let $(W,B_W)$ be a $\mathbb{Q}$-factorial klt pair and $f:(X,B)\to S$ and $f':(X',B')\to S'$ be two different log Mori fibre spaces as outputs of $(K_{W}+B_{W})$-MMP.  To modify the beginning setting, we need more conventions and lemmas:
 \begin{defn}
@@ -682,7 +682,7 @@ Then we need to show that there is a Sarkisov link $X_{i}\dashrightarrow X_{i+1}
 \item Let $D_{W,i}=B_{W}+g_{i}G_{W}+h_{i}H_{W}$ and $D_{i}=B_{i}+g_{i}G_{i}+h_{i}H_{i}$. Let $D_{W,i}(t)=B_{W}+g_{i}G_{W}+h_{i}H_{W}+t(G_{W}-r_{i}H_{W})$ and $D_{i}(t)=B_{i}+g_{i}G_{i}+h_{i}H_{i}+t\left(G_{i}-r_{i}H_{i}\right))$. Let $g_{i+1}=g_{i}-r_{i}s_{i}$ and $h_{i+1}=h_{i}+s_{i}$. Note that $D_{W,i+1}=D_{W,i}(s_{i})$. 
   \end{itemize}
 \end{defn}
-Then we have (check \cite[Lemma 4.4]{liuSarkisovProgramGeneralized2019} for details)
+Then we have (check \cite[Lemma 4.4]{liuSarkisovProgramGeneralized2021} for details)
 \begin{enumerate}
     \item $r_{i}>0$;
     \item either $\Gamma=\{0\} $ or is a closed interval;
@@ -736,7 +736,7 @@ By \cite[Lemma 13.14-17]{haconMinimalModelProgram2012} and \cite[Lemma 4.2]{liuS
 \end{claim}
 \subsection{Termination}
 \begin{lem}\label{termination2}
-\cite[Lemma 13.18 and Lemma 13.19]{haconMinimalModelProgram2012} (or \cite[Lemma 4.9]{liuSarkisovProgramGeneralized2019}) Suppose we construct a sequence of Sarkisov links: 
+\cite[Lemma 13.18 and Lemma 13.19]{haconMinimalModelProgram2012} (or \cite[Lemma 4.9]{liuSarkisovProgramGeneralized2021}) Suppose we construct a sequence of Sarkisov links: 
 \[
   \xymatrix{
     X=X_0\ar@{.>}[r]\ar[d]&X_{1}\ar@{.>}[r]\ar[d]& X_{2}\ar[d]\ar[r] &\cdots\ar@{.>}[r]&X_{i}\ar[d] \ar[r] &\cdots\\
@@ -790,7 +790,7 @@ $X_{N}\to S_{N}$ is isomorphic to $X'\to S'$.
   By $2$ of Theorem \ref{nfi}, we have $h_{N}=1$ and they are isomorphic.
 \end{proof}
 \section{Using the Polytope}\label{thirdmethod}
-In this section we follows \cite{haconSarkisovProgram2011}.
+In this section we follows \cite{haconSarkisovProgram2012}.
 \subsection{Construction of Sarkisov links}
 In this subsection we construct one Sarkisov link. First we show the partition of $\mathcal{E}_{A}(V)$  corresponding to ample models and morphisms between these ample models.
 \begin{thm}\label{finitemodel}
@@ -828,7 +828,7 @@ In this subsection we construct one Sarkisov link. First we show the partition o
 \end{thm}
 
 \begin{lem}\label{subspace}
-  \cite[Corollary 3.4]{haconSarkisovProgram2011}If $V$ spans  Neron-Severi group of $W$, then there is a Zariski dense open subset $U$ of the Grassmannian $G(r,V)$ of real affine subspace of dimension $r$ such that any  $[V']\in U$ defined on rational numbers satisfies (1-4) of Theorem \ref{mapbetweenAM} 
+  \cite[Corollary 3.4]{haconSarkisovProgram2012}If $V$ spans  Neron-Severi group of $W$, then there is a Zariski dense open subset $U$ of the Grassmannian $G(r,V)$ of real affine subspace of dimension $r$ such that any  $[V']\in U$ defined on rational numbers satisfies (1-4) of Theorem \ref{mapbetweenAM} 
 \end{lem}
 \begin{proof}
  Let $U \subset G(r,V) $ be the set of real affine subspace  $V'$ of $V$ of dimension $r$, which contain no face of any $\mathcal{C}_{i}$ of $\mathcal{L}(V)$. In particular, the interior of  $\mathcal{L}_{A}(V')$ is contained in the interior of $\mathcal{L}_{A}(V)$. Clearly that any $V'\in U$ defined over rationals satisfies (1-4) of \ref{mapbetweenAM}. 
@@ -878,7 +878,7 @@ Now suppose we are in the second case. Since $\rho(X/S)=\rho(Y/S)=1$, we know th
 \end{proof}
 
 \begin{lem}
-  \cite[Lemma 3.6]{haconSarkisovProgram2011} Let $f:W\dashrightarrow X $ be a birational contraction between $\mathbb{Q}$-factorial varieties. Suppose $(W,D)$ and $(W,D+A)$ are both klt. If $f$ is ample model of $(W,D+A)$ and $A$ is ample, then $f$ is a result of  $(K_{W}+D)$-MMP.
+  \cite[Lemma 3.6]{haconSarkisovProgram2012} Let $f:W\dashrightarrow X $ be a birational contraction between $\mathbb{Q}$-factorial varieties. Suppose $(W,D)$ and $(W,D+A)$ are both klt. If $f$ is ample model of $(W,D+A)$ and $A$ is ample, then $f$ is a result of  $(K_{W}+D)$-MMP.
 \end{lem}
 This lemma gunrantee that every variety in the Sarkisov links constructed later is a result of $(W,B_{W})$-MMP.
 
@@ -916,7 +916,7 @@ The same holds for $ q $ and $ t $. And the map $X'\to Y'$ is clear the composit
 \subsection{Decomposition into Sarkisov links}
 We need a special resolution $W$ and a special  affine subspace $V \subset \operatorname{WDiv}(W)$.
 \begin{lem}\label{keylemma}
-  \cite[Lemma 4.1]{haconSarkisovProgram2011} Let $ \phi:X\to S $ and $ \psi :Y\to T  $ be two MMP related Mori fibre spaces corresponding to two klt projective varieties $ (X,B_X) $ and $ (Y,B_Y) $. Then we may find a smooth projective variety $ W $, two birational morphisms $ f:W\to X $ and $ g:W\to Y $, a klt pair $ (W,B_{W}) $, an ample $ \mathbb{Q} $-divisor $ A $ on $ W $ and a two dimensional rational affine subspace $ V $ of $ \mathrm{WDiv}_\mathbb{R}(W) $ such that 
+  \cite[Lemma 4.1]{haconSarkisovProgram2012} Let $ \phi:X\to S $ and $ \psi :Y\to T  $ be two MMP related Mori fibre spaces corresponding to two klt projective varieties $ (X,B_X) $ and $ (Y,B_Y) $. Then we may find a smooth projective variety $ W $, two birational morphisms $ f:W\to X $ and $ g:W\to Y $, a klt pair $ (W,B_{W}) $, an ample $ \mathbb{Q} $-divisor $ A $ on $ W $ and a two dimensional rational affine subspace $ V $ of $ \mathrm{WDiv}_\mathbb{R}(W) $ such that 
   \begin{enumerate}
     \item If $ D\in \mathcal{L}_A(V) $ then $ D-B_W $ is ample;
     \item $ \mathcal{A}_{A,\phi\circ f} $ and $ \mathcal{A}_{A,\psi\circ g} $ are not contained in the boundary of $ \mathcal{L}_A(V) $;
