@@ -1,23 +1,62 @@
-\documentclass{article}
-
-\usepackage{wrapfig}
-\usepackage{amsfonts}
-\usepackage[all]{xy}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{mathrsfs}
-\usepackage{amsthm}
-\usepackage{enumerate}
-\usepackage[hidelinks]{hyperref}
-\usepackage{ulem}
-\usepackage{tikz}  
-\usetikzlibrary{arrows.meta}%画箭头用的包
-\usetikzlibrary{cd}
-\usepackage{multicol} %用于实现在同一页中实现不同的分栏
+\documentclass[11pt]{amsart}
 
 \usepackage{geometry}
-% \geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm}
-% \geometry{a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm}
+\geometry{a4paper,top=3cm,bottom=3cm,left=2.5cm,right=2.5cm}
+
+%\setcounter{tocdepth}{1}%delete the subsections in the contents
+\setcounter{tocdepth}{1}%%%%%%No subsection
+
+\hyphenpenalty=5000
+\tolerance=1000
+
+\usepackage{amsfonts, amssymb, amscd}
+\numberwithin{equation}{section}
+
+\usepackage[symbol]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\usepackage{todonotes}
+ \newcommand\liu[1]{\todo[color=green!40]{#1}} %Liu
+ \newcommand\liuinline[1]{\todo[inline,color=green!40]{#1}} %Liu inline
+ \newcommand\han[1]{\todo[color=yellow!40]{#1}} %Han
+ \newcommand\haninline[1]{\todo[inline,color=yellow!40]{#1}} %Han inline
+ 
+  \newcommand\chen[1]{\todo[color=blue!40]{#1}} %Chen
+ \newcommand\cheninline[1]{\todo[inline,color=blue!40]{#1}} %Chen inline
+
+
+\usepackage{bm}
+\usepackage{verbatim}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+%\usepackage[nospace,noadjust]{cite}
+%\usepackage[all]{xy}
+\usepackage{tikz-cd}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{subfiles}
+\usepackage[toc,page]{appendix}
+\usepackage{mathtools}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage[all]{xy}
+
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+%\usepackage{fixltx2e}
+\usepackage{appendix}
+\usepackage{hyperref}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
 
 \newtheorem{defn}{Definition}[subsection]
 \newtheorem{prop}[defn]{Proposition}
@@ -31,17 +70,46 @@
 \newtheorem{problem}{Problem}
 \newtheorem*{ques}{Question}
 
-% \setcounter{section}{0}
-
-\title{Sarkisov program}
-\author{wyz}
-\date{\today}
+% \theoremstyle{definition}
+% \newtheorem{defn}[thm]{Definition}
+% \newtheorem{definition}[theorem]{Definition}
+% \newtheorem{example}[theorem]{Example}
+% \newtheorem{question}[theorem]{Question}
+% \newtheorem{remark}[theorem]{Remark}
+% \newtheorem{conjecture}[theorem]{Conjecture}
 
 \begin{document}
 
-  \maketitle
-  \tableofcontents
-  %\newpage
+\title{Introduction to Sarkisov program}
+\dedicatory{Dedicated to Professor Vyacheslav V. Shokurov on the occasion of his seventieth birthday}
+
+\author{Yifei Chen, Yanze Wang}
+
+\begin{abstract}
+In this paper, we describe three different Sarkisov program, and give examples.
+\end{abstract}
+
+\address{UCAS}
+\email{wangyanze@amss.ac.cn}
+
+
+\address{Shanghai Center for Mathematical Sciences, Fudan University, Shanghai, 200438, China}
+\email{hanjingjun@fudan.edu.cn}
+
+
+
+
+
+\subjclass{Primary 14E30, 
+Secondary 14B05.}
+\date{\today}
+
+
+\maketitle
+
+\tableofcontents
+
+
 \section{Introduction}
 
 The purpose of this article is to show that two different log Mori fibre spaces as outputs of a klt pair can be linked by composition of  Sarkisov links.
@@ -97,9 +165,6 @@ For the second case, it is shown that:
     &T &}$
     Here, all $ f:(X,B)\to S $ and $ f_1:(X_1,B_1)\to S_1 $ are log Mori fibre space, and all $ p,q $ are divisorial contractions, and all dash arrows are composition of flips (or flops in section \ref{thirdmethod}). 
 \end{defn}
-% \begin{rmk}
-%   The birational maps $Z\dashrightarrow X_{1}$ in type I and II are $2$-ray games over $S$, and birational maps $X\dashrightarrow X_{1}$ in type III are $2$-ray games over $S_{1}$,   and birational maps $X\dashrightarrow X_{1}$ in type III are $2$-ray games over $T$.
-% \end{rmk}
 The Sarkisov program has its origin in the birational classification of ruled surfaces \cite{sarkisovCONICBUNDLESTRUCTURES1983}. 
 Reid explained the original idea of Sarkisov \cite{sarkisovBirationalmapsofstandardQfanoFibering}. 
 The complete proof of Sarkisov program for terminal threefolds is given  by Corti \cite{cortiFactoringBirationalMaps}. 
@@ -133,6 +198,7 @@ Take a special $2$-dimensional rational affine subspace  $V$ (by Lemma \ref{keyl
   \item  There are finitely many points  $D_{i}$ "connecting" $D_{S}$ and $D_{T}$, and these $D_{i}$ corresponds to a Sarkisov link.
   \item   $X\dashrightarrow Y$ is composition of these Sarkisov links.
 \end{enumerate}
+
 
 \section{Preliminary}
 In this article, all varieties are over complex number $\mathbb{C}$.
@@ -401,7 +467,52 @@ Then we run $(K_{Y}+B_{Y})$-MMP on $Y$ over $X$ with scaling of some ample divis
 \subsection{Flowchart for the Log Sarkisov program}
 We follow \cite[Flowchart for the Sarkisov program]{brunoLogSarkisovProgram1995} in this subsection.
 
-If $ \lambda\leqslant\mu $ and $ K_X+B+\frac{1}{\mu}H $ is nef, the two Mori fibre spaces are isomorphic  (shown in next subsection by proposition \ref{nfi} ) and we stop here. Otherwise:
+If $ \lambda\leqslant\mu $ and $ K_X+B+\frac{1}{\mu}H $ is nef, the two Mori fibre spaces are isomorphic by following proposition and we stop here. 
+
+\begin{thm}\label{nfi}
+  (Noether-Fano-Iskovskikh Criterion): Notations as in the definition of Sarkisov degree, then 
+  \begin{enumerate}
+    \item $ \mu\geqslant \mu' $;
+    \item If $ \mu \geqslant \lambda $ and $ (K_X+B+\frac{1}{\mu} H) $ is nef, then $\Phi$ is an isomorphisms of Mori fibre spaces, i.e., we have commutative diagram: 
+      \[ \xymatrix{
+          X\ar[r]^\sim_\Phi\ar[d]_f&X'\ar[d]^{f'}\\
+      S\ar[r]^\sim& S' } \]
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+% Suppose  $ B=\sum_ib_iB_i+\sum_jd_jD_j $ and $ B'=\sum_jd_j'D_j+\sum_kb_k'B_k' $, where $ B_i $ are divisors on $ X $ but not on $ X' $, $ B_k' $ are divisors on $ X' $ but not on $ X $, and $ D_j $ are divisors on both $ X $ and $ X' $.
+  We follow the proof in \cite{haconMinimalModelProgram2012},\cite{liuSarkisovProgramGeneralized2021} and \cite{cortiFactoringBirationalMaps}:
+  \begin{enumerate}
+    \item Only need to show $ (K_X+B+\frac{1}{\mu'}H) $ is $ f $-nef.   Let $\sigma:W\to X$ and $\sigma':W\to X'$ be the common resolution. Consider the ramification formulas:
+      \[
+        \begin{aligned}  
+          K_W+B_W+\frac{1}{\mu'}H_W=&\sigma'^*(K_{X'}+B'+\frac{1}{\mu'}H')+\sum e'_jE_j+ \sum g_k'G_k'\\
+          =&\sigma^*(K_{X}+B+\frac{1}{\mu'}H)+\sum g_iG_i+\sum e_jE_j
+        \end{aligned}
+      \]
+      Here $ \{G_i\}, \{E_j\} $ are $ \sigma $-exceptional divisors, and $ \{E_j\}\{G'_k\} $ are $ \sigma' $-exceptional divisors. Since $H_W=\sigma'^*H' $, $ g_k'>0 $ (or there are no such $ G'_k $). Then take a general curve $ C\subset X $ contracted by $ f $, such that its strict transform $ \tilde{C} $ on $ W $ is disjoint from $ G_i, E_j $, and is not contained in $ G'_k $. Then we have:
+      \[
+        \begin{aligned}
+          C.\left(K_X+B+\frac{1}{\mu'}H\right)==&\tilde{C}.\left(\sigma^*\left(K_W+B_{W}+\frac{1}{\mu'}H\right)+\sum g_iG_i+\sum e_jE_j\right)\\
+          =&\tilde{C}.\left(\sigma'^*\left(K_{X'}+B'+\frac{1}{\mu'}H'\right)+\sum e'_jE_j+ \sum g_k'G_k'\right)\\
+          =&\tilde{C}.\sigma'^*f'^*A'+C.\left(\sum g_k'G_k'\right) \geqslant0
+        \end{aligned}
+      .\]
+     This implies $ (K_X+B+\frac{1}{\mu'}H) $ is $ f $-nef and $ \mu\geqslant \mu' $;
+   \item  First we show that $ \mu=\mu' $. By 1, we only need to show $ (K_{X'}+B'+\frac{1}{\mu}H') $ is $ f' $-nef. Indeed,  same as 1, we can take a curve $ C' $ on $X'$ contracted by $f'$, such that its strict transform $\tilde{C}'$ on $W$ is disjoint from  $ G'_i, E_j $, and is not contained in $ G'_k $ and 
+     $C'.\left(K_{X'}+B'+\frac{1}{\mu}H'\right)\geqslant 0$.
+
+Then we show there are isomorphic. Take a very ample divisor $ D $ on $ X $ and let $ D'  $ be its strict transform on $ X' $. $ D' $ is $ f' $-ample, thus there exists $ 0<d\ll1 $ such that the following holds:
+      \begin{itemize}
+        \item $ K_X+B+\frac{1}{\mu }H+dD $ is ample;
+        \item $ K_{X'}+B'+\frac{1}{\mu }H'+dD' $ is ample.
+      \end{itemize}
+ % since $ K_{X'}+B'+\frac{1}{\mu }H' $ is pull back of ample divisor $ \frac{1}{\mu'}A' $ on $ S' $ and $ D' $ is $ f' $-ample
+  Therefore $X$ and $X'$ are both log canonical models of $(W,B_{W}+\frac{1}{\mu}H_{W}+dD_{W})$, hence $X\cong X'$. Furthermore, $f$ and  $f'$ are contractions of same numerical class of curves, thus two log Mori fibre spaces are isomorphic.
+\end{enumerate}
+\end{proof}
+Otherwise, if the condition does not hold:
 \begin{claim}
   \begin{enumerate}
   \item If $ \lambda\leqslant\mu $ and $ K_X+B+\frac{1}{\mu}H $ is not nef, then there is a contraction $f:X \to T$ and a Sarkisov link $\psi_{1}:X\dashrightarrow X_{1}$ of type III or IV;
@@ -471,55 +582,11 @@ Suppose there is an infinite sequence, i.e. there are infinitely many $ X_i $ an
 \begin{enumerate}
   \item Discreteness of nef threshold holds for all dimensions, by boundedness of $\delta$-lc fano varieties (\cite[Theorem 1.1]{birkarSingularitiesLinearSystems2020}). Therefore we may assume $\mu_{i}$ is constant, that is, $\mu=\mu_{0}=\mu_{i}$ for all $i$.
   \item  Termination of flips holds only for threefolds and peseudo-effective fourfolds.  
+    Therefore, for higher dimensions, we cannot exclude the possibility that the program gives an infinite sequence of Sarkisov links of type IV.
+  \item Ascending chain condition of log canonical threshold holds for all dimensions \cite{HMX14}.
+  \item Finiteness of local log canonical threshold doesnot hold for higher dimensions. Therefore we cannot exclude the possibility that  the program gives an infinite sequence of Sarkisov links of type II.
+
 \end{enumerate}
-
-At last we have the Noether-Fano-Iskovskikh criterion (hold for all dimensions) to show when they are isomorphic:
-
-\begin{thm}\label{nfi}
-  (Noether-Fano-Iskovskikh Criterion): Notations as in the definition of Sarkisov degree, then 
-  \begin{enumerate}
-    \item $ \mu\geqslant \mu' $;
-    \item If $ \mu \geqslant \lambda $ and $ (K_X+B+\frac{1}{\mu} H) $ is nef, then $\Phi$ is an isomorphisms of Mori fibre spaces, i.e., we have commutative diagram: 
-      \[ \xymatrix{
-          X\ar[r]^\sim_\Phi\ar[d]_f&X'\ar[d]^{f'}\\
-      S\ar[r]^\sim& S' } \]
-  \end{enumerate}
-\end{thm}
-
-
-% need this proof 
-\begin{proof}
-% Suppose  $ B=\sum_ib_iB_i+\sum_jd_jD_j $ and $ B'=\sum_jd_j'D_j+\sum_kb_k'B_k' $, where $ B_i $ are divisors on $ X $ but not on $ X' $, $ B_k' $ are divisors on $ X' $ but not on $ X $, and $ D_j $ are divisors on both $ X $ and $ X' $.
-  We follow the proof in \cite{haconMinimalModelProgram2012},\cite{liuSarkisovProgramGeneralized2021} and \cite{cortiFactoringBirationalMaps}:
-  \begin{enumerate}
-    \item Only need to show $ (K_X+B+\frac{1}{\mu'}H) $ is $ f $-nef.   Let $\sigma:W\to X$ and $\sigma':W\to X'$ be the common resolution. Consider the ramification formulas:
-      \[
-        \begin{aligned}  
-          K_W+B_W+\frac{1}{\mu'}H_W=&\sigma'^*(K_{X'}+B'+\frac{1}{\mu'}H')+\sum e'_jE_j+ \sum g_k'G_k'\\
-          =&\sigma^*(K_{X}+B+\frac{1}{\mu'}H)+\sum g_iG_i+\sum e_jE_j
-        \end{aligned}
-      \]
-      Here $ \{G_i\}, \{E_j\} $ are $ \sigma $-exceptional divisors, and $ \{E_j\}\{G'_k\} $ are $ \sigma' $-exceptional divisors. Since $H_W=\sigma'^*H' $, $ g_k'>0 $ (or there are no such $ G'_k $). Then take a general curve $ C\subset X $ contracted by $ f $, such that its strict transform $ \tilde{C} $ on $ W $ is disjoint from $ G_i, E_j $, and is not contained in $ G'_k $. Then we have:
-      \[
-        \begin{aligned}
-          C.\left(K_X+B+\frac{1}{\mu'}H\right)==&\tilde{C}.\left(\sigma^*\left(K_W+B_{W}+\frac{1}{\mu'}H\right)+\sum g_iG_i+\sum e_jE_j\right)\\
-          =&\tilde{C}.\left(\sigma'^*\left(K_{X'}+B'+\frac{1}{\mu'}H'\right)+\sum e'_jE_j+ \sum g_k'G_k'\right)\\
-          =&\tilde{C}.\sigma'^*f'^*A'+C.\left(\sum g_k'G_k'\right) \geqslant0
-        \end{aligned}
-      .\]
-     This implies $ (K_X+B+\frac{1}{\mu'}H) $ is $ f $-nef and $ \mu\geqslant \mu' $;
-   \item  First we show that $ \mu=\mu' $. By 1, we only need to show $ (K_{X'}+B'+\frac{1}{\mu}H') $ is $ f' $-nef. Indeed,  same as 1, we can take a curve $ C' $ on $X'$ contracted by $f'$, such that its strict transform $\tilde{C}'$ on $W$ is disjoint from  $ G'_i, E_j $, and is not contained in $ G'_k $ and 
-     $C'.\left(K_{X'}+B'+\frac{1}{\mu}H'\right)\geqslant 0$.
-
-Then we show there are isomorphic. Take a very ample divisor $ D $ on $ X $ and let $ D'  $ be its strict transform on $ X' $. $ D' $ is $ f' $-ample, thus there exists $ 0<d\ll1 $ such that the following holds:
-      \begin{itemize}
-        \item $ K_X+B+\frac{1}{\mu }H+dD $ is ample;
-        \item $ K_{X'}+B'+\frac{1}{\mu }H'+dD' $ is ample.
-      \end{itemize}
- % since $ K_{X'}+B'+\frac{1}{\mu }H' $ is pull back of ample divisor $ \frac{1}{\mu'}A' $ on $ S' $ and $ D' $ is $ f' $-ample
-  Therefore $X$ and $X'$ are both log canonical models of $(W,B_{W}+\frac{1}{\mu}H_{W}+dD_{W})$, hence $X\cong X'$. Furthermore, $f$ and  $f'$ are contractions of same numerical class of curves, thus two log Mori fibre spaces are isomorphic.
-\end{enumerate}
-\end{proof}
 
 \section{Double scaling}
 This section we follows \cite[13.The Sarkisov program]{haconMinimalModelProgram2012} and  \cite{liuSarkisovProgramGeneralized2021}.
@@ -776,29 +843,13 @@ By above Lemma, from now on in this subsection, we always assume that $V$ has di
   \item $ \rho(X)=\rho(Y) $, and $ \pi $ is  a $ (K_X+B) $-flop and $ \mathcal{O}\neq\mathcal{C}_{A,g} $ is not contained in the boundary of $ \mathcal{E}_A(V) $.
   \end{enumerate}
 \end{lem}
-\begin{tikzpicture}
-  \draw (0,0)--(0,3);
-  \draw (1,2)node{$ \mathcal{C}_{A,f} $};
-  \draw (0,0)--(3,0);
-  \draw (2,1)node{$ \mathcal{C}_{A,g} $};
-  \draw(0,0)--(3,3);
-  \draw(3,2.5)node{$ \mathcal{O} $};
-\end{tikzpicture}
-$\qquad\qquad\qquad\qquad$or$\qquad\qquad\qquad\qquad$
-\begin{tikzpicture}
-  \draw (0,0)--(0,3);
-  \draw (1,2)node{$ \mathcal{C}_{A,f} $};
-  \draw(0,0)--(3,3);
-  \draw(3,1.5)node{$ \mathcal{O}= \mathcal{C}_{A,g}$};
-\end{tikzpicture}
-
 \begin{lem}
   \cite[Lemma 3.6]{haconSarkisovProgram2012} Let $f:W\dashrightarrow X $ be a birational contraction between $\mathbb{Q}$-factorial varieties. Suppose $(W,D)$ and $(W,D+A)$ are both klt. If $f$ is ample model of $(W,D+A)$ and $A$ is ample, then $f$ is a result of  $(K_{W}+D)$-MMP.
 \end{lem}
 This lemma gunrantee that every variety in the Sarkisov links constructed later is a result of $(W,B_{W})$-MMP.
 
 Finally we show there is a Sarkisov link corresponding to certain $D \in \mathcal{E}_{A}(V)$. Let $ D=A+B $ be a point of the boundary of $ \mathcal{E}_A(V) $ in the interior of $ \mathcal{L}_A(V) $. Let $ \mathcal{T}_1, \ldots, \mathcal{T}_k $ be the polytopes $ \mathcal{C}_i $ of dimension $ 2 $ containing $ D $. Possibly reordering, we may assume that  the intersection  $ \mathcal{O}_0 $ and $ \mathcal{O}_k $ of $ \mathcal{T}_1 $ and $ \mathcal{T}_k $ with boundary of $ \mathcal{E}_A(V) $ and  $ \mathcal{O}_i=\mathcal{T}_i\cap\mathcal{T}_{i+1} $ are one dimensional. Let $ f_i:W\dashrightarrow  X_i $ be the birational contraction associated to $ \mathcal{T}_i $ and $ g_i:W\dashrightarrow  S_i $ be the rational contraction associated to $ \mathcal{O}_i $.
-
+\begin{center}
 \begin{tikzpicture}
   \draw (0,0)node[below]{$ D $}--(-6,4)node[above]{$ \mathcal{O}_0 $};
   \draw (-2.5,2)node[right]{$ \mathcal{T}_1 $};
@@ -809,6 +860,7 @@ Finally we show there is a Sarkisov link corresponding to certain $D \in \mathca
   \draw (2,2)node[right]{$ \mathcal{T}_{k} $};
   \draw (0,0)--(6,4)node[above]{$ \mathcal{O}_{k} $};
 \end{tikzpicture}
+\end{center}
 
 Set $ f=f_1:W\dashrightarrow X, g=f_k:W\dashrightarrow Y $ and $ \phi:X\to S=S_0,\psi:Y\to T=S_k $ and $ X'=X_2,Y'=X_{k-1} $ and let $ W\dashrightarrow R $ be the ample model of $ D $. Then
 \begin{thm}\label{constructlink}
@@ -893,7 +945,7 @@ Then we can prove the main theorem
 
 % need this proof
 \begin{proof}[Proof of the main theorem]
-Let $(W,B_{W}),A $ and $V$ as in the lemma \ref{keylemma}.  Pick $ D_{0} \in \mathcal{A}_{A,\phi\circ f} $  and $ D_1\in \mathcal{C}_{A,\psi \circ g} $ belonging to the interior of $ \mathcal{L}_A(V) $. As $ V $ is two dimensional, removing $ D_0 $ and $ D_1 $ divides the boundary of $ \mathcal{E}_A(V) $ into two parts. The part which consists entirely of divisors which are not big is contained in the interior of $ \mathcal{L}_A(V) $. Consider tracing this boundary from $ D_0 $ to $ D_1 $. Then there are finitely many $ 2\leqslant i\leqslant N $ points $ D_i $ which are contained in more than two polytopes $ \mathcal{C}_{A,f_i}(V) $. By lemma \ref{constructlink},  each point $ D_i $ gives a Sarkisov link. And the birational map $X \dashrightarrow Y$ is composition of such links.
+Let $(W,B_{W}),A $ and $V$ as in the lemma \ref{keylemma}.  Pick $ D_{0} \in \mathcal{A}_{A,\phi\circ f} $  and $ D_1\in \mathcal{C}_{A,g} $ belonging to the interior of $ \mathcal{L}_A(V) $. As $ V $ is two dimensional, removing $ D_0 $ and $ D_1 $ divides the boundary of $ \mathcal{E}_A(V) $ into two parts. The part which consists entirely of divisors which are not big is contained in the interior of $ \mathcal{L}_A(V) $. Consider tracing this boundary from $ D_0 $ to $ D_1 $. Then there are finitely many $ 2\leqslant i\leqslant N $ points $ D_i $ which are contained in more than two polytopes $ \mathcal{C}_{A,f_i}(V) $. By lemma \ref{constructlink},  each point $ D_i $ gives a Sarkisov link. And the birational map $X \dashrightarrow Y$ is composition of such links.
 \end{proof}
 
 \section{Examples}
@@ -942,11 +994,13 @@ Set $ \mathcal{H}'=|\mathcal{O}(1)| $. Different choices of $\theta$ and  $e$ gi
 \begin{enumerate}
   \item\label{example1.1} If $ 2b+2b'\geqslant 3e>0 $,then $\Phi$ is composition of 2 Sarkisov links $\psi_{0},\psi_{1}$ of type II:
 
-$\xymatrix{
+    \[
+      \xymatrix{
     &Z_{0}\ar[rd]\ar[ld] & &Z_{1}\ar[rd]\ar[ld]\\
-  X\ar[d]\ar@{.>}[rr]^{\psi_{0}}& &X_{1}\ar@{.>}[rr]^{\psi_{1}}\ar[d]&&X'\ar[d]\\
-  pt&&pt&&pt
-  }$
+        X\ar[d]\ar@{.>}[rr]^{\psi_{0}}& &X_{1}\ar@{.>}[rr]^{\psi_{1}}\ar[d]&&X'\ar[d]\\
+        pt&&pt&&pt
+      }
+    \]
   \item If $ 2b+2b'< 3e $, then $\Phi$ is just one Sarkisov link $\Phi$ of type II:
     \[
       \xymatrix{
@@ -957,7 +1011,6 @@ $\xymatrix{
     \]
   \item If $ e=b=b'=0 $, then $\Phi$ is composition of 4 Sarkisov links $\psi_{i}$:
 \[ \xymatrix{
-  &&&W\ar[ld]\ar[rd]&&&&\\
 &&W_2\ar[ld]\ar[rd]&&W_2'\ar[ld]\ar[rd]\\
 &X_1=\mathbb{F}_1\ar@{.>}[rr]^{\psi_{1}}\ar[d]&&X_2=\mathbb{F}_2\ar@{.>}[rr]^{\psi_{2}}\ar[d]&&X_3=\mathbb{F}_1\ar[d]\ar[rd]^{\psi_{3}}\\
 X=\mathbb{P}^2\ar[d]\ar@{.>}[ru]^{\psi_{0}}&\mathbb{P}^1\ar[ld]\ar@{=}[rr]&&\mathbb{P}^1\ar@{=}[rr]&&\mathbb{P}^1\ar[rd]&X_4=\mathbb{P}^2\ar[d]\\
@@ -1021,7 +1074,20 @@ Then $D_{0}$ and $D_{1}$ correspond to log Mori fibre spaces $\phi:X\to S$ and $
 \]
 
 
-\bibliographystyle{plain}
-\bibliography{ref}
+\begin{thebibliography}{99}
 
+\bibitem[Bir19]{Bir19} C. Birkar,
+\textit{Anti-pluricanonical systems on Fano varieties}, Ann. of Math. (2) \textbf{190} (2019), no. 2, p. 345-463.
+
+\bibitem[BCHM10]{BCHM10}
+C. Birkar, P. Cascini, C. D. Hacon, and J. M\textsuperscript{c}Kernan,  \textit{Existence of minimal models for varieties of log general type}, J. Amer. Math. Soc. {\bf 23} (2010), no. 2, 405--468.	
+
+\bibitem[HMX14]{HMX14} C.~D. Hacon, J. M\textsuperscript{c}Kernan, and C. Xu, \textit{ACC for log canonical thresholds}, Ann. of Math. (2) \textbf{180} (2014), no. 2, 523--571.
+
+\bibitem[Sho06]{Sho06} V. V. Shokurov \textit{3-fold log models}, J. Math. Sci., \textbf{81}(3):2667–2699,1996.
+
+\end{thebibliography}
 \end{document}
+
+
+
