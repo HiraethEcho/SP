@@ -1,0 +1,103 @@
+\begin{thebibliography}{10}
+
+\bibitem{birkarAscendingChainCondition2007}
+Caucher Birkar.
+\newblock Ascending chain condition for log canonical thresholds and
+  termination of log flips.
+\newblock {\em Duke Mathematical Journal}, 136(1), January 2007.
+
+\bibitem{birkarAntipluricanonicalSystemsFano2019}
+Caucher Birkar.
+\newblock {Anti-pluricanonical systems on Fano varieties}.
+\newblock {\em Annals of Mathematics}, 190(2):345 -- 463, 2019.
+
+\bibitem{birkarSingularitiesLinearSystems2020}
+Caucher Birkar.
+\newblock {Singularities of linear systems and boundedness of Fano varieties}.
+\newblock {\em Annals of Mathematics}, 193(2):347 -- 405, 2021.
+
+\bibitem{birkarExistenceMinimalModels2008}
+Caucher Birkar, Paolo Cascini, Christopher~D. Hacon, and James McKernan.
+\newblock Existence of minimal models for varieties of log general type, August
+  2008.
+
+\bibitem{birkarExistenceMinimalModels2009}
+Caucher Birkar, Paolo Cascini, Christopher~D. Hacon, and James
+  M\textsuperscript{c}Kernan.
+\newblock Existence of minimal models for varieties of log general type.
+\newblock {\em Journal of the American Mathematical Society}, 23(2):405--468,
+  November 2009.
+
+\bibitem{brunoLogSarkisovProgram1995}
+Andrea Bruno and Kenji Matsuki.
+\newblock Log {S}arkisov program.
+\newblock {\em Internat. J. Math.}, 8(4):451--494, 1997.
+
+\bibitem{cortiFactoringBirationalMaps}
+Alessio Corti.
+\newblock Factoring birational maps of threefolds after {{Sarkisov}}.
+\newblock {\em Journal of Algebraic Geometry}, 1995(4):223--254, 1995.
+
+\bibitem{haconFlipsFlops2010}
+Christopher Hacon.
+\newblock Flips and {{Flops}}.
+\newblock {\em Proceedings of the International Congress of Mathematicians 2010
+  (ICM 2010) - Vol. I: Plenary Lectures and Ceremonies, Vols. II-IV: Invited
+  Lectures}, January 2010.
+
+\bibitem{haconExistenceMinimalModels2010}
+Christopher Hacon and James M\$\^\{c\}\$Kernan.
+\newblock Existence of minimal models for varieties of log general type {{II}}.
+\newblock {\em Journal of the American Mathematical Society}, 23(2):469--490,
+  April 2010.
+
+\bibitem{haconSarkisovProgram2012}
+Christopher Hacon and James McKernan.
+\newblock The {{Sarkisov}} program.
+\newblock {\em Journal of Algebraic Geometry}, 22(2):389--405, December 2012.
+
+\bibitem{haconMinimalModelProgram2012}
+Christopher~D. Hacon.
+\newblock The {{Minimal}} model program for {{Varieties}} of log general type.
+\newblock {\em Wiadomo\'sci Matematyczne}, 48(2):49, June 2012.
+
+\bibitem{haconSarkisovProgram2011}
+Christopher~D. Hacon and James M\textsuperscript{c}Kernan.
+\newblock The {{Sarkisov}} program, June 2011.
+
+\bibitem{kawamataFlopsConnectMinimal2008}
+Yujiro Kawamata.
+\newblock Flops {{Connect Minimal Models}}.
+\newblock {\em Publications of the Research Institute for Mathematical
+  Sciences}, 44(2):419--423, 2008.
+
+\bibitem{liuSarkisovProgramGeneralized2019}
+Jihao Liu.
+\newblock Sarkisov program for generalized pairs, September 2019.
+
+\bibitem{liuSarkisovProgramGeneralized2021}
+Jihao Liu.
+\newblock Sarkisov program for generalized pairs.
+\newblock {\em Osaka J. Math.}, 58(4):899--920, 2021.
+
+\bibitem{miyamoto2019TheSP}
+Keisuke Miyamoto.
+\newblock The sarkisov program on log surfaces.
+\newblock {\em arXiv: Algebraic Geometry}, 2019:114--114, 2019.
+
+\bibitem{miyamotoSarkisovProgramLog2019}
+Keisuke Miyamoto.
+\newblock The {{Sarkisov}} program on log surfaces, December 2019.
+
+\bibitem{sarkisovBIRATIONALAUTOMORPHISMSCONIC1981}
+V~G Sarkisov.
+\newblock {{BIRATIONAL AUTOMORPHISMS OF CONIC BUNDLES}}.
+\newblock {\em Mathematics of the USSR-Izvestiya}, 17(1):177--202, February
+  1981.
+
+\bibitem{sarkisovCONICBUNDLESTRUCTURES1983}
+V.~G. Sarkisov.
+\newblock On conic bundle structures.
+\newblock {\em Izv. Akad. Nauk SSSR Ser. Mat.}, 46(2):371--408, 432, 1982.
+
+\end{thebibliography}

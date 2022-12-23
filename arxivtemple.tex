@@ -26,7 +26,7 @@
 
 
 \usepackage{bm}
-\usepackage{verbatim}
+% \usepackage{verbatim}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{graphicx}
@@ -44,8 +44,7 @@
 \usepackage[linesnumbered,ruled]{algorithm2e}
 \usepackage[all]{xy}
 
-\usepackage{graphicx}
-\graphicspath{{images/}}
+% \usepackage{graphicx}
 
 %\usepackage{fixltx2e}
 \usepackage{appendix}
@@ -65,10 +64,6 @@
 \newtheorem{cor}[defn]{Corollary}
 \newtheorem{rmk}[defn]{Remark}
 \newtheorem{claim}[defn]{Claim}
-\newtheorem{const}[defn]{Construction}
-\newtheorem{fact}[defn]{Fact}
-\newtheorem{problem}{Problem}
-\newtheorem*{ques}{Question}
 
 % \theoremstyle{definition}
 % \newtheorem{defn}[thm]{Definition}
@@ -169,9 +164,9 @@ The Sarkisov program has its origin in the birational classification of ruled su
 Reid explained the original idea of Sarkisov \cite{sarkisovBirationalmapsofstandardQfanoFibering}. 
 The complete proof of Sarkisov program for terminal threefolds is given  by Corti \cite{cortiFactoringBirationalMaps}. 
 Andrea Bruno and Kenji Matsuki \cite{brunoLogSarkisovProgram1995} generalized it to klt pairs of dimension $3$. In fact, they showed that the Sarkisov program works for klt pairs of all dimensions, but in higher dimension it may not terminate.  
-Due to the finiteness of weak log canonical model \cite{birkarExistenceMinimalModels2009}, Hacon gives another Sarkisov program called double scaling \cite{haconMinimalModelProgram2012} which terminates in all dimensions. 
+Due to the finiteness of weak log canonical model \cite{BCHM10}, Hacon gives another Sarkisov program called double scaling \cite{haconMinimalModelProgram2012} which terminates in all dimensions. 
 Liu Jihao generalized Hacon's method to generalized pairs \cite{liuSarkisovProgramGeneralized2021}. 
-As another application of \cite{birkarExistenceMinimalModels2009}, Hacon and M\textsuperscript{c}kern gave another proof \cite{haconSarkisovProgram2012} and is quite different.
+As another application of \cite{BCHM10}, Hacon and M\textsuperscript{c}kern gave another proof \cite{haconSarkisovProgram2012} and is quite different.
 \subsection{Using MMP}
 Assume $f:(X,B)\to S'$ and $f':(X',B')\to S'$ are two Mori fibre spaces as outputs of $(K_{W}+B_{W})$-MMP on $W$. The Sarkisov program constructs each Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ inductively. Each Sarkisov link is given by running a special MMP called 2-ray game.
 
@@ -208,7 +203,7 @@ In this article, all varieties are over complex number $\mathbb{C}$.
 \end{defn}
 
 \begin{defn}\label{negativemap}
-  \cite[Definition 3.6.1]{birkarExistenceMinimalModels2009}Let $f:X\dashrightarrow Y$ be a birational map of normal quasi-projective varieties, and $p:W\to X$ and $q:W\to Y$ be a resolution of indeterminacy of $f$. Let $D$ be a $\mathbb{R}$-Cartier divisor on $X$ such that  $D_{Y}=f_*D$ is  also $\mathbb{R}$-Cartier. Then $f$ is called \textbf{$D$-non-positive ( respectively $D$-negative)} if
+  \cite[Definition 3.6.1]{BCHM10}Let $f:X\dashrightarrow Y$ be a birational map of normal quasi-projective varieties, and $p:W\to X$ and $q:W\to Y$ be a resolution of indeterminacy of $f$. Let $D$ be a $\mathbb{R}$-Cartier divisor on $X$ such that  $D_{Y}=f_*D$ is  also $\mathbb{R}$-Cartier. Then $f$ is called \textbf{$D$-non-positive ( respectively $D$-negative)} if
 \begin{itemize}
   \item $f$ does not extract any divisor;
   \item $E=p^{*}D-q^*D_Y$ is effective and exceptional over $Y$ ( respectively $\operatorname{Supp}p_*E$ contains all $f$-exceptional divisors).
@@ -219,21 +214,21 @@ In this article, all varieties are over complex number $\mathbb{C}$.
   \cite[13.2.Notation and conventions]{haconMinimalModelProgram2012} Let $f:X\dashrightarrow Y$ be a rational map of normal quasi-projective varieties over $S$, and $D$ be a $\mathbb{R}$-Cartier $\mathbb{R}$-divisor  on $X$ with $f_*D=D_Y$. Then $f$ is called \textbf{$D$-trivial} if $D$ is pull back of a $\mathbb{R}$-Cartier divisor on $S$.
 \end{defn}
 
-Recall the definitions of models in \cite{birkarExistenceMinimalModels2009}
+Recall the definitions of models in \cite{BCHM10}
 \begin{defn}
-  \cite[Definition 3.6.5]{birkarExistenceMinimalModels2009} Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties and let $D$ be an $\mathbb{R}$-Cartier divisor on $X$. Let $ f:X\dashrightarrow Y $ be a birational map over $ U $, then $ Z $ is an \textbf{semiample model } for $ D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is semiample over $ U $.
+  \cite[Definition 3.6.5]{BCHM10} Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties and let $D$ be an $\mathbb{R}$-Cartier divisor on $X$. Let $ f:X\dashrightarrow Y $ be a birational map over $ U $, then $ Z $ is an \textbf{semiample model } for $ D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is semiample over $ U $.
 
   Let $ g:X\dashrightarrow Z $ be a rational map over $ U $, then $ Z $ is an \textbf{ample model } for $ D $ over $ U $ if there is  an ample divisor $H$  over $U$  on $Z$  such that if $p:W \to X $ and $q:W \to Z $ resolves $g$, then $q$ is a contraction morphism and we may write $p^*D \sim_{\mathbb{R},U} q^*H+E$, where $E\geqslant 0$ and for any $B \in |p^*D/U|_{\mathbb{R}}$, then $B\geqslant E$.
 \end{defn}
 \begin{defn}\label{models}
-  \cite[Definition 3.6.7]{birkarExistenceMinimalModels2009} Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties, if $ K_X+D $ is log canonical and $ f:X\dashrightarrow Y $ is a birational map extracts no divisors, then define:
+  \cite[Definition 3.6.7]{BCHM10} Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties, if $ K_X+D $ is log canonical and $ f:X\dashrightarrow Y $ is a birational map extracts no divisors, then define:
   \begin{enumerate}
     \item $ Y $ is \textbf{weak log canonical model} for $ K_X+D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is nef over $ U $;
     \item $ Y $ is \textbf{ log canonical model} for $ K_X+D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is ample over $ U $;
     \item $ Y $ is \textbf{ log terminal model} for $ K_X+D $ over $ U $ if $ f $ is $ K_X+D $-negative and $ K_Y+f_*D $ is dlt and nef over $ U $ and $ Y $ is $ \mathbb{Q} $-factorial.
   \end{enumerate}
 \end{defn}
-\begin{lem}\cite[Lemma 3.6.6]{birkarExistenceMinimalModels2009}
+\begin{lem}\cite[Lemma 3.6.6]{BCHM10}
   Let $\pi:X \to U$ be a projective morphism of normal quasi-projective varieties and let $D$ be an $\mathbb{R}$-Cartier divisor on $X$.
   \begin{enumerate}
     \item If $g_{i}:X \dashrightarrow X_{i},i=1,2$ are two ample models of $D$ over $U$, then there is an isomorphism $h:X_{1}\to X_{2}$ and $g_{2}=h \circ g_{1}$.
@@ -248,7 +243,7 @@ By above lemma there is another definition of log canonical models:
 This Lemma seems useless.
 
 Furthermore, for big boundary, we have
-\begin{lem}\cite[Lemma 3.9.3]{birkarExistenceMinimalModels2009}Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties. Suppose $(X,B)$ is a klt pair and  $B$ is big over $U$. If $f:X\dashrightarrow Y$ is a weak log canonical model over $U$ then
+\begin{lem}\cite[Lemma 3.9.3]{BCHM10}Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties. Suppose $(X,B)$ is a klt pair and  $B$ is big over $U$. If $f:X\dashrightarrow Y$ is a weak log canonical model over $U$ then
   \begin{itemize}
     \item $f$ is a semiample model over $U$;
     \item  the ample model $g:X \dashrightarrow Z$ over $U$ exits;
@@ -256,7 +251,7 @@ Furthermore, for big boundary, we have
   \end{itemize}
 \end{lem}
 \begin{defn}\label{polytopeofdivisor}
-  \cite[Definition 1.1.4]{birkarExistenceMinimalModels2009} Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and  let $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(X) $ defined over rational numbers. Fix an $ \mathbb{R} $-divisor $ A\geqslant 0 $, and then define
+  \cite[Definition 1.1.4]{BCHM10} Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and  let $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(X) $ defined over rational numbers. Fix an $ \mathbb{R} $-divisor $ A\geqslant 0 $, and then define
   \[
     \begin{aligned}
       \mathcal{L}_A(V)&=\{D=A+B:B \in V,  K_X+D \text{ is log canonical and  } B\geqslant0 \}\\
@@ -273,9 +268,9 @@ Furthermore, for big boundary, we have
   If the base $U$ is clear or it is a point, then we may ommite $\pi$ and simply write $\mathcal{E}_{A}(V)$ and $\mathcal{A}_{A,f}$.
 \end{defn}
 
-% By \cite[Lemma 3.7.2]{birkarExistenceMinimalModels2009}, if $V$  is a rational subspace, then $\mathcal{L}_{A}(V)$ is a rational polytope.
+% By \cite[Lemma 3.7.2]{BCHM10}, if $V$  is a rational subspace, then $\mathcal{L}_{A}(V)$ is a rational polytope.
 \begin{thm}[Finiteness of weak log canonical models]\label{finitewlcm}
-\cite[Theorem E]{birkarExistenceMinimalModels2009}
+\cite[Theorem E]{BCHM10}
    Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties, and $A$ be an general divisor relatively ample over $U$, and $V \subset \operatorname{WDiv}_{\mathbb{R}}(X)$ be a finite dimensional rational subspace. Suppose that there is a klt pair $(X,\Delta_{0})$. Then there are finitely many birational maps $f_{i}:X \dashrightarrow X_{i}$ such that if $f:X \dashrightarrow  Y$ is a weak log canonical model of $K_{X}+D$ over $U$ for some $D \in \mathcal{L}_{A}(V)$, then there is an isomorphism  $h_{i}:X_{i} \to Y$  and $f=h_{i}\circ f_{i}$.  
 
 \end{thm}
@@ -301,14 +296,14 @@ and
 \]
 \end{defn}
 \begin{thm}
-\cite[Corollary 1.4.2]{birkarExistenceMinimalModels2009}Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and let $(X,B)$ be a $\mathbb{Q}$-factorial klt pair where $K_{X}+B$ is $\mathbb{R}$-Cartier and $B$ is $\pi$-big. Let $C\geqslant0$ be an $\mathbb{R}$-divisor. If $K_{X}+B+C$ is klt and  $\pi$-nef, then we may run $(K_{X}+B)$-MMP over $U$  with scaling of $C$ and  terminates.
+\cite[Corollary 1.4.2]{BCHM10}Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and let $(X,B)$ be a $\mathbb{Q}$-factorial klt pair where $K_{X}+B$ is $\mathbb{R}$-Cartier and $B$ is $\pi$-big. Let $C\geqslant0$ be an $\mathbb{R}$-divisor. If $K_{X}+B+C$ is klt and  $\pi$-nef, then we may run $(K_{X}+B)$-MMP over $U$  with scaling of $C$ and  terminates.
 \end{thm}
 \begin{thm}\label{notpseudoeffmfs}
-  \cite[Corollary 1.3.3]{birkarExistenceMinimalModels2009}Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and let $(X,B)$ be a $\mathbb{Q}$-factorial klt pair where $K_{X}+B$ is $\mathbb{R}$-Cartier.  If $K_{X}+B+C$ is  not $\pi$-peseudo-effective, then we may run $f:X\dashrightarrow Y$ a $(K_{X}+B)$-MMP over   $U$ and end with a Mori fibre space $g:Y\to Z$.
+  \cite[Corollary 1.3.3]{BCHM10}Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and let $(X,B)$ be a $\mathbb{Q}$-factorial klt pair where $K_{X}+B$ is $\mathbb{R}$-Cartier.  If $K_{X}+B+C$ is  not $\pi$-peseudo-effective, then we may run $f:X\dashrightarrow Y$ a $(K_{X}+B)$-MMP over   $U$ and end with a Mori fibre space $g:Y\to Z$.
 \end{thm}
 
 \begin{cor}\label{extraction}
-  \cite[Corollary 13.7]{haconMinimalModelProgram2012} and \cite[Corollary 1.4.3]{birkarExistenceMinimalModels2009}: Let $ (X,B) $ be a a klt pair and $\mathfrak{C}$ be any set of exceptional divisors such that  contains only exceptional divisors $ E $ of discrepancy $ a(E;X,B)\leqslant 0 $. Then there is a birational morphism $ f:Z\to X $ and a $ \mathbb{Q} $-divisor $ B_Z $ such that:
+  \cite[Corollary 13.7]{haconMinimalModelProgram2012} and \cite[Corollary 1.4.3]{BCHM10}: Let $ (X,B) $ be a a klt pair and $\mathfrak{C}$ be any set of exceptional divisors such that  contains only exceptional divisors $ E $ of discrepancy $ a(E;X,B)\leqslant 0 $. Then there is a birational morphism $ f:Z\to X $ and a $ \mathbb{Q} $-divisor $ B_Z $ such that:
   \begin{enumerate}
     \item $ (Z,B_Z) $ is klt;
     \item $ E $ is a $f$-exceptional divisor if and only if $ E\in \mathfrak{C} $;
@@ -788,7 +783,7 @@ In this section we follows \cite{haconSarkisovProgram2012}.
 \subsection{Construction of Sarkisov links}
 In this subsection we construct one Sarkisov link. First we show the partition of $\mathcal{E}_{A}(V)$  corresponding to ample models and morphisms between these ample models.
 \begin{thm}\label{finitemodel}
-\cite[Corollary 1.1.5]{birkarExistenceMinimalModels2009}Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties,  and $V \subset \operatorname{WDiv}_{\mathbb{R}}(X)$ be a finite dimensional rational subspace. Suppose that there is a divisor $\Delta_{0} \in V$ such that $(X,\Delta_{0})$ is klt. Let $A$ be a general ample $\mathbb{Q}$-divisor over $U$ which has no components common with any element of $V$.  
+\cite[Corollary 1.1.5]{BCHM10}Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties,  and $V \subset \operatorname{WDiv}_{\mathbb{R}}(X)$ be a finite dimensional rational subspace. Suppose that there is a divisor $\Delta_{0} \in V$ such that $(X,\Delta_{0})$ is klt. Let $A$ be a general ample $\mathbb{Q}$-divisor over $U$ which has no components common with any element of $V$.  
   \begin{enumerate}
     \item   There are finitely many birational maps $f_{i}:X \dashrightarrow   X_{i}$ over $U$ such that 
       \[
@@ -1079,6 +1074,11 @@ Then $D_{0}$ and $D_{1}$ correspond to log Mori fibre spaces $\phi:X\to S$ and $
 \bibitem[Bir19]{Bir19} C. Birkar,
 \textit{Anti-pluricanonical systems on Fano varieties}, Ann. of Math. (2) \textbf{190} (2019), no. 2, p. 345-463.
 
+\bibitem[Bir21]{birkarSingularitiesLinearSystems2020}
+Caucher Birkar.
+\textit{Singularities of linear systems and boundedness of Fano varieties}.
+  Annals of Mathematics, 193(2):347 -- 405, 2021.
+
 \bibitem[BCHM10]{BCHM10}
 C. Birkar, P. Cascini, C. D. Hacon, and J. M\textsuperscript{c}Kernan,  \textit{Existence of minimal models for varieties of log general type}, J. Amer. Math. Soc. {\bf 23} (2010), no. 2, 405--468.	
 
@@ -1086,6 +1086,52 @@ C. Birkar, P. Cascini, C. D. Hacon, and J. M\textsuperscript{c}Kernan,  \textit{
 
 \bibitem[Sho06]{Sho06} V. V. Shokurov \textit{3-fold log models}, J. Math. Sci., \textbf{81}(3):2667–2699,1996.
 
+\bibitem[Cor95]{cortiFactoringBirationalMaps} C. Alessio,
+\textit{Factoring Birational Maps of Threefolds after {{Sarkisov}}}, Journal of Algebraic Geometry. (4) \textbf{190} (1995), no. 2, p. 223--245.
+
+\bibitem[BM97]{brunoLogSarkisovProgram1995}
+Andrea Bruno and Kenji Matsuki.
+\textit{Log {S}arkisov program},
+ Internat. J. Math., 8(4):451--494, 1997.
+
+\bibitem[HM12]{haconSarkisovProgram2012}
+Christopher Hacon and James McKernan.
+\textit{The {{Sarkisov}} program},
+Journal of Algebraic Geometry, 22(2):389--405, December 2012.
+
+\bibitem[Hac12]{haconMinimalModelProgram2012}
+Christopher~D. Hacon.
+\textit{The {{Minimal}} model program for {{Varieties}} of log general type}.
+  Wiadomo\'sci Matematyczne, 48(2):49, June 2012.
+
+\bibitem[Kaw08]{kawamataFlopsConnectMinimal2008}
+Yujiro Kawamata.
+\textit{Flops {{Connect Minimal Models}}},
+  Publications of the Research Institute for Mathematical
+Sciences, 44(2):419--423, 2008.
+
+
+\bibitem[Liu21]{liuSarkisovProgramGeneralized2021}
+Jihao Liu.
+\textit{Sarkisov program for generalized pairs},
+  Osaka J. Math., 58(4):899--920, 2021.
+
+\bibitem[Miy19]{miyamoto2019TheSP}
+Keisuke Miyamoto.
+\textit{The sarkisov program on log surfaces},
+  arXiv: Algebraic Geometry, 2019:114--114, 2019.
+
+
+\bibitem[Sar81]{sarkisovBIRATIONALAUTOMORPHISMSCONIC1981}
+V~G Sarkisov.
+\textit{{Birational automorphisms of conic bundles}},
+  Mathematics of the USSR-Izvestiya, 17(1):177--202, February
+  1981.
+
+  \bibitem[Sar82]{sarkisovCONICBUNDLESTRUCTURES1983}
+V.~G. Sarkisov.
+\textit{On conic bundle structures},
+  Izv. Akad. Nauk SSSR Ser. Mat., 46(2):371--408, 432, 1982.
 \end{thebibliography}
 \end{document}
 
