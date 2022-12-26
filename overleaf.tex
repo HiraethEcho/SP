@@ -1,83 +1,29 @@
-
 \documentclass[11pt]{amsart}
 
 \usepackage{geometry}
 \geometry{a4paper,top=3cm,bottom=3cm,left=2.5cm,right=2.5cm}
 
-%\setcounter{tocdepth}{1}%delete the subsections in the contents
 \setcounter{tocdepth}{1}%%%%%%No subsection
 
 \hyphenpenalty=5000
 \tolerance=1000
 
 \usepackage{amsfonts, amssymb, amscd}
-\numberwithin{equation}{section}
-
-\usepackage[symbol]{footmisc}
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
-
-\usepackage{todonotes}
- \newcommand\liu[1]{\todo[color=green!40]{#1}} %Liu
- \newcommand\liuinline[1]{\todo[inline,color=green!40]{#1}} %Liu inline
- \newcommand\han[1]{\todo[color=yellow!40]{#1}} %Han
- \newcommand\haninline[1]{\todo[inline,color=yellow!40]{#1}} %Han inline
- 
-  \newcommand\chen[1]{\todo[color=blue!40]{#1}} %Chen
- \newcommand\cheninline[1]{\todo[inline,color=blue!40]{#1}} %Chen inline
-
-
-\usepackage{bm}
-\usepackage{verbatim}
-\usepackage{amssymb}
 \usepackage{mathrsfs}
-\usepackage{graphicx}
-%\usepackage[nospace,noadjust]{cite}
-%\usepackage[all]{xy}
 \usepackage{tikz-cd}
-\usepackage{subcaption}
-\usepackage{listings}
-\usepackage{subfiles}
-\usepackage[toc,page]{appendix}
-\usepackage{mathtools}
-\usepackage{comment}
+\usepackage[hidelinks]{hyperref}
 \usepackage{enumerate}
-\usepackage{enumitem}
-\usepackage[linesnumbered,ruled]{algorithm2e}
 \usepackage[all]{xy}
 
-\usepackage{graphicx}
-\graphicspath{{images/}}
 
-%\usepackage{fixltx2e}
-\usepackage{appendix}
-\usepackage{hyperref}
-\lstset{
-  basicstyle=\ttfamily,
-  columns=fullflexible,
-  frame=single,
-  breaklines=true,
-  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
-}
-
-\newtheorem{defn}{Definition}[subsection]
+% \newtheorem{defn}{Definition}[subsection]
+\newtheorem{defn}{Definition}[section]
 \newtheorem{prop}[defn]{Proposition}
 \newtheorem{lem}[defn]{Lemma}
 \newtheorem{thm}[defn]{Theorem}
 \newtheorem{cor}[defn]{Corollary}
 \newtheorem{rmk}[defn]{Remark}
 \newtheorem{claim}[defn]{Claim}
-\newtheorem{const}[defn]{Construction}
-\newtheorem{fact}[defn]{Fact}
-\newtheorem{problem}{Problem}
-\newtheorem*{ques}{Question}
-
-% \theoremstyle{definition}
-% \newtheorem{defn}[thm]{Definition}
-% \newtheorem{definition}[theorem]{Definition}
-% \newtheorem{example}[theorem]{Example}
-% \newtheorem{question}[theorem]{Question}
-% \newtheorem{remark}[theorem]{Remark}
-% \newtheorem{conjecture}[theorem]{Conjecture}
 
 \begin{document}
 
@@ -89,7 +35,6 @@
 \begin{abstract}
 The purpose of the note is to introduce three methods of Sarkisov program, which aims to factorize birational maps of log Mori fibre spaces.
 \end{abstract}
-
 \address{Academy of Mathematics and Systems Science,
 Chinese Academy of Sciences.
 No. 55 Zhonguancun East Road, Haidian District,
@@ -108,30 +53,21 @@ Secondary 14B05.}
 
 \section{Introduction}
 
-%The purpose of this article is to show that two different log Mori fibre spaces as outputs of a klt pair can be linked by composition of  Sarkisov links.
-
-%\subsection{Motivation and Main theorem}
-% Start with a projective log smooth pair $ \left(X,B\right) $, and assume we can run $ (K_X+B)$-MMP on it. The program may have different results, and the relation of the outputs is defined below:
-The Minimal model program (MMP)  aims to classify varieties up to birational equivalence. Conjectually, any variety is either birational to  a minimal model  or a Mori fibre space. The representative in each birational class is possibly not unique. It is natural to ask what is the relation of representatives of a birational class.
-
+The Minimal model program (MMP)  aims to classify varieties up to birational equivalence. 
+Conjectually, any variety is either birational to  a minimal model  or a Mori fibre space. The representative in each birational class is possibly not unique. It is natural to ask what is the relation of representatives of a birational class.
 Kawamata shows that two different minimal models can be linked by flops as follows:
-
 \begin{thm}
-  \cite[Theorem 1]{kawamataFlopsConnectMinimal2008} Let $(W,B_W)$ be a $\mathbb{Q}$-factorial terminal pair, and $(X,B),(Y,D)$ are two minimal models of $(W,B_W)$. Then the birational map $X\dashrightarrow Y$ may be factored as sequence of $(K_X+B)$-flops. 
+  \cite[Theorem 1]{kawamataFlopsConnectMinimal2008} Let $(W,B_W)$ be a $\mathbb{Q}$-factorial terminal pair, and $(X,B),(Y,D)$ are two minimal models of $(W,B_W)$. Then the birational map $X\dashrightarrow Y$ may be factored as sequence of $(K_X+B)$ flops. 
 \end{thm}
 
 For Mori fibre spaces, Sarkisov program shows:
-
 \begin{thm}\label{main}
   Let $ f:(X,B)\to S$ and $,f':(X',B')\to S' $ be two MMP related $ \mathbb{Q} $-factorial klt log Mori fibre spaces with the induced  birational map $\Phi$:
   \[ \xymatrix{
     (X,B)\ar[d]_f\ar@{.>}[r]^\Phi&(X',B')\ar[d]^{f'}\\
     S&S'} \]
-  Then modulo isomorphisms, $ \Phi  $ can be decomposed into a sequence of the following four types of Sarkisov links.
- 
+  Then modulo isomorphisms, $ \Phi  $ can be decomposed into a sequence of the following four types of Sarkisov links:
 
-%\begin{defn}
- % The following four types of  birational maps $X\dashrightarrow X_1$ are called Sarkisov links: 
 
   $\textbf{I}$:
   $\xymatrix{
@@ -157,142 +93,35 @@ For Mori fibre spaces, Sarkisov program shows:
     S\ar[dr]_{s}&&S_1\ar[dl]^{t}\\
     &T &}$
     where all $ f:(X,B)\to S $ and $ f_1:(X_1,B_1)\to S_1 $ are log Mori fibre spaces, all $ p,q $ are divisorial contractions, and all dash arrows are composition of flips (or flops in Section \ref{thirdmethod}). 
-%\end{defn}
- \end{thm}
-
+  \end{thm}
 
 The Sarkisov program has its origin in the birational classification of ruled surfaces \cite{sarkisovCONICBUNDLESTRUCTURES1983}. 
-Reid explains the original idea of Sarkisov \cite{sarkisovBirationalmapsofstandardQfanoFibering}. 
+Reid \cite{reidBirationalgeometry} explains the original idea of Sarkisov \cite{sarkisovBirationalmapsofstandardQfanoFibering}. 
 The complete proof of Sarkisov program for terminal threefolds is given  by Corti \cite{cortiFactoringBirationalMaps}. 
-Bruno and Matsuki \cite{brunoLogSarkisovProgram1995} generalize it to klt pairs of dimension $3$. Moreover, they outline the Sarkisov program for any dimensions. The original idea of Sarkisov has two parts: construction of Sarkisov links and termination of the program. The Sarkisov links are outcomes of 2-ray game of minimal model program. Sarkisov degree $(\mu,\lambda, e)$ is designed for termination. The invariant $\mu$ is related to bounded of Fano varieties. The invariants $\lambda$ and $\mu$ are related to the singularities of linear systems. As important advances in minimal model program, such as \cite{BCHM10} work for MMP with scaling, ACC of lct \cite{HMX14}, boundedness of Fano varieties \cite{Bir19}, \cite{birkarSingularitiesLinearSystems2020}, only the termination of Sarkisov program is left open, which is related to the termination of flips. For readers' convenience, we give details of the method in Section 3.
+Bruno and Matsuki \cite{brunoLogSarkisovProgram1995} generalize it to klt pairs of dimension $3$. Moreover, they outline the Sarkisov program for any dimensions. The original idea of Sarkisov has two parts: construction of Sarkisov links and termination of the program. The Sarkisov links are outcomes of 2-ray game of minimal model program. Sarkisov degree $(\mu,\lambda, e)$ is designed for termination. The invariant $\mu$ is related to boundedness of Fano varieties. The invariants $\lambda$ and $\mu$ are related to the singularities of linear systems.
+As important advances in minimal model program, such as MMP with scaling terminates by \cite{BCHM10}, ACC of lct \cite{HMX14}, boundedness of Fano varieties \cite{Bir19}, \cite{birkarSingularitiesLinearSystems2020}, only the termination of Sarkisov program of dimension greater than 3 is left open, which is related to the termination of flips. We call the method as original method, and introduce it in Section 3.
 
+Due to the finiteness of weak log canonical models in \cite{BCHM10}, Hacon \cite{haconMinimalModelProgram2012} gives another method for Sarkisov program, which is called  double scaling  and it terminates in all dimensions. 
+Liu \cite{liuSarkisovProgramGeneralized2021} generalizes Hacon's method to generalized pairs. The method and the original method are running minimal model program. The difference is that the method of double scaling has a common roof, and each step of Sarkisov link is under the common roof, which makes MMP running in the case is in a smaller collection  compared with the original method. Hence the method of double scaling can terminate. We  call the method as double scaling method and introduce it in Section 4.
 
-
-
-Due to the finiteness of weak log canonical models in \cite{BCHM10}, Hacon \cite{haconMinimalModelProgram2012} gives another method for Sarkisov program, which is called  double scaling  which terminates in all dimensions. 
-Liu \cite{liuSarkisovProgramGeneralized2021} generalized Hacon's method to generalized pairs. The method and the original method are running minimal model program. The difference is that the method of double scaling has a common roof, which in a smaller category of MMP compared with the original method. Hence the method of double scaling can terminate. We introduce the method of double scaling in Section 4.
-
-By using the idea of Shokurov's polytope \cite{Sho96}, Hacon and M\textsuperscript{c}Kernan \cite{haconSarkisovProgram2012} give another proof of Sarkisov program. We introduce the method in Section 5.
+% FIXME: log surface
+By using the idea of Shokurov's polytope \cite{Sho96}, \cite{cs11}, Hacon and M\textsuperscript{c}Kernan \cite{haconSarkisovProgram2012} give another method of Sarkisov program. Miyamoto \cite{miyamoto2019TheSP} uses the method to show Sarkisov program works for  lc log surfaces or $\mathbb{Q}$-factorial log surfaces over an algebraically closed of any characteristic.  We call the method as polytope method and introduce it in Section 5.
 
 In Section 6, we give examples to illustrate each methods of Sarkisov program.
 
-Sarkisov program has many applications. Such as the classical result for Cremona group of rank 2. That is, any birational automorphism of projective plane is a composition of automorphism of projective plane and a quadratic transform (see \cite{ksc04} Chapter 2). Takahashi applies log Sarkisov program to the a classical result of algebra. That is, any automorphism of affine plane is the composition of linear transformations and upper triangular transformations (see \cite{mat02}, Chapter 13). For more applications, we refer to the nice book of Lamy (\cite{lam22}). 
+Sarkisov program has many applications. Such as the classical result for Cremona group of rank 2. That is, any birational automorphism of projective plane is a composition of automorphism of projective plane and a quadratic transform (see \cite{ksc04} Chapter 2). Takahashi \cite{tak95} applies log Sarkisov program to dlt surfaces and obtains another proof for the classical algebraic result: any automorphism of affine plane is the composition of linear transformations and upper triangular transformations (see \cite{mat02}, Chapter 13). For more applications, we refer to the nice book of Lamy (\cite{lam22}). 
+
+%In the note, we give details of the proof just for readers' convenience. We do not claim any originality of results.
 
 
+% FIXME: Takahashi 
+% Sarkisov program has many applications. Such as the classical result for Cremona group of rank 2. That is, any birational automorphism of projective plane is a composition of automorphism of projective plane and a quadratic transform (see \cite{ksc04} Chapter 2). Takahashi applies log Sarkisov program to dlt surfaces and obtains a classical result of algebra. That is, any automorphism of affine plane is the composition of linear transformations and upper triangular transformations (see \cite{mat02}, Chapter 13). For more applications, we refer to the nice book of Lamy (\cite{lam22}). 
 
-
-
-\subsection{Using MMP}
-Assume $f:(X,B)\to S'$ and $f':(X',B')\to S'$ are two Mori fibre spaces as outputs of $(K_{W}+B_{W})$-MMP on $W$. The Sarkisov program constructs each Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ inductively. Each Sarkisov link is given by running a special MMP called 2-ray game.
-
-\textbf{Sarkisov's Idea and Bruno and Matsuk's generalization:} Take an ample $\mathbb{Q}$-divisor $A'$ on $S'$ such that $H'\sim -(K_{X'}+B') +f'^*A'$  is ample, then $(X',B'+H')$ is a weak log canonical model. Therefore we expect that $X'$ is output of certain MMP from $X$. Let $H$ be the strict transform of $H'$ on $X$, then we run $(K_{X}+B+cH)$-MMP for max  $c$ such that
-\begin{enumerate}
-  \item $K_{X}+B+cH$ is non-positive over $S$, and 
-  \item $K_{X}+B+cH$ is log canonical ($\theta$-canonical).
-\end{enumerate}
-Then we construct the Sarkisov link in following cases:
-\begin{enumerate}
-  \item If $c$ is not threshold of second condition, find a contraction $g_{i}:X_{i} \to T_{i}$ such that $\rho(X_{i}/T_{i})=2$ and factor though $f_{i}:X_{i} \to S_{i}$.  We run MMP on  $X_{i} $ over $T_{i}$, and obtains a Sarkisov link of type III or IV;
-  \item If $c$ is threshold of second condition, then find a divisorial extraction $p_{i}:Z_{i}\to X_{i}$, and then $\rho(Z_{i}/S_{i})=2$.  We run MMP on $Z_{i}$ over $S_{i}$, and obtains a Sarkisov link of type I or II. 
-\end{enumerate}
-We run the whole program in a special collection $\mathcal{C}_{\theta}$ (Proposition \ref{cat}). In this collection we can define Sarkisov degree, which decreses after composing a Sarkisov link $\psi_{i}:X_{i}\dashrightarrow X_{i+1}$.
-
-\textbf{Double scaling:} Let $W$ be the common resolution of two Mori fibre spaces. Take an ample $\mathbb{Q}$-divisor $A$ on $S$ such that $G\sim -(K_{X}+B) +f^*A$  is ample. Then  $(X,B+G)$ and $(X',B'+H')$ are two weak log canonical models of $W$ (for $K_{W}+B_{W}+G_{W}$ and $K_{W}+B_{W}+H_{W}$). We expect that there are finitely many weak log canonical models $(X_{i},B_{i}+g_{i}G_{i}+h_{i}H_{i})$ of $(W,B_{W}+g_{i}G_{W}+h_{i}H_{W})$ and $\psi_{i}:X_{i}\dashrightarrow X_{i+1}$ is a Sarkisov link given by $2$-ray game.
-
-\subsection{Using polytope}
-This is a proof of main theorem that is not a program. Let $W$ be the common log resolution of two Mori fibre spaces $X\to S$ and $Y\to T$. Take a finite dimensional subspace $V$ of $\operatorname{WDiv}_{\mathbb{R}}(W)$ and an ample $\mathbb{Q}$-divisor $A$. Then $\{\mathcal{A}_{i} =\mathcal{A}_{A,f_{i}}\} $ is a partition of $\mathcal{E}_{A}(V)$, and each $\mathcal{A}_{i}$ corresponds to an ample model of $W$. There are morphisms betwwen the ample models of $(W,D)$ for $D \in \mathcal{L}_{A}(V)$ (Theorem \ref{mapbetweenAM} and Theorem \ref{mapbetweenAM2}). In particular, if $D$ contains in the boundary of  $\mathcal{E}_{A}(V)$ and many polytopes of ample models, then those morphisms form a Sarkisov link (\ref{constructlink}).
-
-Take a special $2$-dimensional rational affine subspace  $V$ (by Lemma \ref{keylemma}) such that 
-\begin{enumerate}
-  \item $S,T$ are ample models of $W$ for some $D_{S},D_{T} \in \mathcal{L}_{A}(V)$;
-  \item  There are finitely many points  $D_{i}$ "connecting" $D_{S}$ and $D_{T}$, and these $D_{i}$ corresponds to a Sarkisov link.
-  \item   $X\dashrightarrow Y$ is composition of these Sarkisov links.
-\end{enumerate}
-
-\subsection*{Acknowledgements} Both authors are partially supported by the NSFC grant No. 12271384. The authors thank Yi Gu and Jinsong Xu for many useful discussions. The authors thank Professor Nobuyoshi Takahashi for sharing us his master thesis \cite{tak95}. 
 
 \section{Preliminaries}
 Throughout the note, all varieties are over $\mathbb{C}$, the field of complex numbers.
-\subsection{Models}
-\begin{defn}
-  \cite[\S 2]{haconSarkisovProgram2012} A rational map $f:X\dashrightarrow Y$ is called a \textbf{rational contraction} if there is a resolution $p:W\to X$  and $q:W\to Y$  of $f$  such that $p$  and $q$  are contraction morphisms and $p$  is birational. $f$ is called a \textbf{birational contraction} if $q$  is in addition birational and every $p$-exceptional divisor is $q$-exceptional. If in addition $f^{-1}$ is also a \textbf{birational contraction}, then $f$ is called a \textbf{small birational map}.
-\end{defn}
-
-\begin{defn}\label{negativemap}
-  \cite[Definition 3.6.1]{BCHM10}Let $f:X\dashrightarrow Y$ be a birational map of normal quasi-projective varieties, and $p:W\to X$ and $q:W\to Y$ be a resolution of indeterminacy of $f$. Let $D$ be a $\mathbb{R}$-Cartier divisor on $X$ such that  $D_{Y}=f_*D$ is  also $\mathbb{R}$-Cartier. Then $f$ is called \textbf{$D$-non-positive ( respectively $D$-negative)} if
-\begin{itemize}
-  \item $f$ does not extract any divisor;
-  \item $E=p^{*}D-q^*D_Y$ is effective and exceptional over $Y$ ( respectively $\operatorname{Supp}p_*E$ contains all $f$-exceptional divisors).
-\end{itemize}
-\end{defn}
-% TODO: move this definition
-\begin{defn}\label{trivialmap}
-  \cite[13.2.Notation and conventions]{haconMinimalModelProgram2012} Let $f:X\dashrightarrow Y$ be a rational map of normal quasi-projective varieties over $S$, and $D$ be a $\mathbb{R}$-Cartier $\mathbb{R}$-divisor  on $X$ with $f_*D=D_Y$. Then $f$ is called \textbf{$D$-trivial} if $D$ is pull back of a $\mathbb{R}$-Cartier divisor on $S$.
-\end{defn}
-
-Recall the definitions of models in \cite{birkarExistenceMinimalModels2009}
-\begin{defn}
-  \cite[Definition 3.6.5]{BCHM10} Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties and let $D$ be an $\mathbb{R}$-Cartier divisor on $X$. Let $ f:X\dashrightarrow Y $ be a birational map over $ U $, then $ Z $ is an \textbf{semiample model } for $ D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is semiample over $ U $.
-
-  Let $ g:X\dashrightarrow Z $ be a rational map over $ U $, then $ Z $ is an \textbf{ample model } for $ D $ over $ U $ if there is  an ample divisor $H$  over $U$  on $Z$  such that if $p:W \to X $ and $q:W \to Z $ resolves $g$, then $q$ is a contraction morphism and we may write $p^*D \sim_{\mathbb{R},U} q^*H+E$, where $E\geqslant 0$ and for any $B \in |p^*D/U|_{\mathbb{R}}$, then $B\geqslant E$.
-\end{defn}
-\begin{defn}\label{models}
-  \cite[Definition 3.6.7]{BCHM10} Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties, if $ K_X+D $ is log canonical and $ f:X\dashrightarrow Y $ is a birational map extracts no divisors, then define:
-  \begin{enumerate}
-    \item $ Y $ is \textbf{weak log canonical model} for $ K_X+D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is nef over $ U $;
-    \item $ Y $ is \textbf{ log canonical model} for $ K_X+D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is ample over $ U $;
-    \item $ Y $ is \textbf{ log terminal model} for $ K_X+D $ over $ U $ if $ f $ is $ K_X+D $-negative and $ K_Y+f_*D $ is dlt and nef over $ U $ and $ Y $ is $ \mathbb{Q} $-factorial.
-  \end{enumerate}
-\end{defn}
-\begin{lem}\cite[Lemma 3.6.6]{BCHM10}
-  Let $\pi:X \to U$ be a projective morphism of normal quasi-projective varieties and let $D$ be an $\mathbb{R}$-Cartier divisor on $X$.
-  \begin{enumerate}
-    \item If $g_{i}:X \dashrightarrow X_{i},i=1,2$ are two ample models of $D$ over $U$, then there is an isomorphism $h:X_{1}\to X_{2}$ and $g_{2}=h \circ g_{1}$.
-    \item If $f:X \dashrightarrow Y$ is a semiample model of $D$ over $U$, then the ample model $g:X \dashrightarrow  Z$ of $D$ over $U$   exits and $g=h \circ f$, where $h:Y \to Z$ is a contraction and $f_*D \sim_{\mathbb{R},U}h^*H$. Here $H$ is the ample divisor corresponding to the ample model $Z$. 
-  \item  If $f:X \dashrightarrow Y$ is a birational map over $U$, then $f$ is the ample model of $D$ over $U$ if and only if $f$ is semiample model of $D$ over $U$ and $f_*D$ is ample over $U$.     
-  \end{enumerate}
-\end{lem}
-By above lemma there is another definition of log canonical models:
-\begin{defn}
-  Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties and $ K_X+D $ is log canonical and $ f:X\dashrightarrow Y $ is a birational map extracts no divisors, then $ Y $ is \textbf{ log canonical model} if it is the ample model. 
-\end{defn}
-This Lemma seems useless.
-
-Furthermore, for big boundary, we have
-\begin{lem}\cite[Lemma 3.9.3]{birkarExistenceMinimalModels2009}Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties. Suppose $(X,B)$ is a klt pair and  $B$ is big over $U$. If $f:X\dashrightarrow Y$ is a weak log canonical model over $U$ then
-  \begin{itemize}
-    \item $f$ is a semiample model over $U$;
-    \item  the ample model $g:X \dashrightarrow Z$ over $U$ exits;
-    \item  there is a contraction $h:Y\to Z$ such that $K_{Y}+f_*B\sim_{\mathbb{R},U} h^*H$ for some ample $\mathbb{R}$-divisor $H$ on $Z$ over $U$.   
-  \end{itemize}
-\end{lem}
-\begin{defn}\label{polytopeofdivisor}
-  \cite[Definition 1.1.4]{birkarExistenceMinimalModels2009} Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and  let $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(X) $ defined over rational numbers. Fix an $ \mathbb{R} $-divisor $ A\geqslant 0 $, and then define
-  \[
-    \begin{aligned}
-      \mathcal{L}_A(V)&=\{D=A+B:B \in V,  K_X+D \text{ is log canonical and  } B\geqslant0 \}\\
-      \mathcal{E}_{A,\pi}(V)&=\{D\in \mathcal{L}_A(V): K_X+D \text{ is pseudo effective over } U\}\\ 
-      % \mathcal{N}_{A,\pi}(V)&=\{D\in\mathcal{L}_A(V):K_X+D \text{ is nef over } U\}\\
-    \end{aligned}
-  \]
-  Given a birational contraction $ f:X \dashrightarrow Y $, define
-  \[ \mathcal{W}_{A,\pi,f}(V)=\{D\in \mathcal{E}_{A}(V): f \text{ is a weak log canonical model of  } (X,D) \text{ over }U\} \]
-  Given a rational contraciton $g:X\dashrightarrow Z  $ over $ U $, define
-  \[ \mathcal{A}_{A,\pi,g}(V)=\{D\in \mathcal{E}_{A}(V): g \text{ is the ample model of  } (X,D) \text{ over }U\} \]
-  In addition, let $ \mathcal{C}_{A,\pi,g}(V) $ denote the closure of $ \mathcal{A}_{A,\pi,g}(V) $ in $\mathcal{L}_{A}(V)$.
-
-  If the base $U$ is clear or it is a point, then we may ommite $\pi$ and simply write $\mathcal{E}_{A}(V)$ and $\mathcal{A}_{A,f}$.
-\end{defn}
-
-% By \cite[Lemma 3.7.2]{birkarExistenceMinimalModels2009}, if $V$  is a rational subspace, then $\mathcal{L}_{A}(V)$ is a rational polytope.
-\begin{thm}[Finiteness of weak log canonical models]\label{finitewlcm}
-\cite[Theorem E]{birkarExistenceMinimalModels2009}
-   Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties, and $A$ be an general divisor relatively ample over $U$, and $V \subset \operatorname{WDiv}_{\mathbb{R}}(X)$ be a finite dimensional rational subspace. Suppose that there is a klt pair $(X,\Delta_{0})$. Then there are finitely many birational maps $f_{i}:X \dashrightarrow X_{i}$ such that if $f:X \dashrightarrow  Y$ is a weak log canonical model of $K_{X}+D$ over $U$ for some $D \in \mathcal{L}_{A}(V)$, then there is an isomorphism  $h_{i}:X_{i} \to Y$  and $f=h_{i}\circ f_{i}$.  
-
-\end{thm}
-
-
 \subsection{MMP}
+We call the varieties appeared in minimal model program the \textbf{results} of the MMP, and the varieties where the MMP ends  the \textbf{outputs} of the MMP.
 \begin{defn}
   Let $(X,B)$ be a pair  and let  $f:Y\to X$ be a log resolution of $(X,B)$. Suppose
   \[
@@ -311,19 +140,21 @@ and
   \operatorname{totdiscrep}(X, B) :=\operatorname{inf}\{a(E; X, B) : E \text{ is a divisor over } X\}.
 \]
 \end{defn}
+
 \begin{thm}
-\cite[Corollary 1.4.2]{birkarExistenceMinimalModels2009}Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and let $(X,B)$ be a $\mathbb{Q}$-factorial klt pair where $K_{X}+B$ is $\mathbb{R}$-Cartier and $B$ is $\pi$-big. Let $C\geqslant0$ be an $\mathbb{R}$-divisor. If $K_{X}+B+C$ is klt and  $\pi$-nef, then we may run $(K_{X}+B)$-MMP over $U$  with scaling of $C$ and  terminates.
+\cite[Corollary 1.4.2]{BCHM10} Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and let $(X,B)$ be a $\mathbb{Q}$-factorial klt pair where $K_{X}+B$ is $\mathbb{R}$-Cartier and $B$ is $\pi$-big. Let $C\geqslant0$ be an $\mathbb{R}$-divisor. If $K_{X}+B+C$ is klt and  $\pi$-nef, then we may run $(K_{X}+B)$-MMP over $U$  with scaling of $C$ and  terminates.
 \end{thm}
+
 \begin{thm}\label{notpseudoeffmfs}
-  \cite[Corollary 1.3.3]{birkarExistenceMinimalModels2009}Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and let $(X,B)$ be a $\mathbb{Q}$-factorial klt pair where $K_{X}+B$ is $\mathbb{R}$-Cartier.  If $K_{X}+B+C$ is  not $\pi$-peseudo-effective, then we may run $f:X\dashrightarrow Y$ a $(K_{X}+B)$-MMP over   $U$ and end with a Mori fibre space $g:Y\to Z$.
+  \cite[Corollary 1.3.3]{BCHM10} Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and let $(X,B)$ be a $\mathbb{Q}$-factorial klt pair where $K_{X}+B$ is $\mathbb{R}$-Cartier.  If $K_{X}+B+C$ is  not $\pi$-peseudo-effective, then we may run $f:X\dashrightarrow Y$ a $(K_{X}+B)$-MMP over   $U$ and end with a Mori fibre space $g:Y\to Z$.
 \end{thm}
 
 \begin{cor}\label{extraction}
-  \cite[Corollary 13.7]{haconMinimalModelProgram2012} and \cite[Corollary 1.4.3]{birkarExistenceMinimalModels2009}: Let $ (X,B) $ be a a klt pair and $\mathfrak{C}$ be any set of exceptional divisors such that  contains only exceptional divisors $ E $ of discrepancy $ a(E;X,B)\leqslant 0 $. Then there is a birational morphism $ f:Z\to X $ and a $ \mathbb{Q} $-divisor $ B_Z $ such that:
+  \cite[Corollary 13.7]{haconMinimalModelProgram2012} and \cite[Corollary 1.4.3]{BCHM10}: Let $ (X,B) $ be a  klt pair and $\mathfrak{C}$ be any set of exceptional divisors such that  contains only exceptional divisors $ E $ of discrepancy $ a(E;X,B)\leqslant 0 $. Then there is a birational morphism $ f:Z\to X $ and a $ \mathbb{Q} $-divisor $ B_Z $ such that:
   \begin{enumerate}
     \item $ (Z,B_Z) $ is klt;
-    \item $ E $ is a $f$-exceptional divisor if and only if $ E\in \mathfrak{C} $;
-    \item $ B_Z=\sum-a(E;X,B) $ and $ f_*B_Z=B $ and $ K_Z+B_Z=f^*(K_X+B) $.
+    \item $ E $ is an $f$-exceptional divisor if and only if $ E\in \mathfrak{C} $;
+    \item $ \operatorname{mult}_{E}B_Z=-a(E;X,B) $ if $E \in \mathfrak{C}$, and $ f_*B_Z=B $ and $ K_Z+B_Z=f^*(K_X+B) $.
   \end{enumerate} 
   In particular, if we take $\mathfrak{C}$ containing all such divisors, then $ Z $ is called \textbf{terminalization} of $ X $; if take $\mathfrak{C}$ containing only one such divisor, then $ f:Z\to X $ is called a \textbf{divisorial extraction}.    
 \end{cor}
@@ -338,32 +169,129 @@ and
 % \end{rmk}
  \begin{lem}\label{MMPrelatedConditation}
   \cite[Proposition 3.4]{brunoLogSarkisovProgram1995}
-  Let $ \{(X_l,B_l)\} $ be a finite set of $ \mathbb{Q} $-factorial klt pairs such that birational to other, then TFAE:
+  Let $ \{(X_l,B_l)\} $ be a finite set of $ \mathbb{Q} $-factorial klt pairs such that birational to other, then the following are equivalent:
   \begin{enumerate}
     \item They are MMP-related;
-    \item There is a nonsingular pair $ (W,B_W) $ with snc boundary, and projective birational morphisms $ f_l:W\to  X_l $ dominating each $ X_l $, such that $ f_{l*}B_W=B_l $ and
+    \item There is a log smooth pair $ (W,B_W) $, and projective birational morphisms $ f_l:W\to  X_l $ dominating each $ X_l $, such that $ f_{l*}B_W=B_l $ and
       \[ K_W+B_W=f_l^*(K_{X_l}+B_l)+\sum_{exceptional}{a_{li}E_{li}} \]
-      with $ a_{li}>0 $ for all $ f_i $-exceptional divisors;
+      with $ a_{li}>0 $ for all $ f_i $-exceptional divisors $E_{li}$;
     \item For any two pairs $ (X,B=\sum_ib_iB_i),(X',B'=\sum _jb_j'B_j') $ in the set,  $ a(B_i;X',B')\geqslant -b_i $ and strict inequality holds if and only if $ B_i $ exceptional over $ X' $, and $ a(B'_j;X,B)\geqslant -b'_j $ and strict inequality holds if and only if $ B'_j $ exceptional over $ X $.
   \end{enumerate}
 \end{lem}
 
-Let $ K=K(X) $ be the function field, and let $ \Sigma=\{\nu\} $ be the set of discrete valutions of the field . 
+
+\subsection{Models}
+\begin{defn}
+  \cite[\S 2]{haconSarkisovProgram2012} A rational map $f:X\dashrightarrow Y$ is called a \textbf{rational contraction} if there is a resolution $p:W\to X$  and $q:W\to Y$  of $f$  such that $p$  and $q$  are contraction morphisms and $p$  is birational. $f$ is called a \textbf{birational contraction} if $q$  is in addition birational and every $p$-exceptional divisor is $q$-exceptional. If in addition $f^{-1}$ is also a \textbf{birational contraction}, then $f$ is called a \textbf{small birational map}.
+\end{defn}
+
+\begin{defn}\label{negativemap}
+  \cite[Definition 3.6.1]{BCHM10} Let $f:X\dashrightarrow Y$ be a birational map of normal quasi-projective varieties, and $p:W\to X$ and $q:W\to Y$ be a resolution of indeterminacy of $f$. Let $D$ be a $\mathbb{R}$-Cartier divisor on $X$ such that  $D_{Y}=f_*D$ is  also $\mathbb{R}$-Cartier. Then $f$ is called \textbf{$D$-non-positive ( respectively $D$-negative)} if
+\begin{itemize}
+  \item $f$ does not extract any divisor;
+  \item $E=p^{*}D-q^*D_Y$ is effective and exceptional over $Y$ ( respectively $\operatorname{Supp}p_*E$ contains all $f$-exceptional divisors).
+\end{itemize}
+\end{defn}
+
+Recall the definitions of models in \cite{BCHM10}
+\begin{defn}
+  \cite[Definition 3.6.5]{BCHM10} Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties and let $D$ be an $\mathbb{R}$-Cartier divisor on $X$. Let $ f:X\dashrightarrow Y $ be a birational map over $ U $, then $ Z $ is an \textbf{semiample model } for $ D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is semiample over $ U $.
+
+  Let $ g:X\dashrightarrow Z $ be a rational map over $ U $, then $ Z $ is an \textbf{ample model } for $ D $ over $ U $ if there is  an ample divisor $H$  over $U$  on $Z$  such that if $p:W \to X $ and $q:W \to Z $ resolves $g$, then $q$ is a contraction morphism and we may write $p^*D \sim_{\mathbb{R},U} q^*H+E$, where $E\geqslant 0$ and for any $B \in |p^*D/U|_{\mathbb{R}}$, then $B\geqslant E$.
+\end{defn}
+\begin{defn}\label{models}
+  \cite[Definition 3.6.7]{BCHM10} Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties, if $ K_X+D $ is log canonical and $ f:X\dashrightarrow Y $ is a birational map extracts no divisors, then define:
+  \begin{enumerate}
+    \item $ Y $ is \textbf{weak log canonical model} for $ K_X+D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is nef over $ U $;
+    \item $ Y $ is \textbf{ log canonical model} for $ K_X+D $ over $ U $ if $ f $ is $ K_X+D $-non-positive and $ K_Y+f_*D $ is ample over $ U $;
+    \item $ Y $ is \textbf{ log terminal model} for $ K_X+D $ over $ U $ if $ f $ is $ K_X+D $-negative and $ K_Y+f_*D $ is dlt and nef over $ U $ and $ Y $ is $ \mathbb{Q} $-factorial.
+  \end{enumerate}
+\end{defn}
+
+\begin{lem}\cite[Lemma 3.6.6]{BCHM10}
+  Let $\pi:X \to U$ be a projective morphism of normal quasi-projective varieties and let $D$ be an $\mathbb{R}$-Cartier divisor on $X$.
+  \begin{enumerate}
+    \item If $g_{i}:X \dashrightarrow X_{i}, i=1,2$ are two ample models of $D$ over $U$, then there is an isomorphism $h:X_{1}\to X_{2}$ and $g_{2}=h \circ g_{1}$.
+    \item If $f:X \dashrightarrow Y$ is a semiample model of $D$ over $U$, then the ample model $g:X \dashrightarrow  Z$ of $D$ over $U$   exits and $g=h \circ f$, where $h:Y \to Z$ is a contraction and $f_*D \sim_{\mathbb{R},U}h^*H$. Here $H$ is the ample divisor corresponding to the ample model $Z$. 
+  \item  If $f:X \dashrightarrow Y$ is a birational map over $U$, then $f$ is the ample model of $D$ over $U$ if and only if $f$ is a semiample model of $D$ over $U$ and $f_*D$ is ample over $U$.     
+  \end{enumerate}
+\end{lem}
+
+By above lemma there is another definition of log canonical models:
+
+\begin{defn}
+  Let $ \pi:(X,D)\to U $ be a projective morphism of normal quasi-projective varieties, $ K_X+D $ log canonical and $ f:X\dashrightarrow Y $  a birational map extracts no divisors, then $ Y $ is \textbf{ log canonical model} if it is the ample model. 
+\end{defn}
+
+Furthermore, for big boundaries, we have
+\begin{lem}\cite[Lemma 3.9.3]{BCHM10} Let $ \pi:(X,B)\to U $ be a projective morphism of normal quasi-projective varieties. Suppose $(X,B)$ is a klt pair and  $B$ is big over $U$. If $f:X\dashrightarrow Y$ is a weak log canonical model over $U$ then
+  \begin{itemize}
+    \item $f$ is a semiample model over $U$;
+    \item  the ample model $g:X \dashrightarrow Z$ over $U$ exits;
+    \item  there is a contraction $h:Y\to Z$ such that $K_{Y}+f_*B\sim_{\mathbb{R},U} h^*H$ for some ample $\mathbb{R}$-divisor $H$ on $Z$ over $U$.   
+  \end{itemize}
+\end{lem}
+\begin{defn}\label{polytopeofdivisor}
+  \cite[Definition 1.1.4]{BCHM10} Let $ \pi:X\to U $ be a projective morphism of normal quasi-projective varieties, and  let $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(X) $ defined over rational numbers. Fix an $ \mathbb{R} $-divisor $ A\geqslant 0 $, and then define
+  \[
+    \begin{aligned}
+      \mathcal{L}_A(V)&=\{D=A+B:B \in V,  K_X+D \text{ is log canonical and  } B\geqslant0 \}\\
+      \mathcal{E}_{A,\pi}(V)&=\{D\in \mathcal{L}_A(V): K_X+D \text{ is pseudo effective over } U\}\\ 
+      % \mathcal{N}_{A,\pi}(V)&=\{D\in\mathcal{L}_A(V):K_X+D \text{ is nef over } U\}\\
+    \end{aligned}
+  \]
+  Given a birational contraction $ f:X \dashrightarrow Y $, define
+  \[ \mathcal{W}_{A,\pi,f}(V)=\{D\in \mathcal{E}_{A}(V): f \text{ is a weak log canonical model of  } (X,D) \text{ over }U\} \]
+  Given a rational contraciton $g:X\dashrightarrow Z  $ over $ U $, define
+  \[ \mathcal{A}_{A,\pi,g}(V)=\{D\in \mathcal{E}_{A}(V): g \text{ is the ample model of  } (X,D) \text{ over }U\} \]
+  In addition, let $ \mathcal{C}_{A,\pi,g}(V) $ denote the closure of $ \mathcal{A}_{A,\pi,g}(V) $ in $\mathcal{L}_{A}(V)$.
+
+  If the base $U$ is clear or it is a point, then we may ommite $\pi$ and simply write $\mathcal{E}_{A}(V)$ and $\mathcal{A}_{A,f}$.
+\end{defn}
+
+% By \cite[Lemma 3.7.2]{BCHM10}, if $V$  is a rational subspace, then $\mathcal{L}_{A}(V)$ is a rational polytope.
+\begin{thm}[Finiteness of weak log canonical models, \cite{BCHM10} Theorem E]\label{finitewlcm}
+
+   Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties, and $A$ be a general divisor relatively ample over $U$, and $V \subset \operatorname{WDiv}_{\mathbb{R}}(X)$ be a finite dimensional rational subspace. Suppose that there is a klt pair $(X,\Delta_{0})$. Then there are finitely many birational maps $f_{i}:X \dashrightarrow X_{i}$ such that if $f:X \dashrightarrow  Y$ is a weak log canonical model of $K_{X}+D$ over $U$ for some $D \in \mathcal{L}_{A}(V)$, then there is an isomorphism  $h_{i}:X_{i} \to Y$  and $f=h_{i}\circ f_{i}$.  
+
+\end{thm}
+
+
+\section{Original method}
+Suppose $f:(X,B)\to S'$ and $f':(X',B')\to S'$ are two Mori fibre spaces as outputs of $(K_{W}+B_{W})$-MMP on $W$. The Sarkisov program constructs each Sarkisov link $X_{i}\dashrightarrow X_{i+1}$ inductively. Each Sarkisov link is given by running a special MMP called 2-ray game. Take an ample divisor $A'$ on $S'$ such that $H'\sim -\frac{1}{\mu'}(K_{X'}+B') +f'^*A'$  is ample, then $(X',B'+\frac{1}{\mu}H')$ is a weak log canonical model. Therefore we expect that $X'$ is an output of certain MMP from $X$. Let $H$ be the birational transform of $H'$ on $X$, then we run $(K_{X}+B+cH)$-MMP for maximum  $c$ such that
+\begin{enumerate}
+  \item $K_{X}+B+cH$ is non-positive over $S$, and 
+  \item $K_{X}+B+cH$ is log canonical ($\theta$-canonical).
+\end{enumerate}
+Then we construct the Sarkisov link in following cases:
+\begin{enumerate}
+  \item If $c$ is not the threshold of second condition, find a contraction $g_{i}:X_{i} \to T_{i}$ such that $\rho(X_{i}/T_{i})=2$ and factor though $f_{i}:X_{i} \to S_{i}$.  We run MMP on  $X_{i} $ over $T_{i}$, and obtains a Sarkisov link of type III or IV;
+  \item If $c$ is the threshold of second condition, then find a divisorial extraction $p_{i}:Z_{i}\to X_{i}$, and then $\rho(Z_{i}/S_{i})=2$.  We run MMP on $Z_{i}$ over $S_{i}$, and obtains a Sarkisov link of type I or II. 
+\end{enumerate}
+We run the whole program in a special collection $\mathcal{C}_{\theta}$ (Proposition \ref{cat}). In this collection we can define Sarkisov degree, which decreases after composing a Sarkisov link $\psi_{i}:X_{i}\dashrightarrow X_{i+1}$.
+
+To show termination of this program, we need boundedness of Fano varieties, termination of flips and chain condition for singularities in this collection. 
+
+\subsection{Preliminaries}
+
+First we fix a collection: 
+
+Let $ K=K(X) $ be the function field, and let $ \Sigma=\{\nu\} $ be the set of discrete valuations of the field . 
 \begin{defn}\label{thetacategory}
   \cite[Definition 3.5]{brunoLogSarkisovProgram1995}
-  Let  $\theta:\Sigma\to [0,1)_\mathbb{Q}$ be a function. Then we can construct a collection $ \mathcal{C}_\theta $ of pairs  associated to $ \theta $, consists of klt pairs $ (X,B=\sum a_iB_i) $ satisfying
+  Let  $\theta:\Sigma\to [0,1)_\mathbb{Q}$ be a function. Then we can define a collection $ \mathcal{C}_\theta $ of pairs  associated to $ \theta $, consists of klt pairs $ (X,B=\sum a_iB_i) $ satisfying
   \begin{enumerate}
     \item $ a_i=\theta(B_i) $;
     \item $ a(E;X,B)>-\theta(E) $ for all $ E $ exceptional over $ X $.
   \end{enumerate} 
 \end{defn}
-For example, if we take $\theta \equiv 0$ constant, the $\mathcal{C}_{\theta}$ is the collection of all terminal varieties $Y$ without boundary birational to $X$. Furthermore, we can define the corresponding discrepancy:
+For example, if we take $\theta \equiv 0$ constant, the $\mathcal{C}_{\theta}$ is the collection of all terminal varieties $Y$ without boundary and birational to $X$. Furthermore, we can define the corresponding discrepancy:
 \begin{defn}[$\theta$-discrepancy]
-  Let $(X,B)$ be a pair in the category $\mathcal{C}_{\theta}$ for some function $\theta$ and let  $f:Y\to X$ be a log resolution of $(X,B)$. Suppose
+  Let $\mathcal{C}_{\theta}$ be a collection of varieties as above. Let $(X,B)$ be a pair with function field $K(X)=K$. Let  $f:Y\to X$ be a log resolution of $(X,B)$. Suppose
   \[
   K_{Y}+B_{Y}+C=f^*(K_{X}+B)
   \]
-  where $B_{Y}=(f^{-1})_*B+ \sum_{E_{i}\text{ exceptional}} \theta(E_{i})E_{i}$, then the $\theta$-discrepancy  of exceptional divisor $E_{i}$ over $X$ is 
+  where $B_{Y}=(f^{-1})_*B+ \sum_{E_{i}\text{ exc}} \theta(E_{i})E_{i}$, then the $\theta$-discrepancy  of exceptional divisor $E_{i}$ over $X$ is 
   \[
     a_{\theta}(E_{i};X,B)=-\operatorname{mult}_{E_{i}}C.
   \]
@@ -371,30 +299,9 @@ For example, if we take $\theta \equiv 0$ constant, the $\mathcal{C}_{\theta}$ i
  \[
     a_{\theta}(E_{i};X,B)=a(E_{i};X,B)+\theta(E_{i}).
  \]
-A pair $(X,B)$ is called $\theta$-canonical($\theta$-terminal) if $a_{\theta}(E;X,B)\geqslant 0$($a_{\theta}(E;X,B)> 0$ ) for all exceptional  divisors $E$ over $X$.  Note that $\theta$-canonical pair is not always in $\mathcal{C}_{\theta}$.
+A pair $(X,B)$ is called $\theta$-canonical ($\theta$-terminal) if $a_{\theta}(E;X,B)\geqslant 0$ ($a_{\theta}(E;X,B)> 0$) for all exceptional  divisors $E$ over $X$.  Note that $\theta$-canonical pair is not always in $\mathcal{C}_{\theta}$.
 \end{defn}
-
-
-% \subsection{Others}
-
-% \begin{thm}\label{BAB}
-%   \cite[Theorem 1.1]{birkarSingularitiesLinearSystems2020} Let $ d $ be a natural number and $ \delta $ be a positivity real number, then the projective varieties $ X $ such that  \begin{itemize}
-%     \item  $ (X,B) $ is a $ \delta $-lc pair of dimension $ d $ for some boundary $ B $, and
-%       \item   $ -(K_X+B) $ nef and big,
-%   \end{itemize}
-%   form a bounded family.
-% \end{thm}
-% \begin{lem}\label{effeciveindex}
-%   \cite[Lemma 2.24]{birkarAntipluricanonicalSystemsFano2019} Let $ \mathcal{P} $ be  a bounded set of couples. Then there is  a natural number $ I $ depending only on $ \mathcal{P} $ satisfying the following: Assume $ X $ is projective with klt singularities and $ M\geqslant 0 $ an integral divisor on $ X $ so that $ (X,\mathrm{Supp}\, M)\in \mathcal{P} $, then $ IK_X $ and $ IM $ are cartier.
-% \end{lem}
-% \begin{thm}
-%   Fix a positive integral $ n $, $ I\subset [0,1] $ and a subset $ J $ of positive real numbers. If $ I,J $ satisfy the DCC, then $ \mathrm{LCT}_n(I,J) $ satisfies ACC.
-% \end{thm}
-
-\section{Original proof}
-\subsection{Prepare}
-
-First we fix a collection: 
+In our problem, there is a collection corresponds to the two log Mori fibre spaces:
 \begin{prop}\label{cat}
   \cite[Lemma 3.6]{brunoLogSarkisovProgram1995}
   Let $ f:(X,B)\to S,f':(X',B')\to S' $ be two $ \mathbb{Q} $-factorial log Mori fibre spaces  with only klt singularities and MMP-related, inducing a birational map $\Phi$:
@@ -415,13 +322,13 @@ First we fix a collection:
   \end{enumerate}
 \end{prop}
 \begin{rmk}
-Let $\delta=1-\epsilon$, then all pairs in $\mathcal{C}_{\theta}$ is $\delta$-lc. 
+Let $\delta=1-\epsilon$, then all pairs in $\mathcal{C}_{\theta}$ are $\delta$-lc. 
 \end{rmk}
 
-With notations and assumptions in Proposition \ref{cat},   we shall define the Sarkisov degree. We take a  very ample divisor $ A'  $ on $ S' $ and a sufficiently large and divisible integer $ \mu'>1 $ such that 
+With notations and assumptions in Proposition \ref{cat},   we shall define the Sarkisov degree. Take a  very ample divisor $ A'  $ on $ S' $ and a sufficiently large and divisible integer $ \mu'>1 $ such that 
 \[ \mathcal{H}'=|-\mu' (K_{X'}+B') +f'^*A'| \]
 is a very ample complete linear system on $ X' $ over $ \mathrm{Spec}\,\mathbb{C} $. Let $ (W,B_W) $ be a common log resolution of $ X $ and $ X' $ in $ \mathcal{C}_\theta $ with projective birational morphism $ \sigma:W\to X$,   $\sigma':W\to X' $ and $\sigma_*B_W=B, \sigma'_*B_W=B' $. Let $\mathcal{H}_W:=\sigma'^*\mathcal{H}'$
-and then $\mathcal{H}:=(\Phi^{-1})_*\mathcal{H}'=\sigma_*\mathcal{H}_W$. Furthermore, if $ \mathcal{H} $ is not base point free, then
+and then  $\mathcal{H}:=(\Phi^{-1})_*\mathcal{H}'=\sigma_*\mathcal{H}_W$. Furthermore, if $ \mathcal{H} $ is not base point free, then
 \[ \sigma^*\mathcal{H}=\mathcal{H}_W+F \]
 where $ F=\sum f_lF_l\geqslant0 $ is the fixed part. Take a general member $ H' $ of the linear system $ \mathcal{H}' $ such that $ H_W:=\sigma'^*H'=(\sigma'^{-1})_*H'\in \mathcal{H}_W $, and let $ H:=(\Phi^{-1})_*H'=\sigma_*H_{W} $, then $H$ if $f$-ample and $ \sigma^*H=H_W+F $. By taking further resolution, we may assume $H_{W}$ is smooth and crosses normally with exceptional locus of $\sigma$ and $\sigma'$.
 
@@ -449,10 +356,10 @@ Now we can define the Sarkisov degree in $\mathcal{C}_{\theta}$ with respect to 
       where $ \sum a_lE_l $ is effective and supported on $ \mathrm{Exc}\,\sigma $. Then $\lambda:=\max\{ \frac{f_l}{a_l}\}$. If $ \mathcal{H} $ is base point free, then $ \sum f_lF_l=0 $ and $\lambda=0  $.
       \item   $ e $ is the number of components in $\sum(a_l-cf_l)E_l$ with coefficient $ 0 $ in the formula
       \[ K_W+B_W+\frac{1}{\lambda} H_W=\sigma^*(K_X+B+\frac{1}{\lambda} H)+\sum(a_l-\lambda f_l)E_l .\]
-      Such prime divisors $E_{1}\ldots E_{e}$ are called $(K_{X}+B_{X}+\frac{1}{\lambda}H)$-$\theta$-crepant.
+      Such prime divisors $E_{1},\ldots, E_{e}$ are called $(K_{X}+B_{X}+\frac{1}{\lambda}H)$-$\theta$-crepant.
  \end{enumerate} 
 \end{rmk}
-We also need some  extraction map in this category: 
+We also need some  extraction maps in this collection 
 \begin{lem}\label{thetaextraction}
 Using the notation in the definition of Sarkisov degree, then there is a contraction  $f:Z\to X$ such that 
 \begin{itemize}
@@ -466,7 +373,7 @@ Using the notation in the definition of Sarkisov degree, then there is a contrac
 \end{lem}
 % need this proof 
 \begin{proof}
-  We follow the proof in \cite[Proposition 1.6]{brunoLogSarkisovProgram1995} but for klt pair case.  Let $(W,B_{W})\in \mathcal{C}_{\theta}$ and $\sigma:W\to X,\sigma':W \to X'$ be the common resolution as in Definition \ref{sarkisovdegree} ,and suppose  $E_{1},\ldots ,E_{e}$ are   $(K_{X}+B_{X}+\frac{1}{\mu}H)$-$\theta$-crepant divisors after renumbering. Then we have
+  We follow the idea of the proof in \cite[Proposition 1.6]{brunoLogSarkisovProgram1995}.  Let $(W,B_{W})\in \mathcal{C}_{\theta}$ and $\sigma:W\to X,\sigma':W \to X'$ be the common resolution as in Definition \ref{sarkisovdegree} ,and suppose  $E_{1},\ldots ,E_{e}$ are   $(K_{X}+B_{X}+\frac{1}{\mu}H)$-$\theta$-crepant divisors after renumbering. Then we have
 
 \[ K_W+B_W+\frac{1}{\lambda} H_W=\sigma^*(K_X+B+\frac{1}{\lambda} H)+\sum_{l=1}^{e} 0\cdot E_{l}+\sum_{l>e}(a_l-\frac{1}{\lambda} f_l)E_l .\]
 We run $(K_{W}+B_{W}+\frac{1}{\lambda}H_{W})$-MMP on $W$ over $X$ with scaling of some ample divisor, then the MMP ends with a minimal model $p:(Y,B_{Y}+\frac{1}{\lambda}H_{Y})\to X$  of $(W,B_{W}+\frac{1}{\lambda}H_{W})$ over $X$ and the exceptional locus is exactly $\cup_{i=1}^{e}E_{i}$ and $p$ is crepant: 
@@ -475,10 +382,10 @@ We run $(K_{W}+B_{W}+\frac{1}{\lambda}H_{W})$-MMP on $W$ over $X$ with scaling o
 .\]
 Then we run $(K_{Y}+B_{Y})$-MMP on $Y$ over $X$ with scaling of some ample divisor. This ends with the minimal model  $(X,B)$ of $(Y,B_{Y})$ over $X$, and the last contraction  in the MMP is $f:Z\to X$  as required.
 \end{proof}
-\subsection{Flowchart for the Log Sarkisov program}
+\subsection{Flowchart for the Sarkisov program}
 We follow \cite[Flowchart for the Sarkisov program]{brunoLogSarkisovProgram1995} in this subsection.
 
-If $ \lambda\leqslant\mu $ and $ K_X+B+\frac{1}{\mu}H $ is nef, the two Mori fibre spaces are isomorphic by following proposition and we stop here. 
+If $ \lambda\leqslant\mu $ and $ K_X+B+\frac{1}{\mu}H $ is nef, the two Mori fibre spaces are isomorphic by following proposition and we stop here:
 
 \begin{thm}\label{nfi}
   (Noether-Fano-Iskovskikh Criterion): Notations as in the definition of Sarkisov degree, then 
@@ -505,16 +412,16 @@ If $ \lambda\leqslant\mu $ and $ K_X+B+\frac{1}{\mu}H $ is nef, the two Mori fib
       Here $ \{G_i\}, \{E_j\} $ are $ \sigma $-exceptional divisors, and $ \{E_j\}\{G'_k\} $ are $ \sigma' $-exceptional divisors. Since $H_W=\sigma'^*H' $, $ g_k'>0 $ (or there are no such $ G'_k $). Then take a general curve $ C\subset X $ contracted by $ f $, such that its strict transform $ \tilde{C} $ on $ W $ is disjoint from $ G_i, E_j $, and is not contained in $ G'_k $. Then we have:
       \[
         \begin{aligned}
-          C.\left(K_X+B+\frac{1}{\mu'}H\right)==&\tilde{C}.\left(\sigma^*\left(K_W+B_{W}+\frac{1}{\mu'}H\right)+\sum g_iG_i+\sum e_jE_j\right)\\
+          C.\left(K_X+B+\frac{1}{\mu'}H\right)=&\tilde{C}.\left(\sigma^*\left(K_W+B_{W}+\frac{1}{\mu'}H\right)+\sum g_iG_i+\sum e_jE_j\right)\\
           =&\tilde{C}.\left(\sigma'^*\left(K_{X'}+B'+\frac{1}{\mu'}H'\right)+\sum e'_jE_j+ \sum g_k'G_k'\right)\\
           =&\tilde{C}.\sigma'^*f'^*A'+C.\left(\sum g_k'G_k'\right) \geqslant0
         \end{aligned}
       .\]
      This implies $ (K_X+B+\frac{1}{\mu'}H) $ is $ f $-nef and $ \mu\geqslant \mu' $;
-   \item  First we show that $ \mu=\mu' $. By 1, we only need to show $ (K_{X'}+B'+\frac{1}{\mu}H') $ is $ f' $-nef. Indeed,  same as 1, we can take a curve $ C' $ on $X'$ contracted by $f'$, such that its strict transform $\tilde{C}'$ on $W$ is disjoint from  $ G'_i, E_j $, and is not contained in $ G'_k $ and 
+   \item  First we show that $ \mu=\mu' $. By (1), we only need to show $ (K_{X'}+B'+\frac{1}{\mu}H') $ is $ f' $-nef. Indeed,  same as (1), we can take a curve $ C' $ on $X'$ contracted by $f'$, such that its strict transform $\tilde{C}'$ on $W$ is disjoint from  $ G'_i, E_j $, and is not contained in $ G'_k $ and 
      $C'.\left(K_{X'}+B'+\frac{1}{\mu}H'\right)\geqslant 0$.
 
-Then we show there are isomorphic. Take a very ample divisor $ D $ on $ X $ and let $ D'  $ be its strict transform on $ X' $. $ D' $ is $ f' $-ample, thus there exists $ 0<d\ll1 $ such that the following holds:
+Then we show they are isomorphic. Take a very ample divisor $ D $ on $ X $ and let $ D'  $ be its strict transform on $ X' $. $ D' $ is $ f' $-ample, thus there exists $ 0<d\ll1 $ such that the following holds:
       \begin{itemize}
         \item $ K_X+B+\frac{1}{\mu }H+dD $ is ample;
         \item $ K_{X'}+B'+\frac{1}{\mu }H'+dD' $ is ample.
@@ -523,6 +430,7 @@ Then we show there are isomorphic. Take a very ample divisor $ D $ on $ X $ and 
   Therefore $X$ and $X'$ are both log canonical models of $(W,B_{W}+\frac{1}{\mu}H_{W}+dD_{W})$, hence $X\cong X'$. Furthermore, $f$ and  $f'$ are contractions of same numerical class of curves, thus two log Mori fibre spaces are isomorphic.
 \end{enumerate}
 \end{proof}
+
 Otherwise, if the condition does not hold:
 \begin{claim}
   \begin{enumerate}
@@ -537,10 +445,10 @@ Otherwise, if the condition does not hold:
   \item\label{a} By assumption,  $\lambda\leqslant \mu$ and   $ K_X+B+\frac{1}{\mu}H $ is not nef. Suppose $ f $ is the contraction with respect to a $ (K_X+B) $-negative extremal ray $ R= \overline{\operatorname{ NE }}(X/S) $, then $ (K_X+B+\frac{1}{\mu}H).R=0 $ by definition of $ \mu $. There is an extremal ray $ P \subset \overline{\operatorname{ NE }}(X) $ such that $ (K_X+B+\frac{1}{\mu}H).P<0 $ and $ F:=P+R $ is an extremal face  (Check \cite[5.4.2]{cortiFactoringBirationalMaps} for details). Take  $ 0<\delta\ll 1 $ such that $ (K_X+B+(\frac{1}{\mu}-\delta)H).P<0 $, then $  (K_X+B+(\frac{1}{\mu}-\delta)H).R<0 $ since $H$ is $f$-ample, and $ F $ is a $  (K_X+B+(\frac{1}{\mu}-\delta)H) $-negative extremal face. Since $ (X,B+(\frac{1}{\mu}-\delta)H) $ is klt, there is  a contraction $ g:X\to T $ with respect  to $ F $ factorizing through $ f:X\to S $. Since  $ (X,B+\frac{1}{\mu}H) $ is klt, and $ \rho(X/T)=2 $,  we can  run $ (K_X+B+\frac{1}{\mu}H) $-MMP on $ X  $ with scaling of some ample divisor.  Since $ B+\frac{1}{\mu}H $ is relatively big,  the MMP terminates. There are following cases: 
   \begin{enumerate}
     \item\label{a1} 
-After finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is a divisorial contraction $ p:Z\to X_1 $, and then followed by a Mori fibre space $(X_{1},B_{1}+\frac{1}{\mu}H_{1} )\to S_{1}$. 
+      After finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is a divisorial contraction $ p:Z\to X_1 $, and then followed by a log Mori fibre space $f_{1}:X_{1}\to S_{1}$ for $(X_{1},B_{1}+\frac{1}{\mu}H_{1})$ and $(X_{1},B_{1})$.
     Then  $S_{1} \cong T$ and this is a link of type III.     
    \item\label{a2}
-      After finitely many flips $ X\dashrightarrow X_1 $, first non-flip contraction is a Mori fibre space $ f_1:X_1\to S_{1} $. This is a link of type IV.  
+      After finitely many flips $ X\dashrightarrow X_1 $, first non-flip contraction is a log Mori fibre space $ f_1:X_1\to S_{1} $ for $(X_{1},B_{1}+\frac{1}{\mu}H_{1})$ and $(X_{1},B_{1})$. This is a link of type IV.  
     \item \label{a3}
       After finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is a divisorial contraction $ p:Z\to X_1$ with 
     \[ K_Z+B_Z+\frac{1}{\mu}H_Z=p^*(K_{X_1}+B_1+\frac{1}{\mu}H_1)+eE \]
@@ -549,7 +457,7 @@ After finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is 
   \end{enumerate}
 \item\label{b}By assumption, $\lambda>\mu$. Take  an extraction $ p:(Z,B_Z,H_Z)\to (X,B,H) $ as in Lemma \ref{thetaextraction}. That is,  $ (Z,B_Z) $ is $ \theta $-terminal and $ p^*(K_X+B+\frac{1}{\lambda}H)=K_Z+B_Z+\frac{1}{\lambda}H_Z $ where $ B_Z=\sum\theta(E_\nu)E_\nu $ and $ E=\mathrm{Exc}\,p $ is a prime divisor on $ Z $.
   % Let $ H_Z $ be a strict transform of a general member $ H' $ of $ \mathcal{H}' $. 
-  Then we run $ (K_Z+B_Z+\frac{1}{\lambda}H_Z) $-MMP on $ Z $ over $ S $ with scaling of some ample divisor. Since $Z$ is covered by $ (K_Z+B_Z+\frac{1}{\lambda}H_Z) $-negative curves, $ (K_Z+B_Z+\frac{1}{\lambda}H_Z) $ is not relatively pseudo-effective. Hence this  ends with a Mori fibre space by Theorem \ref{notpseudoeffmfs}. There are two cases:
+  Then we run $ (K_Z+B_Z+\frac{1}{\lambda}H_Z) $-MMP on $ Z $ over $ S $ with scaling of some ample divisor. Since $Z$ is covered by $ (K_Z+B_Z+\frac{1}{\lambda}H_Z) $-negative curves, $ (K_Z+B_Z+\frac{1}{\lambda}H_Z) $ is not relatively pseudo-effective. Hence this MMP ends with a log Mori fibre space by Theorem \ref{notpseudoeffmfs}. There are two cases:
   \begin{enumerate}
     \item \label{b1}After finitely many flips $ Z\dashrightarrow Z' $, the first non-flip contraction is a divisorial contraction $ q:Z'\to X_1 $. Then $ X_{1}\to S $ is a log Mori fibre space of $(X,B)$ and $(X,B+\frac{1}{\lambda}H)$.  Let $ S_1=S $ and this is a link of type II.
     \item\label{b2}After finitely many flips $ Z\dashrightarrow X_1 $, first non-flip contraction is a fibering contraction $ f_1:X_1\to S_{1}$. Since $ (K_{X_1}+B_1+\frac{1}{\lambda}H_1) $ is $ f_1 $-negative and $ H_1 $ is $ f_1 $- ample, $ (K_{X_1}+B_1) $ is $ f_1 $-negative, and $ (X_1,B_1)/Y $ is a log Mori fibre space.  Take $ S_1=Y $ and this is a link of type I.
@@ -562,7 +470,7 @@ After finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is 
   \item 
   \begin{enumerate}
     \item For case \ref{a1} and \ref{a2},  since $ K_{X_1}+B_1+\frac{1}{\mu}H_1 $ is $ f_1 $-negative, we have    $\mu_1<\mu$.
-    \item For case \ref{a3} and \ref{a4}, Since $ (K_{X_1}+B_1+\frac{1}{\mu}H_1) $ is trivial on the ray $ R=\overline{\operatorname{NE}}(X_1/S_1) $ for both cases, we have $\mu_1=\mu$.
+    \item For case \ref{a3} and \ref{a4}, since $ (K_{X_1}+B_1+\frac{1}{\mu}H_1) $ is trivial on the ray $ R=\overline{\operatorname{NE}}(X_1/S_1) $ for both cases, we have $\mu_1=\mu$.
       Notice that $ (X_1,B_1+\frac{1}{\mu}H_1) $ stays $ \theta $-canonical, we have $\lambda_1\leqslant \mu=\mu_1$, thus next link goes back to case \ref{a}. Furthermore,   for case \ref{a3} we have $\rho(X_1)=\rho(X)-1$.
   \end{enumerate} 
 \item For case \ref{b}: 
@@ -573,7 +481,7 @@ After finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is 
       \item 
         either $\dim S_i<\dim S_{i+1} $
         \item  
-        or $\dim S_i=\dim S_{i+1}$ and the link is square.
+        or $\dim S_i=\dim S_{i+1}$ and the link is a square.
     \end{itemize}
   \item We have  $\lambda_1\leqslant \lambda$ and if $ \lambda_1=\lambda $, then   $e_1<e$.
   \end{enumerate} 
@@ -581,7 +489,7 @@ After finitely many flips $ X\dashrightarrow Z $, first non-flip contraction is 
 \end{rmk}
 
 \subsection{Termination}
-To prove the termination by contraction, we need following in $\mathcal{C}_{\theta}$: 
+To prove the termination by contradiction, we need following in $\mathcal{C}_{\theta}$: 
 \begin{enumerate}
   \item discreteness of nef threshold $\mu$;
   \item termination of flips;
@@ -591,17 +499,20 @@ To prove the termination by contraction, we need following in $\mathcal{C}_{\the
 Suppose there is an infinite sequence, i.e. there are infinitely many $ X_i $ and birational maps obtained from the program:
 \[ X=X_0\dashrightarrow X_1\dashrightarrow \cdots\dashrightarrow X_i \dashrightarrow\cdots\dashrightarrow X'\]
 \begin{enumerate}
-  \item Discreteness of nef threshold holds for all dimensions, by boundedness of $\delta$-lc fano varieties (\cite[Theorem 1.1]{birkarSingularitiesLinearSystems2020}). Therefore we may assume $\mu_{i}$ is constant, that is, $\mu=\mu_{0}=\mu_{i}$ for all $i$.
+  \item Discreteness of nef threshold holds for all dimensions, by boundedness of $\delta$-lc Fano varieties (\cite[Theorem 1.1]{birkarSingularitiesLinearSystems2020}). Therefore we may assume $\mu_{i}$ is constant, that is, $\mu=\mu_{0}=\mu_{i}$ for all $i$.
   \item  Termination of flips holds only for threefolds and peseudo-effective fourfolds.  
     Therefore, for higher dimensions, we cannot exclude the possibility that the program gives an infinite sequence of Sarkisov links of type IV.
-  \item Ascending chain condition of log canonical threshold holds for all dimensions \cite{HMX14}.
-  \item Finiteness of local log canonical threshold doesnot hold for higher dimensions. Therefore we cannot exclude the possibility that  the program gives an infinite sequence of Sarkisov links of type II.
+  \item Ascending chain condition of log canonical threshold and finiteness of local log canonical threshold hold for all dimensions \cite{HMX14}. Therefore we can exclude the possibility that the program gives an infinite sequence of Sarkisov links of type I and II.
+  %\item  holds for higher dimensions \cite{HMX14}. 
 
 \end{enumerate}
 
-\section{Double scaling}
-This section we follows \cite[13.The Sarkisov program]{haconMinimalModelProgram2012} and  \cite{liuSarkisovProgramGeneralized2021}.
-\subsection{Prepare}
+\section{Double scaling method}
+This section we follows \cite[\S 13]{haconMinimalModelProgram2012} and  \cite{liuSarkisovProgramGeneralized2021}.
+ Let $W$ be the common resolution of two log Mori fibre spaces. Take an ample $\mathbb{Q}$-divisor $A$ on $S$ such that $G\sim -(K_{X}+B) +f^*A$  is ample. Similarly, take an ample $\mathbb{Q}$-divisor $A'$ on $S'$ such that $H'\sim -(K_{X'}+B') +f'^*A'$  is ample. Then  $(X,B+G)$ and $(X',B'+H')$ are two weak log canonical models of $W$ (for $K_{W}+B_{W}+G_{W}$ and $K_{W}+B_{W}+H_{W}$). We expect that there are finitely many weak log canonical models $(X_{i},B_{i}+g_{i}G_{i}+h_{i}H_{i})$ of $(W,B_{W}+g_{i}G_{W}+h_{i}H_{W})$ and $\psi_{i}:X_{i}\dashrightarrow X_{i+1}$ is a Sarkisov link given by $2$-ray game.
+
+In this method, we run the program in a much smaller collection of varieties compared with the original method. That is, all pairs with a $(K_{W}+D)$-non-positive birational contraction $W\dashrightarrow X_{i}$, where $D$ varies in a compact subset $\mathcal{E}_{A}(V)$ of $\operatorname{WDiv}_{\mathbb{R}}(W)$. In this collection, the termination of the program follows by the finiteness of weak log canonical models. 
+\subsection{Preliminaries}
 Let $(W,B_W)$ be a $\mathbb{Q}$-factorial klt pair and $f:(X,B)\to S$ and $f':(X',B')\to S'$ be two different log Mori fibre spaces as outputs of $(K_{W}+B_{W})$-MMP.  To modify the beginning setting, we need more conventions and lemmas:
 \begin{defn}
 Let $f:X\dashrightarrow Y$ be a birational map of normal quasi-projective varieties. If
@@ -627,7 +538,7 @@ then
   \item If $Z\to X$ is terminalization of $(X,B)$, then $W\dashrightarrow Z$ extracts no divisors.
 \end{itemize}
 \end{lem}
-Conversely, start from a klt pair and non-positive map, we have
+Conversely, start from a klt pair and a non-positive map, we have
 \begin{lem}\label{terminalresolution}
   \cite[Lemma 3.5]{liuSarkisovProgramGeneralized2021} Let $\sigma:(W,B_W)\dashrightarrow (X,B)$ be a $K_W+B_W$-non-positive birational map such that $\sigma_*(K_W+B_W)=K_X+B$ and $(W,B_W)$ is a $\mathbb{Q}$-factorial klt pair. Then there is a resolution of indeterminacy $\pi:\tilde{W}\to W $ and $\tilde{\sigma}:\tilde{W}\to X$ such that
 \begin{itemize}
@@ -635,12 +546,14 @@ Conversely, start from a klt pair and non-positive map, we have
   \item $\tilde{\sigma}$ is $(K_{\tilde{W}}+B_{\tilde{W}})$-non-positive and $(\tilde{W},B_{\tilde{W}})\geqslant (X,B)$.
 \end{itemize}
 \end{lem}
+
 By Lemma \ref{terminalresolution}, we  replace $(W,B_W)$ by its log resolution such that $(W,B_{W})$ is terminal and $\sigma:W\to X$ and $\sigma':W\to X'$ are $(K_W+B_W)$-non-positive morphisms, and $(W,B_W)\geqslant (X,B),(X',B')$. 
 
 Take  very general ample $\mathbb{Q}$-divisors $ A $ and $ A' $ on $ S $ and $ S' $ such that $ G\sim_{\mathbb{Q}}-(K_X+B)+f^*A $ and $ H\sim_{\mathbb{Q}}-(K_{X'}+B')+f^{'*}A' $ are two ample $\mathbb{Q}$-divisors. Moreover, we may assume $ G $ and $ H $ satisfying $G_{W}:= \sigma^*G=\sigma^{-1}_*G $ and $ H_{W}:=\sigma^{'*}H=\sigma^{'-1}_*H $. Therefore $\sigma_{*}(K_{W}+B_{W}+G_{W})=K_{X}+B+G$ is nef, and Lemma \ref{terminalorder} holds.
 Furthermore, we may assume $(W,B_W+gG_W+hH_W)$ is log smooth and terminal for all $0\leqslant g,h\leqslant 2$ by taking furthermore blowing up if necessary.
 Then we have:
 \begin{thm}[Sarkisov program with double scaling]\label{main2}
+  \cite[Claim 13.12]{haconMinimalModelProgram2012}
 Notations as above, there is a finite sequence of Sarkisov links
 \[
   \xymatrix{
@@ -663,7 +576,10 @@ such that
     \item  The last link $X_{N} \to S_{N}$ is isomorphic to $X'\to S'$
 \end{enumerate}
 \end{thm}
-
+Here trivial map means:
+\begin{defn}\label{rivialmap}
+  \cite[\S 13.2]{haconMinimalModelProgram2012} Let $f:X\dashrightarrow Y$ be a rational map of normal quasi-projective varieties over $S$, and $D$ be a $\mathbb{R}$-Cartier $\mathbb{R}$-divisor  on $X$ with $f_*D=D_Y$. Then $f$ is called \textbf{$D$-trivial} if $D$ is pull back of a $\mathbb{R}$-Cartier divisor on $S$.
+\end{defn}
 \subsection{Construct Sarkisov links}
 This subsection we construct the links inductively. Suppose we have $\sigma_{i}:W\dashrightarrow X_{i}$ as in Theorem  \ref{main2}, that is 
 \begin{itemize}
@@ -698,7 +614,7 @@ Then we have (check \cite[Lemma 4.4]{liuSarkisovProgramGeneralized2021} for deta
     \[
       a(E;X_{i},D_{i}(s_{i}+\epsilon))\geqslant a(E;W,D_{W,i}(s_{i}+\epsilon))
     \]
-    and $K_{X_{i}}+D_{i}(s_{i}+\epsilon)$ is not nef. Then there is a $2$-dimensional $(K_{X_{i}}+D_{i}(s_{i}+\epsilon)-\delta G_{i})$-negative extremal face $F$ for some $0< \delta \ll \epsilon $, spaned by $R=\mathbb{R}_{\geqslant 0}[C_{i}]$ and another extremal ray $P$. Hence there is a contraction $X_{i}\to T_{i}$ corresponding to $F$ factoring through $f_{i}$. Then we run $(K_{X_{i}}+D_{i}(s_{i}+\epsilon))$-MMP on $X_{i}$ with scaling over $T_{i}$. After finitely many flips, we either have a $(K_{X_{i}}+D_{i}(s_{i}+\epsilon))$ minimal model, a divisorial contraction, or a Mori fibre space over $T_{i}$: 
+    and $K_{X_{i}}+D_{i}(s_{i}+\epsilon)$ is not nef. Then there is a $2$-dimensional $(K_{X_{i}}+D_{i}(s_{i}+\epsilon)-\delta G_{i})$-negative extremal face $F$ for some $0< \delta \ll \epsilon $, spaned by $R=\mathbb{R}_{\geqslant 0}[C_{i}]$ and another extremal ray $P$. Hence there is a contraction $X_{i}\to T_{i}$ corresponding to $F$ factoring through $f_{i}$. Then we run $(K_{X_{i}}+D_{i}(s_{i}+\epsilon))$-MMP on $X_{i}$ with scaling over $T_{i}$. After finitely many flips, we either have a $(K_{X_{i}}+D_{i}(s_{i}+\epsilon))$ minimal model, a divisorial contraction, or a log Mori fibre space over $T_{i}$: 
     \begin{enumerate}
     \item\label{2a1}After finitely many flips $X_{i}\dashrightarrow X_{i+1}$ there is a log Mori fibre space $X_{i+1}\to S_{i+1}$, and this is a link of type III.
     \item\label{2a2} After finitely many flips $X_{i}\dashrightarrow Z_{i}$ there is a divisorial contraction $Z_{i}\to X_{i+1}$, then let $S_{i+1}=T_{i}$ and $X_{i+1}\to S_{i+1}$ is a log Mori fibre space and this is a link of type IV.
@@ -720,7 +636,7 @@ Then we have (check \cite[Lemma 4.4]{liuSarkisovProgramGeneralized2021} for deta
    \]
   is klt. Then we run $(K_{Z_{i}}+\Delta_{i})$-MMP on $Z_{i}$ over $S_{i}$. Since $Z_{i}$ is covered by $(K_{Z_{i}}+\Delta_{i})$-negative curves, it follows that $(K_{Z_{i}}+\Delta_{i})$ is not peseudo-effective over $S_{i}$, and  this MMP ends with a log Mori fibre space. Moreover, this is a MMP for $p_{i}^*(K_{X_{i}}+D_{i}(s_{i}+\epsilon)-\delta'G_{i})$ for all $0<\delta'\leqslant\delta$. After finitely many flips, we either have a $(K_{Z_{i}}+\Delta_{i})$ log Mori fibre space or a $(K_{Z_{i}}+\Delta_{i})$ divisorial contraction.
   \begin{enumerate}
-    \item\label{2b1} After finitely many flips $Z_{i}\dashrightarrow X_{i+1}$ there is a Mori fibre space $X_{i+1}\to S_{i+1}$, and this is a link of type I. In this case we have $\rho(X_{i+1})=\rho(X_{i})+1$.
+    \item\label{2b1} After finitely many flips $Z_{i}\dashrightarrow X_{i+1}$ there is a log Mori fibre space $X_{i+1}\to S_{i+1}$, and this is a link of type I. In this case we have $\rho(X_{i+1})=\rho(X_{i})+1$.
     \item\label{2b2} After finitely many flips $Z_{i}\dashrightarrow Z_{i+1}'$ there is a divisorial contraction $q_{i}:Z_{i+1}'\to X_{i+1}$, and then a logMori fibre space $X_{i+1}\to S_{i}=:S_{i+1}$. This is a link of type II.
   \end{enumerate}
 \end{enumerate}
@@ -740,7 +656,7 @@ By \cite[Lemma 13.14-17]{haconMinimalModelProgram2012} and \cite[Lemma 4.2]{liuS
 \end{claim}
 \subsection{Termination}
 \begin{lem}\label{termination2}
-\cite[Lemma 13.18 and Lemma 13.19]{haconMinimalModelProgram2012} (or \cite[Lemma 4.9]{liuSarkisovProgramGeneralized2021}) Suppose we construct a sequence of Sarkisov links: 
+\cite[Lemma 13.18-19]{haconMinimalModelProgram2012} (or \cite[Lemma 4.9]{liuSarkisovProgramGeneralized2021}) Suppose we construct a sequence of Sarkisov links: 
 \[
   \xymatrix{
     X=X_0\ar@{.>}[r]\ar[d]&X_{1}\ar@{.>}[r]\ar[d]& X_{2}\ar[d]\ar[r] &\cdots\ar@{.>}[r]&X_{i}\ar[d] \ar[r] &\cdots\\
@@ -792,14 +708,27 @@ Indeed, we may assume that there is a $k$ such that $X_{i} \cong X_{k}$ for all 
 $X_{N}\to S_{N}$ is isomorphic to $X'\to S'$. 
 \end{prop}
 \begin{proof}
-  By $2$ of Theorem \ref{nfi}, we have $h_{N}=1$ and they are isomorphic.
+  Similarly with $2$ of Theorem \ref{nfi}, we have $h_{N}=1$ and they are isomorphic.
 \end{proof}
-\section{Using the Polytope}\label{thirdmethod}
+
+
+
+\section{Polytope method}\label{thirdmethod}
 In this section we follows \cite{haconSarkisovProgram2012}.
+This  proof of Theorem \ref{main} is not a program. Let $W$ be the common log resolution of two Mori fibre spaces $X\to S$ and $Y\to T$. Take a finite dimensional affine subspace $V$ of $\operatorname{WDiv}_{\mathbb{R}}(W)$ and an ample $\mathbb{Q}$-divisor $A$. Then $\{\mathcal{A}_{i} =\mathcal{A}_{A,f_{i}}\} $ is a partition of $\mathcal{E}_{A}(V)$, and each $\mathcal{A}_{i}$ corresponds to an ample model of $W$.    There are morphisms between these ample models (Theorem \ref{mapbetweenAM} and Theorem \ref{mapbetweenAM2}). Moreover, let $\mathcal{C}_{i}$ be the closure of $\mathcal{A}_{i}$. If $D$ is contained in  $\partial \mathcal{E}_{A}(V)$ and two or more $\mathcal{C}_{i}$, then those morphisms form a Sarkisov link (Theorem \ref{constructlink}).
+
+We can find a special $2$-dimensional rational affine subspace  $V$ (by Lemma \ref{keylemma}) such that 
+\begin{enumerate}
+  \item $S,T$ are ample models of $W$ for some $D_{S},D_{T} \in \mathcal{L}_{A}(V)$;
+  \item  There are finitely many points  $D_{i}$ between $D_{S}$ and $D_{T}$, and each $D_{i}$ corresponds to a Sarkisov link.
+\end{enumerate}
+
+Then  $X\dashrightarrow Y$ is composition of these Sarkisov links, and the Theorem \ref{main} follows.
 \subsection{Construction of Sarkisov links}
 In this subsection we construct one Sarkisov link. First we show the partition of $\mathcal{E}_{A}(V)$  corresponding to ample models and morphisms between these ample models.
+
 \begin{thm}\label{finitemodel}
-\cite[Corollary 1.1.5]{birkarExistenceMinimalModels2009}Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties,  and $V \subset \operatorname{WDiv}_{\mathbb{R}}(X)$ be a finite dimensional rational subspace. Suppose that there is a divisor $\Delta_{0} \in V$ such that $(X,\Delta_{0})$ is klt. Let $A$ be a general ample $\mathbb{Q}$-divisor over $U$ which has no components common with any element of $V$.  
+\cite[Corollary 1.1.5]{BCHM10} Let $\pi:X\to U$ be a projective morphism of normal quasi-projective varieties,  and $V \subset \operatorname{WDiv}_{\mathbb{R}}(X)$ be a finite dimensional rational subspace. Suppose that there is a divisor $\Delta_{0} \in V$ such that $(X,\Delta_{0})$ is klt. Let $A$ be a general ample $\mathbb{Q}$-divisor over $U$ which has no components common with any element of $V$.  
   \begin{enumerate}
     \item   There are finitely many birational maps $f_{i}:X \dashrightarrow   X_{i}$ over $U$ such that 
       \[
@@ -816,7 +745,9 @@ In this subsection we construct one Sarkisov link. First we show the partition o
   \end{enumerate}
   % In particular $\mathcal{E}_{A,\pi}(V)$ is a rational polytope and  $\overline{\mathcal{A}_{j}}$ is a finite union of rational polytopes. 
 \end{thm}
+
   % Let $W$ be a smooth projective   variety, and let $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$.
+  
 \begin{thm}\label{mapbetweenAM}
   \cite[Theorem 3.3]{haconSarkisovProgram2012} Let $W$ be a smooth projective   variety, and  $ V $ be a finite dimensional affine subspace of $ \operatorname{WDiv}_{\mathbb{R}}(W) $ defined over rational numbers and fix an ample effective $\mathbb{Q}$-divisor $A$. Suppose that there is an element $D_{0}$ of $\mathcal{L}_{A}(V)$ such that $K_{W}+D_{0}$ is big and klt. Then there are finitely many rational contractions $ f_i:W\dashrightarrow X_i $ such that
   \begin{enumerate}
@@ -833,12 +764,15 @@ In this subsection we construct one Sarkisov link. First we show the partition o
 \end{thm}
 
 \begin{lem}\label{subspace}
-  \cite[Corollary 3.4]{haconSarkisovProgram2012}If $V$ spans  Neron-Severi group of $W$, then there is a Zariski dense open subset $U$ of the Grassmannian $G(r,V)$ of real affine subspace of dimension $r$ such that any  $[V']\in U$ defined on rational numbers satisfies (1-4) of Theorem \ref{mapbetweenAM} 
+  \cite[Corollary 3.4]{haconSarkisovProgram2012} If $V$ spans  Neron-Severi group of $W$, then there is a Zariski dense open subset $U$ of the Grassmannian $G(r,V)$ of real affine subspace of dimension $r$ such that any  $[V']\in U$ defined on rational numbers satisfies (1-4) of Theorem \ref{mapbetweenAM} 
 \end{lem}
+
 \begin{proof}
  Let $U \subset G(r,V) $ be the set of real affine subspace  $V'$ of $V$ of dimension $r$, which contain no face of any $\mathcal{C}_{i}$ of $\mathcal{L}(V)$. In particular, the interior of  $\mathcal{L}_{A}(V')$ is contained in the interior of $\mathcal{L}_{A}(V)$. Clearly that any $V'\in U$ defined over rationals satisfies (1-4) of \ref{mapbetweenAM}. 
 \end{proof}
-By above Lemma, from now on in this subsection, we always assume that $V$ has dimension $2$ and satisfies Theorem \ref{mapbetweenAM}. The following lemma shows that the morphism in $2$ of Theorem \ref{mapbetweenAM} can be divisorial contraction, small contraction or Mori fibre space. And in some cases they forms a flop.
+
+By above Lemma, from now on in this subsection, we always assume that $V$ has dimension $2$ and satisfies Theorem \ref{mapbetweenAM}. The following lemma shows that the morphism in $2$ of Theorem \ref{mapbetweenAM} can be divisorial contraction, small contraction or log Mori fibre space. And in some cases they forms a flop.
+
 \begin{lem}\label{mapbetweenAM2}
 \cite[Lemma 3.5]{haconSarkisovProgram2012} Let $ f:W\dashrightarrow X $ and $ g:W\dashrightarrow  Y $ be two rational contracions such that $ \mathcal{C}_{A,f} $ is of dimension $ 2 $ and $ \mathcal{O}=\mathcal{C}_{A,f}\cap \mathcal{C}_{A,g} $ is of dimension $ 1 $. Assume $ \rho(X)\geqslant \rho(Y) $ and $ \mathcal{O} $ is not contained in the boundary of $ \mathcal{L}_{A}(V) $. Let $ D $ be an interior point of $ \mathcal{O} $ and $ B=f_*D $. Then there is a rational contraction $ \pi:X\dashrightarrow Y $ and $ g=\pi\circ f $ such that either
 \begin{enumerate}
@@ -854,9 +788,11 @@ By above Lemma, from now on in this subsection, we always assume that $V$ has di
   \item $ \rho(X)=\rho(Y) $, and $ \pi $ is  a $ (K_X+B) $-flop and $ \mathcal{O}\neq\mathcal{C}_{A,g} $ is not contained in the boundary of $ \mathcal{E}_A(V) $.
   \end{enumerate}
 \end{lem}
+
 \begin{lem}
   \cite[Lemma 3.6]{haconSarkisovProgram2012} Let $f:W\dashrightarrow X $ be a birational contraction between $\mathbb{Q}$-factorial varieties. Suppose $(W,D)$ and $(W,D+A)$ are both klt. If $f$ is ample model of $(W,D+A)$ and $A$ is ample, then $f$ is a result of  $(K_{W}+D)$-MMP.
 \end{lem}
+
 This lemma gunrantee that every variety in the Sarkisov links constructed later is a result of $(W,B_{W})$-MMP.
 
 Finally we show there is a Sarkisov link corresponding to certain $D \in \mathcal{E}_{A}(V)$. Let $ D=A+B $ be a point of the boundary of $ \mathcal{E}_A(V) $ in the interior of $ \mathcal{L}_A(V) $. Let $ \mathcal{T}_1, \ldots, \mathcal{T}_k $ be the polytopes $ \mathcal{C}_i $ of dimension $ 2 $ containing $ D $. Possibly reordering, we may assume that  the intersection  $ \mathcal{O}_0 $ and $ \mathcal{O}_k $ of $ \mathcal{T}_1 $ and $ \mathcal{T}_k $ with boundary of $ \mathcal{E}_A(V) $ and  $ \mathcal{O}_i=\mathcal{T}_i\cap\mathcal{T}_{i+1} $ are one dimensional. Let $ f_i:W\dashrightarrow  X_i $ be the birational contraction associated to $ \mathcal{T}_i $ and $ g_i:W\dashrightarrow  S_i $ be the rational contraction associated to $ \mathcal{O}_i $.
@@ -892,10 +828,12 @@ Note that $ \rho(X_i/R)\leqslant 2 $ and $ \rho(X/S)=\rho(Y/T)=1 $. Thus
 \end{enumerate}
 The same holds for $ q $ and $ t $. And the map $X'\to Y'$ is clear the composition of flops. This gives 4 types of links.
 \end{proof}
+
 \subsection{Decomposition into Sarkisov links}
 We need a special resolution $W$ and a special  affine subspace $V \subset \operatorname{WDiv}(W)$.
+
 \begin{lem}\label{keylemma}
-  \cite[Lemma 4.1]{haconSarkisovProgram2012} Let $ \phi:X\to S $ and $ \psi :Y\to T  $ be two MMP related Mori fibre spaces corresponding to two klt projective varieties $ (X,B_X) $ and $ (Y,B_Y) $. Then we may find a smooth projective variety $ W $, two birational morphisms $ f:W\to X $ and $ g:W\to Y $, a klt pair $ (W,B_{W}) $, an ample $ \mathbb{Q} $-divisor $ A $ on $ W $ and a two dimensional rational affine subspace $ V $ of $ \mathrm{WDiv}_\mathbb{R}(W) $ such that 
+  \cite[Lemma 4.1]{haconSarkisovProgram2012} Let $ \phi:X\to S $ and $ \psi :Y\to T  $ be two MMP related log Mori fibre spaces corresponding to two klt projective varieties $ (X,B_X) $ and $ (Y,B_Y) $. Then we may find a smooth projective variety $ W $, two birational morphisms $ f:W\to X $ and $ g:W\to Y $, a klt pair $ (W,B_{W}) $, an ample $ \mathbb{Q} $-divisor $ A $ on $ W $ and a two dimensional rational affine subspace $ V $ of $ \mathrm{WDiv}_\mathbb{R}(W) $ such that 
   \begin{enumerate}
     \item If $ D\in \mathcal{L}_A(V) $ then $ D-B_W $ is ample;
     \item $ \mathcal{A}_{A,\phi\circ f} $ and $ \mathcal{A}_{A,\psi\circ g} $ are not contained in the boundary of $ \mathcal{L}_A(V) $;
@@ -954,28 +892,26 @@ Let $V_{1}$ be the translate by $B_{0}$ of the two dimensional vector space span
 \end{proof}
 Then we can prove the main theorem
 
-% need this proof
-\begin{proof}[Proof of the main theorem]
+\begin{proof}[Proof of Theorem \ref{main}]
 Let $(W,B_{W}),A $ and $V$ as in the lemma \ref{keylemma}.  Pick $ D_{0} \in \mathcal{A}_{A,\phi\circ f} $  and $ D_1\in \mathcal{C}_{A,g} $ belonging to the interior of $ \mathcal{L}_A(V) $. As $ V $ is two dimensional, removing $ D_0 $ and $ D_1 $ divides the boundary of $ \mathcal{E}_A(V) $ into two parts. The part which consists entirely of divisors which are not big is contained in the interior of $ \mathcal{L}_A(V) $. Consider tracing this boundary from $ D_0 $ to $ D_1 $. Then there are finitely many $ 2\leqslant i\leqslant N $ points $ D_i $ which are contained in more than two polytopes $ \mathcal{C}_{A,f_i}(V) $. By lemma \ref{constructlink},  each point $ D_i $ gives a Sarkisov link. And the birational map $X \dashrightarrow Y$ is composition of such links.
 \end{proof}
 
 \section{Examples}
-% TODO: compute an example
-This  section we give an example for each method.
+In this  section we give an example for each method.
 \subsection{Original method}\label{example1}
 Let $ X=\mathbb{P}^2 $ with coordinates $ (x_0:x_1:x_2) $ and $ X'=\mathbb{P}^2 $ with coordinates $ (y_0:y_1:y_2) $.
 Denote $ B=\{x_0=0\} $ and $B'=\{y_{0}=0\} $.
 Take a rational map $ \Phi:X\dashrightarrow X' $ defined by 
 \[ \Phi:(x_0:x_1:x_2)\dashrightarrow (x_0^2:x_0x_1:x_1^2+x_0x_2) \]
-The common resolution $\sigma:W\to X$ and $\sigma':W\to X'$ are both composition of three blowing-ups at indetermined points.
-More precisely, $\pi_{1}:W_{1}\to X$ is blowing-up at $P_{0} \in B$. Identifies $B$ with its strict transform on $W_{1}$ and let $E_{1}$ be the exceptional divisor.
-$\pi_{2}:W_{2}\to W_{1}$ is blowing-up at $P_{1}=E_{1} \cap B$. Identifies  $B$ and $E_{1}$ with their strict transforms on $W_{2}$ and let $E_{2}$ be the exceptional divisor.
-$\pi_{3}:W=W_{3}\to W_{2}$ is blowing-up at $P_{2} \in E_{2} \setminus (B\cup E_{1})$. Identifies  $B, E_{1}$ and $E_{2}$ with their strict transforms   on $W_{3}$ and let $E_{3}$ be the exceptional divisor.
-Then $ \sigma=\pi_{3}\circ \pi_{2} \circ \pi_{1} $ and $ W=W_3 $ is the common resolution. Moreover $ \sigma':W\to X' $ is composition of blowing-down curves in the order of $ B,E_2,E_1 $, and $\sigma'_*(E_{3})=B'$. We denote as $W=W'_{3}\xrightarrow{\pi'_{3}} W'_{2}\xrightarrow{\pi'_{2}} W'_{1} \xrightarrow{\pi'_{1}} X'$
+There is a  common resolution $\sigma:W\to X$ and $\sigma':W\to X'$, which are both composition of three blowing-ups at indeterminacy points.
+More precisely, $\pi_{1}:W_{1}\to X$ is blowing-up at indeterminacy point $P_{0} \in B$ of $\Phi$. Identifies $B$ with its strict transform on $W_{1}$ and let $E_{1}$ be the exceptional divisor of $\pi_{1}$.
+$\pi_{2}:W_{2}\to W_{1}$ is blowing-up at $P_{1}=E_{1} \cap B$. Identifies  $B$ and $E_{1}$ with their strict transforms on $W_{2}$ and let $E_{2}$ be the exceptional divisor of $\pi_{2}$.
+$\pi_{3}:W=W_{3}\to W_{2}$ is blowing-up at $P_{2} \in E_{2} \setminus (B\cup E_{1})$. Identifies  $B, E_{1}$ and $E_{2}$ with their strict transforms   on $W_{3}$ and let $E_{3}$ be the exceptional divisor of $\pi_{3}$.
+Then $ \sigma=\pi_{3}\circ \pi_{2} \circ \pi_{1} $ and $ W=W_3 $ is a common resolution of $\Phi$. Moreover $ \sigma':W\to X' $ is composition of blowing-down curves in the order of $ B,E_2,E_1 $, and $\sigma'_*(E_{3})=B'$. We denote as $W=W'_{3}\xrightarrow{\pi'_{3}} W'_{2}\xrightarrow{\pi'_{2}} W'_{1} \xrightarrow{\pi'_{1}} X'$
 
 We give some notations of varieties:
 \begin{itemize}
-  \item Let $W_{2}\to Z_{0}$ be the contraction of $E_{1}$ on $W_{2}$, then $Z_{0} \to X_{1}$ is the contracion of $B$  and $Z_{0}\to X$ is the extraction of $E_{2}$ on $X$;
+  \item Let $W_{2}\to Z_{0}$ be the contraction of $E_{1}$ on $W_{2}$, then $Z_{0} \to X_{1}$ is the contracion of $B$  and $Z_{0}\to X_{0}$ is the extraction of $E_{2}$ on $X$;
  \item Let $W'_{2}\to Z_{1}$ be the contraction of $E_{1}$ on $W'_{2}$, then $Z_{1} \to X_{1}$ is the extraction of $E_{3}$ on $X_{1}$, and $Z_{1}\to X'$ is the contracion of $E_{2}$;
  \item $W\to Z$ be the contraction of $E_{1}$ and $E_{2}$ on $W$, then $Z\to X$ is the extraction of $E_{3}$ and $Z\to X'$ is the contraction of $B$.
 \end{itemize}
@@ -991,19 +927,19 @@ That is
       &Z\ar[dl]\ar[dr]\\
       X&&X' }  \]
     
-Consider the pairs $ (X,bB) $ and $ (X',b'B') $, and take the function $\theta$:
+Consider the pairs $ (X,bB) $ and $ (X',b'B') $, and take the function $\theta$ such that:
 \begin{itemize}
   \item $\theta(B)=b$ and $\theta(B')=b'$;
-  \item $\theta(E_{1})=\theta(E_{2})=e$ with $b,b'<e<1$. 
+  \item $\theta(E_{1})=\theta(E_{2})=\epsilon$ with $b,b'<\epsilon<1$. 
 \end{itemize}
 Then we have ramification fomulas:
 \[ \begin{array}{rllllllllll}
-  K_W+B_W&=&\sigma^*(K_X+bB)&+& (3-2b+b')E_3&+&(1-b+e)E_1&+&(2-2b+e)E_2&\\
-  &=&\sigma'^*(K_{X'}+b'B')&+&(3-2b'+b)B&+&(1-b'+e)E_1&+&(2-2b'+e)E_2&
+  K_W+B_W&=&\sigma^*(K_X+bB)&+& (3-2b+b')E_3&+&(1-b+\epsilon)E_1&+&(2-2b+\epsilon)E_2&\\
+  &=&\sigma'^*(K_{X'}+b'B')&+&(3-2b'+b)B&+&(1-b'+\epsilon)E_1&+&(2-2b'+\epsilon) E_2&
 \end{array} \]
-Set $ \mathcal{H}'=|\mathcal{O}(1)| $. Different choices of $\theta$ and  $e$ gives different Sarkisov programs. 
+Let $ \mathcal{H}'=|\mathcal{O}(1)| $ be the very ample complete linear system on $X'$, then $H\in |\mathcal{O}_{X}(2)|$. Different choices of $\theta$ and  $e$ gives different decompositions: 
 \begin{enumerate}
-  \item\label{example1.1} If $ 2b+2b'\geqslant 3e>0 $,then $\Phi$ is composition of 2 Sarkisov links $\psi_{0},\psi_{1}$ of type II:
+  \item\label{example1.1} If $ 2b+2b'\geqslant 3\epsilon>0 $, then $\Phi$ is the composition of two Sarkisov links $\psi_{0},\psi_{1}$ of type II:
 
     \[
       \xymatrix{
@@ -1012,7 +948,7 @@ Set $ \mathcal{H}'=|\mathcal{O}(1)| $. Different choices of $\theta$ and  $e$ gi
         pt&&pt&&pt
       }
     \]
-  \item If $ 2b+2b'< 3e $, then $\Phi$ is just one Sarkisov link $\Phi$ of type II:
+  \item If $ 2b+2b'< 3\epsilon $, then $\Phi$ is just one Sarkisov link  of type II:
     \[
       \xymatrix{
     &Z\ar[rd]\ar[ld] & \\
@@ -1020,21 +956,25 @@ Set $ \mathcal{H}'=|\mathcal{O}(1)| $. Different choices of $\theta$ and  $e$ gi
         pt&&pt
       }
     \]
-  \item If $ e=b=b'=0 $, then $\Phi$ is composition of 4 Sarkisov links $\psi_{i}$:
+  \item If $ \epsilon=b=b'=0 $, then $\Phi$ is the composition of four` Sarkisov links $\psi_{i}$:
 \[ \xymatrix{
 &&W_2\ar[ld]\ar[rd]&&W_2'\ar[ld]\ar[rd]\\
 &X_1=\mathbb{F}_1\ar@{.>}[rr]^{\psi_{1}}\ar[d]&&X_2=\mathbb{F}_2\ar@{.>}[rr]^{\psi_{2}}\ar[d]&&X_3=\mathbb{F}_1\ar[d]\ar[rd]^{\psi_{3}}\\
-X=\mathbb{P}^2\ar[d]\ar@{.>}[ru]^{\psi_{0}}&\mathbb{P}^1\ar[ld]\ar@{=}[rr]&&\mathbb{P}^1\ar@{=}[rr]&&\mathbb{P}^1\ar[rd]&X_4=\mathbb{P}^2\ar[d]\\
+X=X_0=\mathbb{P}^2\ar[d]\ar@{.>}[ru]^{\psi_{0}}&\mathbb{P}^1\ar[ld]\ar@{=}[rr]&&\mathbb{P}^1\ar@{=}[rr]&&\mathbb{P}^1\ar[rd]&X_4=X'=\mathbb{P}^2\ar[d]\\
 pt&&&&&&pt} \]
 \end{enumerate}
-\subsection{Double scaling}
-Notations and assumptions as \ref{example1}, let $B_{W}=\frac{1}{2}(B+E_{1}+E_{3})$ and consider pairs $(X,\frac{1}{2}B)$ and $(X',\frac{1}{2}B')$. Then we have $G=G_{0}\sim_{\mathbb{Q}}\frac{5}{2}B$ and $H'\sim_{\mathbb{Q}}\frac{5}{2}B'$.
+
+\subsection{Double scaling method}
+Notations and assumptions as in Section \ref{example1}, let $B_{W}=\frac{1}{2}(B+E_{1}+E_{3})$ and consider pairs $(X,\frac{1}{2}B)$ and $(X',\frac{1}{2}B')$. Then we have $G=G_{0}\sim_{\mathbb{Q}}\frac{5}{2}B$ and $H'\sim_{\mathbb{Q}}\frac{5}{2}B'$.
+
 \begin{enumerate}
-  \item $r_{0}=2$ and $s_{0}=\frac{1}{5}$. $X_{1}$ is weak log canonical model of $(W,B_{W}+\frac{3}{5}G_{W}+\frac{1}{5}H_{W})$;
-  \item  $r_{1}=1$ and $s_{1}=\frac{2}{5}$. $X_{2}= X'$ is weak log canonical model of $(W,B_{W}+\frac{1}{5}G_{W}+\frac{3}{5}H_{W})$.
+  \item $r_{0}=2$ and $s_{0}=\frac{1}{5}$. $X_{1}$ is a weak log canonical model of $(W,B_{W}+\frac{3}{5}G_{W}+\frac{1}{5}H_{W})$;
+  \item  $r_{1}=1$ and $s_{1}=\frac{2}{5}$. $X_{2}= X'$ is a weak log canonical model of $(W,B_{W}+\frac{1}{5}G_{W}+\frac{3}{5}H_{W})$.
 \end{enumerate} 
-This gives the same decomposition as case \ref{example1.1} in  \ref{example1}.
-\subsection{Polytope}
+
+This gives the same decomposition as case (\ref{example1.1}) in  Section \ref{example1}.
+
+\subsection{Polytope method}
 Let  $P,Q$ be two different points on $\mathbb{P}^{2}$ and let $L$ be the line passing through $P$ and $Q$. Let $p:X\to \mathbb{P}^{2}$ be the blowing up at $P$ and $E_{1}$ be the exceptional divisor. Let $q:Y\to \mathbb{P}^{2}$ be the blowing up at $Q$ and $E_{2}$ be the exceptional divisor. Let $W\to \mathbb{P}^{2}$ be the blowing up of $P$ and $Q$, then we have contracions $f:W\to X$ and $g:W\to Y$. Identifies $L,E_{1}$ and $E_{2}$ with their strict transfoms on  $W$. Let $h:W\to Z$ be the contracion of $L$, then $Z\cong \mathbb{P}^{1} \times \mathbb{P}^{1}=\mathbb{F}_{0}$.
 \[
   \xymatrix{
@@ -1044,36 +984,36 @@ Let  $P,Q$ be two different points on $\mathbb{P}^{2}$ and let $L$ be the line p
   }
 \]
 
-Note that $X\cong \mathbb{F}_{1}$, there is a Mori fibre space $\phi:X\to S \cong \mathbb{P}^{1}$. Similarly there is another Mori fibre space $\psi:Y\to T\cong \mathbb{P}^{1}$. There is a birational map $\Phi:X\dashrightarrow  Y$ induced by $p$ and $q$. In fact, if we take $B_{W}=\frac{1}{4}L$ on $W$, then $f$ and $g$ are two log Mori fibre spaces as outputs of $(K_{W}+B_{W})$-MMP on $W$.
+Note that $X\cong \mathbb{F}_{1}$, there is a  Mori fibre space $\phi:X\to S \cong \mathbb{P}^{1}$. Similarly there is another Mori fibre space $\psi:Y\to T\cong \mathbb{P}^{1}$. There is a birational map $\Phi:X\dashrightarrow  Y$ induced by $p$ and $q$. In fact, if we take $B_{W}=\frac{1}{4}L$ on $W$, then $f$ and $g$ are two log Mori fibre spaces as outputs of $(K_{W}+B_{W})$-MMP on $W$.
 
 Take $A\sim_{\mathbb{Q}}-K_{W}+\frac{1}{4}L$, and let $V$ be the translate by  $\frac{1}{4}L$ of the 2-dimensional vector space spaned by $E_{1}$ and  $E_{2}$. Then we have $\mathcal{L}_{A}(V)=\mathcal{E}_{A}(V)$. Furthermore,  $K_{W}+D\sim_{\mathbb{Q}} \frac{1}{2}L+aE_{1}+bE_{2}$ for $0\leqslant a,b\leqslant 1$ if $D \in \mathcal{E}_{A}(V)$. The partition of $\mathcal{E}_{A}(V)$ is
 \begin{center}
 \begin{tikzpicture}
-  \draw (0,0)--(10,0)--(10,10)--(0,10)--(0,0);
-  \draw (0,5)--(10,5);
-  \draw (5,0)--(5,10);
-  \draw (5,0)--(0,5);
-  \draw(7.5,7.5)node{$\mathbb{P}^{2} $};
-  \draw(1.5,1.5)node{$Z$};
-  \draw(3.5,3.5)node{$W$};
-  \draw(7.5,2.5)node{$Y$};
-  \draw(2.5,7.5)node{$X$};
+  \draw (0,0)--(6,0)--(6,6)--(0,6)--(0,0);
+  \draw (0,3)--(6,3);
+  \draw (3,0)--(3,6);
+  \draw (3,0)--(0,3);
+  \draw(4.5,4.5)node{$\mathbb{P}^{2} $};
+  \draw(0.9,0.9)node{$Z$};
+  \draw(2.1,2.1)node{$W$};
+  \draw(4.5,1.5)node{$Y$};
+  \draw(1.5,4.5)node{$X$};
   \draw(-0.5,-0.5)node{pt};
-  \draw(-1,5)node{$\mathbb{P}^{1}$};
-  \draw(5,-1)node{$\mathbb{P}^{1}$};
-  \draw(7.5,0.5)node{$D_{1}$};
-  \filldraw (7.5,0) circle(0.05);
-  \filldraw (5,0) circle(0.05);
-  \draw(5.3,0.3)node{$D_{4}$};
+  \draw(-1,3)node{$\mathbb{P}^{1}$};
+  \draw(3,-1)node{$\mathbb{P}^{1}$};
+  \draw(4.5,0.3)node{$D_{1}$};
+  \filldraw (4.5,0) circle(0.05);
+  \filldraw (3,0) circle(0.05);
+  \draw(3.3,0.3)node{$D_{4}$};
   \filldraw (0,0) circle(0.05);
   \draw(0.3,0.3)node{$D_{3}$};
-  \filldraw (0,5) circle(0.05);
-  \draw(0.3,5.3)node{$D_{2}$};
-  \filldraw (0,7.5) circle(0.05);
-  \draw(0.5,7.5)node{$D_{0}$};
+  \filldraw (0,3) circle(0.05);
+  \draw(0.3,3.3)node{$D_{2}$};
+  \filldraw (0,4.5) circle(0.05);
+  \draw(0.5,4.5)node{$D_{0}$};
 \end{tikzpicture}
 \end{center}
-Then $D_{0}$ and $D_{1}$ correspond to log Mori fibre spaces $\phi:X\to S$ and $\psi:Y\to T$. $D_{2},D_{3}$ and $D_{4}$ correspond to three Sarkisov links. Therefore we have decomposition of $\Phi:X\dashrightarrow  Y$ as
+Then $D_{0}$ and $D_{1}$ correspond to log Mori fibre spaces $\phi:X\to S$ and $\psi:Y\to T$. $D_{2},D_{3}$ and $D_{4}$ correspond to three Sarkisov links. Therefore we have a decomposition of $\Phi:X\dashrightarrow  Y$ as
 
 \[
   \xymatrix{
@@ -1086,90 +1026,90 @@ Then $D_{0}$ and $D_{1}$ correspond to log Mori fibre spaces $\phi:X\to S$ and $
 
 
 \begin{thebibliography}{99}
+  \bibitem[Bir19]{Bir19} C. Birkar;
+  \textit{Anti-pluricanonical systems on Fano varieties}, Ann. of Math. (2) \textbf{190} (2019), no. 2,  345--463.
 
-\bibitem[Bir19]{Bir19} C. Birkar;
-\textit{Anti-pluricanonical systems on Fano varieties}, Ann. of Math. (2) \textbf{190} (2019), no. 2,  345--463.
+  \bibitem[Bir21]{birkarSingularitiesLinearSystems2020}
+  C. Birkar;
+  \textit{Singularities of linear systems and boundedness of Fano varieties}.
+  Ann. of Math. 193 (2):347 -- 405, 2021.
 
-\bibitem[Bir21]{birkarSingularitiesLinearSystems2020}
-C. Birkar;
-\textit{Singularities of linear systems and boundedness of Fano varieties}.
-  Annals of Mathematics, 193(2):347 -- 405, 2021.
+  \bibitem[BCHM]{BCHM10}
+  C. Birkar, P. Cascini, C. D. Hacon, and J. M\textsuperscript{c}Kernan;  \textit{Existence of minimal models for varieties of log general type}, J. Amer. Math. Soc. {\bf 23} (2010), no. 2, 405--468.	
 
-\bibitem[BCHM]{BCHM10}
-C. Birkar, P. Cascini, C. D. Hacon, and J. M\textsuperscript{c}Kernan;  \textit{Existence of minimal models for varieties of log general type}, J. Amer. Math. Soc. {\bf 23} (2010), no. 2, 405--468.	
+  \bibitem[BM97]{brunoLogSarkisovProgram1995}
+  A. Bruno and K. Matsuki;
+  \textit{Log {S}arkisov program},
+  Internat. J. Math., 8(4):451--494, 1997.
 
-\bibitem[BM97]{brunoLogSarkisovProgram1995}
-A. Bruno and K. Matsuki;
-\textit{Log {S}arkisov program},
- Internat. J. Math., 8(4):451--494, 1997.
+\bibitem[CS11]{cs11}
+S. R. Choi and V. V. Shokurov; \textit{Geography of log models: theory and applications.}
+   Cent. Eur. J. Math. 9 (2011), no. 3, 489--534.
 
-\bibitem[Cor95]{cortiFactoringBirationalMaps} A. Corti;
-\textit{Factoring birational maps of threefolds after {{Sarkisov}}}, Journal of Algebraic Geometry. (4) \textbf{190} (1995), no. 2, p. 223--245.
+  \bibitem[Cor95]{cortiFactoringBirationalMaps} A. Corti;
+  \textit{Factoring birational maps of threefolds after {{Sarkisov}}}, Journal of Algebraic Geometry. (4) \textbf{190} (1995), no. 2, p. 223--245.
 
-\bibitem[Hac12]{haconMinimalModelProgram2012}
-C. D. Hacon;
-\textit{The {{Minimal}} model program for {{varieties}} of log general type}.
+  \bibitem[Hac12]{haconMinimalModelProgram2012}
+  C. D. Hacon;
+  \textit{The {{minimal}} model program for {{varieties}} of log general type}.
   Wiadomo\'sci Matematyczne, 48(2):49, June 2012.
 
-\bibitem[HM12]{haconSarkisovProgram2012}
-C. D. Hacon and J. M\textsuperscript{c}Kernan;
-\textit{The {{Sarkisov}} program},
-Journal of Algebraic Geometry, 22(2):389--405, December 2012.
+  \bibitem[HM12]{haconSarkisovProgram2012}
+  C. D. Hacon and J. M\textsuperscript{c}Kernan;
+  \textit{The {{Sarkisov}} program},
+  Journal of Algebraic Geometry, 22(2):389--405, December 2012.
 
+  \bibitem[HMX14]{HMX14} C. D. Hacon, J. M\textsuperscript{c}Kernan, and C. Xu; \textit{ACC for log canonical thresholds}, Ann. of Math. (2) \textbf{180} (2014), no. 2, 523--571.
 
-\bibitem[HMX14]{HMX14} C. D. Hacon, J. M\textsuperscript{c}Kernan, and C. Xu; \textit{ACC for log canonical thresholds}, Ann. of Math. (2) \textbf{180} (2014), no. 2, 523--571.
+  \bibitem[Kaw08]{kawamataFlopsConnectMinimal2008}
+  Y. Kawamata;
+  \textit{Flops {{Connect Minimal Models}}},
+  Publications of the Research Institute for Mathematical Sciences, 44(2):419--423, 2008.
 
+  \bibitem[KSC04]{ksc04}
+  J. Koll\'{a}r, K. Smith, A. Corti; \textit{Rational and nearly rational varieties.} Cambridge Studies in Advanced Mathematics, 92. Cambridge University Press, Cambridge, 2004.
 
+  \bibitem[Lam22]{lam22} S. Lamy; \textit{The Cremona group}, preprint.
 
-
-
-
-
-
-
-\bibitem[Kaw08]{kawamataFlopsConnectMinimal2008}
-Y. Kawamata;
-\textit{Flops {{Connect Minimal Models}}},
-  Publications of the Research Institute for Mathematical
-Sciences, 44(2):419--423, 2008.
-
-\bibitem[KSC04]{ksc04}
- J. Koll\'{a}r, K. Smith, A. Corti; \textit{Rational and nearly rational varieties.} Cambridge Studies in Advanced Mathematics, 92. Cambridge University Press, Cambridge, 2004.
-
-\bibitem[Lam22]{lam22} S. Lamy; \textit{The Cremona group}, preprint.
-
-\bibitem[Liu21]{liuSarkisovProgramGeneralized2021}
-J. Liu;
-\textit{Sarkisov program for generalized pairs},
+  \bibitem[Liu21]{liuSarkisovProgramGeneralized2021}
+  J. Liu;
+  \textit{Sarkisov program for generalized pairs},
   Osaka J. Math., 58(4):899--920, 2021.
 
- \bibitem[Mat02]{mat02} K. Matsuki; \textit{Introduction to the Mori program}. Universitext. Springer-Verlag, New York, 2002. 
+  \bibitem[Mat02]{mat02} K. Matsuki; \textit{Introduction to the Mori program}. Universitext. Springer-Verlag, New York, 2002. 
 
- 
+  \bibitem[Miy19]{miyamoto2019TheSP}
+  K. Miyamoto;
+  \textit{The Sarkisov program on log surfaces},
+  preprint (2019) arXiv:1910.07025 [math.AG]
 
-\bibitem[Miy19]{miyamoto2019TheSP}
-K. Miyamoto;
-\textit{The Sarkisov program on log surfaces},
-  arXiv: Algebraic Geometry, 2019:114--114, 2019.
+  \bibitem[Reid91]{reidBirationalgeometry}
+  M.Reid;
+  \textit{Birational Geometry of $3$-folds according to Sarkisov}, preprint, 1991.
 
-
-\bibitem[Sar81]{sarkisovBIRATIONALAUTOMORPHISMSCONIC1981}
-V. G. Sarkisov;
-\textit{{Birational automorphisms of conic bundles}},
-  Mathematics of the USSR-Izvestiya, 17(1):177--202, February
-  1981.
+% FIXME: what the hell are these bibitem?
+  \bibitem[Sar81]{sarkisovBIRATIONALAUTOMORPHISMSCONIC1981}
+  V.~G. Sarkisov;
+  \textit{{Birational automorphisms of conic bundles}},
+  Izv. Akad. Nauk SSSR Ser. Mat. 44 (1980), no. 4, 918–945, 974.
 
   \bibitem[Sar82]{sarkisovCONICBUNDLESTRUCTURES1983}
-V.~G. Sarkisov;
-\textit{On conic bundle structures},
-  Izv. Akad. Nauk SSSR Ser. Mat., 46(2):371--408, 432, 1982.
+  V.~G. Sarkisov;
+  \textit{On conic bundle structures},
+  Izv. Akad. Nauk SSSR Ser. Mat. 46 (1982), no. 2, 371–408, 432.
 
-  \bibitem[Sho96]{Sho96} V. V. Shokurov; \textit{3-fold log models}, J. Math. Sci., \textbf{81}(3):2667--2699, 1996.
+  \bibitem[Sar89]{sarkisovBirationalmapsofstandardQfanoFibering}
+  V.~G. Sarkisov.
+  \textit{Biratioanl maps of standard $\mathbb{Q}$-fano fiberings},
+  I.V.Kurchatov Institution of Aotomic Energy preprint, 1989.
 
-\bibitem[Tak95]{tak95} N. Takahashi; \textit{Sarkisov program for log surfaces}, Tokyo University Master's Thesis (1995), 395--418.
-
+  \bibitem[Sho96]{Sho96} 
+  V. V. Shokurov;
+  \textit{3-fold log models}, J. Math. Sci., \textbf{81}(3):2667--2699, 1996.
+ %FIXME: J. Math. Sci. 81 (1996), no. 3, 2667–2699.
+  \bibitem[Tak95]{tak95}
+  N. Takahashi; 
+  \textit{Sarkisov program for log surfaces},
+  Tokyo University Master's Thesis (1995), 395--418.
 \end{thebibliography}
 \end{document}
-
-
-
