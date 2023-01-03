@@ -1,0 +1,371 @@
+我们的文章typo太多了（见下面Hacon的邮件）。麻烦你先改一下。我再符合。尽快完成。
+
+
+
+收件人: "yifeichen@amss.ac.cn" <yifeichen@amss.ac.cn>
+抄送:
+主题: Re: Shokurov 70 birthday
+
+Dear Yifei,
+
+I quickly scanned through your paper and noticed many typos.
+Could you fix these to make the referee's job a little easier?
+
+
+Best,
+
+Christopher
+
+
+
+\S 1 l 4: what is the relation between representatives of a birational class.
+
+Thm 1.1 l 2: are two minimal (remove are)
+
+before thm 1.2: For Mori fibre spaces, the Sarkisov program shows:
+
+Thm 1.2: and , => and,
+
+pg 2 l 5: Sarkisov's program
+
+pg 2 l 7: in any dimension.
+
+pg 7 l 8: "The Sarkisov links are outcomes of 2-ray game of minimal model program." Maybe better "Sarkisov links are outcomes of the 2-ray game of the minimal model program."
+
+The Sarkisov degree (μ, λ, e) is designed to prove termination.
+
+The invariants λ and μ are related... is it λ and e?
+
+such as the termination of the  MMP with scaling [BCHM], the ACC for lcts [HMX14], the boundedness of Fano varieties [Bir19], [Bir21], two of the main remaining open questions are
+the termination of flips and of the Sarkisov program in dimension greater than 3. We call this approach to the Sarkisov program, the original method, and we introduce it in Section 3.
+
+Using the finiteness of weak log canonical models established in [BCHM], Hacon [Hac12] gives another approach for the Sarkisov program, which is called the double scaling method and is known to terminate in all dimensions.
+Liu [Liu21] generalizes Hacon’s method to generalized pairs.
+Both of these approaches rely on the two ray game of the minimal model program. The main difference is that the method of double
+scaling has a common roof, and each Sarkisov link is then "under a common roof", so that the minimal model programs that we run in this case are easier to control compared to the original method.
+The termination of the method of double scaling can then be shown using techniques similar to the termination of flips with scaling. We introduce the double scaling method in Section 4.
+
+give another approach to the Sarkisov program.
+
+Miyamoto [Miy19] uses this method to show that Sarkisov's program
+
+an algebraically closed field
+
+We call this approach the polytope method
+
+each method of the Sarkisov
+
+Sarkisov's program
+
+of the projective plane (same thing on the next line)
+
+applies the log Sarkisov
+
+automorphism of the affine plane
+
+Throughout this note,
+
+We call the varieties that appear while running a MMP, the results of the MMP, and the varieties that appear at the end of the MMP (which are either minimal models or Mori fiber spaces) are the outputs of the MMP.
+
+Pg 3 l 1: the discrepancy of the exceptional divisor
+also, maybe just use E here?
+
+end of thm 2.2:
+then we may run the (KX + B)-MMP over U with scaling of C and this MMP terminates.
+
+Thm 2.3: KX + B + C should just be KX + B
+
+Cor 2.4 ---   and C be any set of exceptional divisors E of discrepancy a(E; X, B) ⩽ 0. (this sounds better or if you prefer:
+and C be any set of exceptional divisors that contains only exceptional divisors E of discrepancy a(E; X, B) ⩽ 0.)
+
+take C containing all such divisors => take C to be the set consisting of all exceptional divisors E of discrepancy a(E; X, B) ⩽ 0
+
+Two or more pairs {(Xi, Bi)} are called MMP-related
+if they are results of (K + B)-MMPs starting from a given log smooth pair (W, BW ).
+
+Lemma 2.6 --
+"set of Q-factorial klt pairs such that birational to other," could be "set of birational Q-factorial klt pairs"
+
+Defn 2.8 --
+( respectively => (respectively   (TWICE)
+
+Throughout the article you have "a R-Cartier " and "an R-Cartier", please make it uniform (I prefer "an R-Cartier")
+
+Defn 2.9 is a semiample model
+
+Defn 2.10:
+a birational map that extracts no divisors
+
+Before defn 2.12:
+By the above lemma
+
+def 2.12:
+map that extracts no divisors, then Y
+is the log canonical model
+
+def 2.14:
+over the rational numbers
+contraciton => contraction
+ommite => ommit
+
+\S 3:
+f : (X, B) → S′  should be f : (X, B) → S
+
+Mori fibre spaces as outputs of (KW + BW )-MMP on W . --- why not say
+"are two MMP-related Mori fibre spaces" ?
+
+then (X′, B′ + 1/μ H′) is a weak log canonical model. -- should it be (X′, B′ + μ H′)?
+or is the previous 1/μ wrong? I think BM assume 
+μ′ (KX′ + B′) + f ′∗A′ is very ample and so
+ we can pick a general element in this linear series
+
+Therefore we expect that X-->X′ is the output of a certain MMP.
+
+then we let c>0 be the supremum of all numbers such that
+
+(1) KX + B + cH is non-positive over S, and --- do you mean -(KX + B + cH) is nef over S? or do you mean KX + B + cH is non-positive for X-->X'?
+
+(2) KX + B + cH is log canonical (θ-canonical).
+I am not sure what θ-canonical is here....maybe say (or more generally, θ-canonical, see below)
+
+Then we construct the Sarkisov link as follows:
+
+(1) is hard to follow. Do you mean something like:
+(1) If KX + B + cH is klt, then KX + B + cH is "non-positive over S" and we can find a contraction S->T with \rho (S/T)=1. We then run an MMP for X over T, and obtain a Sarkisov link of type III or IV?
+
+I find the switching from X to X_i confusing.
+
+(2) If KX + B + cH is not klt, then consider a divisorial extraction p : Z → X corresponding to a divisor of discrepancy -1.
+Then ρ(Z/S) = 2 and we run an MMP for Z over S, and obtain a Sarkisov link of type I or II.
+
+
+3.1 l 3 field . => field.
+
+consisting of klt pairs
+
+pg 6 l 4 of the exceptional divisor
+
+corresponding to the two log Mori fibre spaces:
+
+Prop 3.3:
+as follows:
+
+(2) such that each Xl is the output of a (KZ + BZ )-
+MMP over Xl (and hence a step of the
+(KZ + BZ )-MMP
+over Spec C)
+
+With the notations
+
+with projective birational morphisms
+
+then H if f -ample  => then H is f -ample
+
+By taking a further resolution,
+
+defn 3.5 exceptionl => exceptional
+
+have the ramification formula:
+
+We run (KW + BW + 1/λ HW )-MMP on W over X ==>
+We run the (KW + BW + 1/λ HW )-MMP over X
+
+of (W, BW + 1/λ HW ) over X ==>
+for (W, BW + 1/λ HW ) over X
+
+Then we run the (KY + BY )-MMP over X
+
+(Please look for other places where the article "the" is missing)
+
+(1) We only need to show
+
+be a common resolution
+
+are contractions of the same numerical curve class, thus
+the two log Mori fibre spaces are isomorphic.
+
+Suppose f is the contraction
+of a (KX + B)-negative extremal ray
+
+(see [Cor95, 5.4.2] for the details).
+
+we can run the (KX + B + 1/μ H)-MMP on X
+with scaling of some ample divisor.
+Is this mmp over T?
+
+There are the following cases:
+
+the first non-flip contraction is a divisorial contraction
+p : Z → X1, which is then followed by a log Mori fibre space
+
+(b) (c) ....the first non-flip
+
+(d) the (KX + B + 1/μ H)-MMP
+
+3.3 (1),(3),(4) thresholds
+
+Termination of flips is only known to hold for threefolds and peseudo-effective fourfolds
+
+\S 4
+We expect that there are finitely many weak log canonical models
+(Xi, Bi + giGi + hiHi) of (W, BW + giGW + hiHW )
+here 0\leq gi,  hi\leq 1? (or \leq 2?)
+
+be two different log Mori fibre spaces which are outputs of a (KW + BW )-MMP.
+
+"To modify the beginning setting, we need more conventions and lemmas:"
+maybe better "We will need to introduce some notation and prove several lemmas."
+
+Lemma 4.2. the , and . and ; at the end of each item appear random...make it uniform
+similarly in thm 4.4
+
+on W ; => on W;
+
+Conversely, start from a klt pair ==> Conversely, given a klt pair
+
+by a log resolution such that
+
+by taking further blow ups if necessary.
+
+4.2. Construction of Sarkisov links. (and same later on)
+
+(2) either Γ = {0} or Γ  is a closed interval;
+
+in the following cases:
+
+4.8 there are only finitely many possibilities for fi : Xi → S
+
+as following: => as follows:
+
+\S 5 In this section we follow [HM13].
+
+and the Theorem 1.2 follows. =>  and Theorem 1.2 follows.
+
+defined over rationals satisfies ==> defined over the rationals satisfies (please do a repeat search for this)
+
+lemma 5.3   defined on rational numbers => defined over the rational numbers
+
+Clearly that any V ′ ∈ U ==> It is clear that any V ′ ∈ U
+
+By above Lemma => By the above Lemma
+
+can be divisorial contraction ==> can be a divisorial contraction
+
+"And in some cases
+they forms a flop." is confusing
+
+Lemma 5.5. ‘  (remove ‘ )
+
+
+This lemma guarantees
+
+5.7
+p′ : W ′ → W be any log resolution such that resolves =>
+p′ : W ′ → W be any log resolution that resolves
+
+
+Proof of 1.2:  And the birational  ==> The birational
+
+6.1, l 6,
+is the blow-up at the
+indeterminacy point P0 ∈ B of Φ. Identify B
+
+π2 : W2 → W1 is the blow-up at P1 = E1 ∩ B. Identify B
+
+is the blow-up at P2 ∈ E2 \ (B ∪ E1). Identify B
+
+is the composition of blowing-down curves
+
+We denote W = W ′....   missing period at the end
+
+We give some notation: (or better We establish some notation:)
+
+Let H′ = |O_{X'}(1)|
+
+choices of θ and ε give different
+
+of four‘ Sarkisov  ==> of four Sarkisov
+
+Identify L, E1 and E2
+
+log Mori fibre spaces given by the output of
+(KW + BW )-MMPs.
+
+
+
+
+
+
+
+
+
+
+
+On Tuesday, December 27, 2022 at 08:01:47 PM MST, <yifeichen@amss.ac.cn> wrote:
+
+
+Dear Professor Hacon,
+
+
+The reference [Hac12] we quote in the paper is actually your paper, Chapter 13 https://www.math.utah.edu/~hacon/MMP.pdf
+
+
+Yanze Wang uses a software of reference shows the paper is published on Wiadomo ́sci Matematyczne,
+48(2):49, June 2012. But I checked mathscinet today. It is a mistake. My apologies! I attached the new version of the note.
+
+
+Our original plan for the Sarkisov program is to study some conjectures of generators of automorphism group of affine space A^3. For example, it is expected automorphism of A^3 is not generated by linear and triangular transformations by algebraists. In explicit computations, we need to resolve the birational map of P^3. Unlike the surface case, I and my student get stuck on how to resolve a birational map of P^3.
+
+
+I saw at the end of your paper with McKernan. You also mentioned Sarkisov program can apply to auto of affine spaces. Any suggestions or comments are appreciated!
+
+
+Yifei Chen
+
+
+
+-----原始邮件-----
+发件人:"Christopher Hacon" <haconc@yahoo.com>
+发送时间:2022-12-28 00:48:02 (星期三)
+收件人: "yifeichen@amss.ac.cn" <yifeichen@amss.ac.cn>
+抄送:
+主题: Re: Shokurov 70 birthday
+
+PS do you know how I can find the ref [Hac12] ?
+
+On Tuesday, December 27, 2022 at 02:02:42 AM MST, yifeichen@amss.ac.cn <yifeichen@amss.ac.cn> wrote:
+
+
+Dear Chenyang and Professor Hacon,
+
+
+We submit a paper 'A note on the Sarkisov program'.
+
+
+Thank you very much for consideration!
+
+
+Merry Christmas and happy new year!
+
+
+Yifei Chen and Yanze Wang
+
+
+
+-----原始邮件-----
+发件人:"Chenyang Xu" <chenyang@princeton.edu>
+发送时间:2022-06-15 23:50:22 (星期三)
+收件人: "yifeichen@amss.ac.cn" <yifeichen@amss.ac.cn>
+抄送: "Christopher Hacon" <hacon@math.utah.edu>
+主题: Shokurov 70 birthday
+
+Dear Yifei,
+
+I hope you have a nice summer!
+
+We are editing a volume for Shokurov 70 birthday conference, and we are wondering whether you are interested to contribute an article. 
+Currently we plan to publish the volume in the series of LMS Lecture Notes. The page limit is 25 pages, and the deadline is the end of this year. 
+
+Looking forward to hearing from you!
+Chenyang
+Also on behalf of Christopher
